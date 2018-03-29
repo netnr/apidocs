@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>linkbutton(按钮)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_70_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_70_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_70_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>LinkButton（按钮）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>使用$.fn.linkbutton.defaults重写默认值对象。</P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>按钮组件使用超链接按钮创建。它使用一个普通的&lt;a&gt;标签进行展示。它可以同时显示一个图标和文本,或只有图标或文字。按钮的宽度可以动态和折叠/展开以适应它的文本标签。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_70_files/linkbutton[1].png"> </DIV>
+<H4 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>&nbsp;</H4>
+<H4 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>使用案例</H4>
+<H5 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>创建按钮</H5>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>使用标签创建按钮更加简单。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>a</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"btn"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>href</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"#"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-linkbutton"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-search'"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>easyui</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>a</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV>
+<DIV align=left>&nbsp;</DIV>
+<P align=left>也可以使用Javascript创建按钮。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>&lt;a&nbsp;id=</SPAN><SPAN 
+  class=string>"btn"</SPAN><SPAN>&nbsp;href=</SPAN><SPAN 
+  class=string>"#"</SPAN><SPAN>&gt;easyui&lt;/a&gt; &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>$(</SPAN><SPAN class=string>'#btn'</SPAN><SPAN>).linkbutton({ 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;iconCls:&nbsp;</SPAN><SPAN 
+  class=string>'icon-search'</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;<BR></DIV>
+<H5 align=left>处理按钮的点击</H5>
+<P align=left>点击按钮会将用户引导到其他页面。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>a</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>href</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"otherpage.php"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-linkbutton"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-search'"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>easyui</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>a</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>下面的示例提示了一个警告信息。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>a</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>href</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"#"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-linkbutton"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-search'"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>onclick</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"javascript:alert('easyui')"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>easyui</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>a</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用jQuery绑定点击事件。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>a</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"btn"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>href</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"#"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-linkbutton"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-search'"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>easyui</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>a</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;$(</SPAN><SPAN 
+  class=string>'#btn'</SPAN><SPAN>).bind(</SPAN><SPAN 
+  class=string>'click'</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(</SPAN><SPAN 
+  class=string>'easyui'</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}); &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<DIV align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>number</TD>
+    <TD>组件的宽度。<STRONG><FONT color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>height</TD>
+    <TD>number</TD>
+    <TD>组件的高度。<STRONG><FONT color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>id</TD>
+    <TD>string</TD>
+    <TD>组件的ID属性。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>disabled</TD>
+    <TD>boolean</TD>
+    <TD>为true时禁用按钮。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>toggle</TD>
+    <TD>boolean</TD>
+    <TD>为true时允许用户切换其状态是被选中还是未选择，可实现checkbox复选效果。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.3版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>selected</TD>
+    <TD>boolean</TD>
+    <TD>定义按钮初始的选择状态，true为被选中，false为未选中。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.3版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>group</TD>
+    <TD>string</TD>
+    <TD>指定相同组名称的按钮同属于一个组，可实现radio单选效果。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.3版开始可用）</FONT></STRONG></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>plain</TD>
+    <TD>boolean</TD>
+    <TD>为true时显示简洁效果。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>text</TD>
+    <TD>string</TD>
+    <TD>按钮文字。</TD>
+    <TD>''</TD></TR>
+  <TR>
+    <TD>iconCls</TD>
+    <TD>string</TD>
+    <TD>显示在按钮文字左侧的图标(16x16)的CSS类ID。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>iconAlign</TD>
+    <TD>string</TD>
+    <TD>按钮图标位置。可用值有：<BR>'left','right'<FONT 
+      color=#ff0000><STRONG>（该属性自1.3.2版开始可用）<BR></STRONG><FONT 
+      color=#000000>'top','bottom'<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.6版开始可用）</FONT></STRONG></FONT></FONT></TD>
+    <TD>left</TD></TR>
+  <TR>
+    <TD>size</TD>
+    <TD>string</TD>
+    <TD>按钮大小。可用值有：'small','large'。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.6版开始可用）</FONT></STRONG></TD>
+    <TD>small</TD></TR></TBODY></TABLE></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<DIV align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH>事件名</TH>
+    <TH>事件参数</TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onClick</TD>
+    <TD>none</TD>
+    <TD>在点击按钮的时候触发。<STRONG><FONT 
+    color=#ff0000>（该事件自1.3.6版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<DIV align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>resize</TD>
+    <TD>param</TD>
+    <TD>重置按钮。<STRONG><FONT color=#ff0000>（该方法自1.4版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>$('#btn').linkbutton('resize', {
+	width: '100%',
+	height: 32
+});</PRE></TD></TR>
+  <TR>
+    <TD>disable</TD>
+    <TD>none</TD>
+    <TD>禁用按钮。&nbsp; 
+      <P>代码示例：</P><PRE>$('#btn').linkbutton('disable');
+</PRE></TD></TR>
+  <TR>
+    <TD>enable</TD>
+    <TD>none</TD>
+    <TD>启用按钮。&nbsp; 
+      <P>代码示例：</P><PRE>$('#btn').linkbutton('enable');
+</PRE></TD></TR>
+  <TR>
+    <TD>select</TD>
+    <TD>none</TD>
+    <TD>选择按钮。<STRONG><FONT 
+color=#ff0000>（该方法自1.3.3版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>unselect</TD>
+    <TD>none</TD>
+    <TD>取消选择按钮。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.3版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

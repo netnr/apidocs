@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>EasyUI更新说明</TITLE>
+
+<STYLE type=text/css>
+body, p, th, td, li, ul, ol, h1, h2, h3, h4, h5, h6, pre
+{
+	font-family: SimSun;
+	line-height: 1.4;
+}
+body, p, th, td, li, ul, ol, pre
+{
+	font-size: 12px;
+}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.5.2版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>form：修复在调用“reset”方法的时候会导致input输入框初始值消失的BUG； 
+  <LI>textbox：修复在调用“destroy”方法的时候无法清除字段标签的BUG； 
+  <LI>datagrid：修复在不存在的行上调用“selectRow”方法的时候会导致记录无效行信息的BUG。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>datagrid：ctrl键选择支持Mac键盘； 
+  <LI>datagrid：新增“<SPAN 
+  style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(46,48,51); FONT: 12px/18px Arial, 'Microsoft YaHei', 微软雅黑, 宋体, 'Malgun Gothic', Meiryo, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">scrollOnSelect</SPAN>”属性，可以让用户确定是否在选择行时自动滚动到对应行所在的位置； 
+
+  <LI>combotree：添加“<SPAN 
+  style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(46,48,51); FONT: 12px/18px Arial, 'Microsoft YaHei', 微软雅黑, 宋体, 'Malgun Gothic', Meiryo, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">textField</SPAN>”属性； 
+
+  <LI>combotreegrid：添加“<SPAN 
+  style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(46,48,51); FONT: 12px/18px Arial, 'Microsoft YaHei', 微软雅黑, 宋体, 'Malgun Gothic', Meiryo, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">textField</SPAN>”属性； 
+
+  <LI>pagination：添加“<SPAN 
+  style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(46,48,51); FONT: 12px/18px Arial, 'Microsoft YaHei', 微软雅黑, 宋体, 'Malgun Gothic', Meiryo, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">showPageInfo</SPAN>”属性； 
+
+  <LI>panel：添加“<SPAN 
+  style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(46,48,51); FONT: 12px/18px Arial, 'Microsoft YaHei', 微软雅黑, 宋体, 'Malgun Gothic', Meiryo, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">halign</SPAN>”和“<FONT 
+  color=#2e3033 face=Arial>titleDirection</FONT>”属性，以允许用户自定义面板标题文字的对齐方式； 
+  <LI>accordion：添加“halign”属性，以允许用户构建水平方向的分类标签； 
+  <LI>tagbox：添加“required”属性，以允许用户将其用于验证指定值是否为空<FONT 
+  color=#ff0000>（译者注：该属性自validatebox继承而来，1.5.2版之前也有该属性只是设置以后无效）</FONT>。</LI></UL>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.5.1版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>datagrid：修复在调用“updateRow”方法之后选中和复选行标志丢失的问题； 
+  <LI>tabs：修复在调用“update”方法的时候导致标签栏工具错位的问题； 
+  <LI>window：修复在窗体高度设置为“auto”时，当移动窗体后窗体会丢失的问题； 
+  <LI>messager：修复在现实进度消息窗口后立即关闭该窗口会导致程序发生异常的问题； 
+  <LI>form：修复“clear”方法无法清除combobox组件选择的下拉项的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>textbox：可以用“cls”属性添加自定义样式； 
+  <LI>numberbox：允许用户使用意大利货币格式； 
+  <LI>combo：添加“multivalue”属性，允许用户决定如何提交多个值； 
+  <LI>combobox：添加“reversed”属性； 
+  <LI>combobox：添加“onClick”事件； 
+  <LI>combogrid：添加“reversed”属性； 
+  <LI>treegrid：使用Shift键启用多值选择。</LI></UL>
+<P>New Plugin（新组件）</P>
+<UL>
+  <LI>tagbox：允许用户在表单字段上添加标签。</LI></UL></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.5版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>combobox：修复在加载包含所选项数据的时候不会触发“onSelect”事件的BUG； 
+  <LI>datagrid：修复在字段设置为一个空值的时候导致在某些情况下“updateRow”方法无法正常工作的BUG。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>一个label标签可以被关联到任意表单的字段上；&nbsp; 
+  <LI>combobox：改进在下拉项中“select”和“unselect”的规则； 
+  <LI>combobox：添加“limitToList”属性来限制只能输入在列表项中的内容； 
+  <LI>combogrid：允许用户快速克隆组件； 
+  <LI>form：添加“dirty”属性，允许用户只发送变更的字段内容； 
+  <LI>form：添加“resetDirty”方法； 
+  <LI>datagrid：允许用户在没有数据的时候显示一条消息（比如：无记录）； 
+  <LI>textbox：添加“label”、“labelWidth”、“labelPosition”和“labelAlign”属性； 
+  <LI>spinner：添加“spinAlign”属性； 
+  <LI>calendar：允许用户在日历组件上显示周数（今年的第几周）； 
+  <LI>window：添加“constrain”属性。</LI></UL>
+<P>New Plugin（新组件）</P>
+<UL>
+  <LI>passwordbox：该插件允许用户在具有更好交互功能的输入框中输入密码； 
+  <LI>combotreegrid：该插件结合了combobox和treegrid组件。 
+  </SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></LI></UL>
+<P><FONT size=3><SPAN style="FONT-SIZE: 11pt"><SPAN 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN style="FONT-SIZE: 11pt"><FONT 
+size=3><SPAN style="FONT-SIZE: 11pt"><FONT color=#ff6600 size=5><STRONG>jQuery 
+EasyUI 1.4.5版本更新内容：</STRONG></FONT><FONT size=3><SPAN 
+id=wiz_font_size_span_11776359 style="FONT-SIZE: 11pt"><SPAN 
+id=wiz_font_size_span_11732109 style="FONT-SIZE: 13pt"><FONT size=3><SPAN 
+id=wiz_font_size_span_11764640 style="FONT-SIZE: 11pt"><FONT size=3><SPAN 
+id=wiz_font_size_span_11772156 style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>datagrid：修复在调用updateRow方法之后使用getChanges方法无法返回被更新的行的BUG； 
+  <LI>treegrid：修复在追加或插入新行的时候触发onLoadSuccess事件的BUG； 
+  <LI>tree：修复在追加或插入新节点的时候触发onLoadSuccess事件的BUG。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>window：可以自定义显示样式了； 
+  <LI>window：新增“border”属性允许用户设置不同的边框样式； 
+  <LI>navpanel：新增“href”属性用以从远程服务器加载显示内容； 
+  <LI>combotree：“setValue”和“setValues”方法增加“id”和“text”形参； 
+  <LI>combobox：新增“showItemIcon”属性； 
+  <LI>combobox：在“groupPosition”属性值设置为“sticky”时，将会将选项分组标签固顶在下拉栏中； 
+  <LI>messager：当敲击回车键时将默认触发消息框的第一个按钮； 
+  <LI>validatebox：新增“editable”、“disabled”、“readonly”、“validateOnCreate”和“validateOnBlur”属性； 
+
+  <LI>validatebox：新增“enable”、“disable”、“readonly”和“resetValidation”方法； 
+  <LI>validatebox：允许用户来决定如何显示错误消息； 
+  <LI>filebox：新增“accept”和“multiple”属性； 
+  <LI>treegrid：新增复选框的选择； 
+  <LI>treegrid：新增“getCheckedNodes”、“checkNode”和“uncheckNode”方法； 
+  <LI>form：新增“iframe”属性； 
+  <LI>form：新增“onProgress”事件； 
+  <LI>form：新增“resetValidation”方法。</LI></UL>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.4.4版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>filebox：修复“clear”和“reset”方法在IE9下无法正常工作的问题； 
+  <LI>messager：修复调用无参的$.messager.progress()方法之后，再调用$.messager.progress('close')方法时无法正常工作的问题； 
+
+  <LI>timespinner：修复在IE8中点击微调按钮时无法正确显示值的问题； 
+  <LI>window：修复在“onMove”事件中调用“options”方法时无法正常显示的问题； 
+  <LI>treegrid：修复“getLevel”方法无法接受为0的参数值的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>layout：改进后的“collapsedContent”、“expandMode”和“hideExpandTool”属性可以支持区域面板； 
+  <LI>layout：改进后的“hideCollapsedContent”属性可以在折叠面板上设置显示垂直标题栏； 
+  <LI>layout：新增“onCollapse”、“onExpand”、“onAdd”、“onRemove”事件； 
+  <LI>datagrid：在排序列的标题上显示↑↓图标； 
+  <LI>datagrid：新增“gotoPage”方法； 
+  <LI>propertygrid：新增“groups”方法，以允许获取所有数据租； 
+  <LI>messager：在显示长消息的的时候支持对消息进行自动滚动； 
+  <LI>tabs：“disabled”属性支持定义一个被禁用的选项卡面板； 
+  <LI>tabs：支持百分比大小。</LI></UL>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.4.3版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>textbox：修复“setText”方法不接受值为0的问题； 
+  <LI>timespinner：修复在使用IE11时点击空文本框时出错的问题； 
+  <LI>tabs：修复“update”方法只能更新面板正文的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>combobox：提升显示下拉框的性能； 
+  <LI>combogrid：在下拉数据表格跳转到其它页面的时候记住显示的文本； 
+  <LI>combogrid：“setValue”和“setValues”方法接受一个键值对象； 
+  <LI>window：内联窗体的遮罩层可以自动伸展来填补父容器； 
+  <LI>tabs：“showTool”和“hideTool”方法提供用户显示或隐藏工具栏； 
+  <LI>layout：允许用户覆盖“cls”、“headerCls”和“bodyCls”属性值。</LI></UL>
+<P>New Plugin（新组件）</P>
+<UL>
+  <LI>switchbutton：新增开关按钮组件，状态：“开”和“关”。 </LI></UL>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.4.2版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>treegrid：修复重建treegrid之后列会恢复原始大小的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>draggable：添加“delay”属性，允许用户延迟拖动操作； 
+  <LI>tree：添加“filter”属性和“doFilter”方法； 
+  <LI>tabs：“add”方法允许用户在指定的索引位上插入选项卡面板； 
+  <LI>tabs：用户可以决定哪些选项卡面板可以被选择； 
+  <LI>tabs：添加“justified”，“narrow”和“pill”属性； 
+  <LI>layout：添加“unsplit”和“split”方法； 
+  <LI>messager：支持键盘导航功能； 
+  <LI>form：添加“onChange”事件； 
+  <LI>combobox：添加“queryParams”属性； 
+  <LI>slider：添加“range”属性； 
+  <LI>menu：添加“itemHeight”，“inline”，“noline”和“align”属性； 
+  <LI>panel：添加“header”属性，允许用户自定义面板标题栏； 
+  <LI>menubutton：添加“hasDownArrow”属性。</LI></UL>
+<P>New Plugin（新组件）</P>
+<UL>
+  <LI>datalist：该组件是展示列表数据的组件，用户可以对列表数据进行分组、单选、多选等各种操作； 
+  <LI>navpanel：该组件是移动端框架的根组件； 
+</LI></UL></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.4.1版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>combogrid：修复combogrid组件和其他combo组件高度不一致的问题； 
+  <LI>datagrid：修复在datagrid行元素调用“updateRow”方法的时候丢失某些类样式的问题； 
+  <LI>menubutton：修复在被禁用的按钮上使用“enable”方法无效的问题； 
+  <LI>form：修复在form组件中调用“clear”方法以后导致firebox组件失效的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>tabs：“update”方法增加“type”参数，允许用户更新表头、表体或整个tab控件； 
+  <LI>panel：添加“openAnimation”、“openDuration”、“closeAnimation”和“closeDuration”属性用来设置面板打开和关闭时的动画效果； 
+
+  <LI>panel：添加“footer”属性用来定义在页脚展示的页脚栏； 
+  <LI>datagrid：调用“endEdit”方法可正确获取编辑值（这应该是一个已有功能的改进，具体内容不得而知）； 
+  <LI>datagrid：添加“onBeforeSelect”、“onBeforeCheck”、“onBeforeUnselect”和“onBeforeUncheck”事件； 
+
+  <LI>propertygrid：允许用户使用“beginEdit”方法进行行编辑； 
+  <LI>datebox：添加“cloneFrom”方法来快速创建“datebox”组件； 
+  <LI>datetimebox：添加“cloneFrom”方法来快速创建“datetimebox”组件。</LI></UL>
+<P>&nbsp;</P>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.4版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>menu：修复在删除一个菜单项的时候该菜单无法正确自适应高度的问题； 
+  <LI>datagrid：修复在datagrid宽度太小的时候“fitColumns”方法无法正常工作的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>EasyUI的所有组件已经支持非固定/百分比大小的尺寸设置； 
+  <LI>menu：添加“showItem”、“hideItem”和“resize”方法； 
+  <LI>menu：基于窗体大小自动调整高度； 
+  <LI>menu：添加“duration”属性，该属性允许用户自定义隐藏菜单动画的持续时间，以毫秒为单位； 
+  <LI>validatebox：添加“onBeforeValidate”和“onValidate”事件； 
+  <LI>combo：从该版本开始combo组件扩展自textbox组件（textbox是1.4中新增的组件）； 
+  <LI>combo：添加“panelMinWidth”、“panelMaxWidth”、“panelMinHeight”和“panelMaxHeight”属性； 
+
+  <LI>searchbox：从该版本开始searchbox组件扩展自textbox组件（textbox是1.4中新增的组件）； 
+  <LI>tree：添加“getRoot”方法，用于返回通过“nodeEl”参数指定的节点的顶部父节点元素(注意：官网的英文API中该函数的说明有误，其说明是none(无参数)，实际这里是需要参数的)； 
+
+  <LI>tree：添加“queryParams”属性； 
+  <LI>datetimebox：添加“spinnerWidth”属性； 
+  <LI>panel：添加“doLayout”方法，用于控制面板内组件的大小； 
+  <LI>panel：添加“clear”方法，用于清除面板内的内容； 
+  <LI>datagrid：允许用户设置百分比宽度的列（该功能真是千呼万唤始出来啊！）；&nbsp;&nbsp; 
+  <LI>form：添加“ajax”，“novalidate”和“queryParams”属性； 
+  <LI>linkbutton：添加“resize”方法。</LI></UL>
+<P>New Plugin（新组件）</P>
+<UL>
+  <LI>textbox：该组件是一个增强的输入字段，它可以让用户非常简单的构建一个表单； 
+  <LI>datetimespinner：该组件是一个日期和时间的微调组件，它允许我们选择一个特定的日期或时间； 
+  <LI>filebox：filebox 该组件表单元素中用于上传文件的文件框工具组件。 
+</LI></UL></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT>
+<P><FONT color=#3366ff></FONT>&nbsp;</P>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.3.6版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>treegrid：修复“getChecked”方法不能正确的返回被选择的行的问题； 
+  <LI>tree：修复在“onlyLeafCheck”属性为true时，复选框无法在异步树种正确显示的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>treegrid：所有的选择和选中的方法都扩展自datagrid组件； 
+  <LI>linkbutton：添加图标对齐功能的完整支持，可用值有：“top”、“bottom”、“left”、“right”； 
+  <LI>linkbutton：添加“size”属性，可用值有：“small”、“large”； 
+  <LI>linkbutton：添加“onClick”事件； 
+  <LI>menubutton：添加“menuAlign”属性，该属性允许用户设置顶级菜单对齐； 
+  <LI>combo：添加“panelAlign”属性，可用值有：“left”、“right”； 
+  <LI>calendar：添加“formatter”、“styler”和“validator”属性，这些属性允许用于自定义日历日期； 
+  <LI>calendar：添加“onChange”事件； 
+  <LI>panel：添加“method”、“queryParams”和“loader”选项； 
+  <LI>panel：添加“onLoadError”事件； 
+  <LI>datagrid：添加“onBeginEdit”事件，该事件在一个行进入编辑模式时触发； 
+  <LI>datagrid：添加“onEndEdit”事件，该事件在完成编辑但是编辑器尚未销毁之前触发； 
+  <LI>datagrid：添加“sort”方法和“onBeforeSortColumn”事件； 
+  <LI>datagrid：将“combogrid”编辑器集成到datagrid中； 
+  <LI>datagrid：添加“ctrlSelect”属性，在启用多行选择的时候允许使用Ctrl键+鼠标点击的方式进行多选操作； 
+  <LI>slider：添加“converter”属性，该属性允许用户决定如何将一个值转换为进度条位置或进度条位置值； 
+  <LI>searchbox：添加“disabled”属性； 
+  <LI>searchbox：添加“disable”、“enable”、“clear”、“reset”方法； 
+  <LI>spinner：添加“readonly”属性、“readonly”方法和“onChange”事件。</LI></UL>
+<P><FONT color=#3366ff></FONT>&nbsp;</P>
+<P><FONT color=#3366ff></FONT>&nbsp;</P>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.3.5版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>searchbox：修复“searcher”函数提供的“name”参数值错误的问题； 
+  <LI>combo：修复“isValid”方法无法返回布尔值的问题； 
+  <LI>combo：修复点击页面某一个combo组件的下拉列表时触发的“onHidePanel”事件会导致页面上其他combo组件的下拉列表被关闭的问题； 
+  <LI>combogrid：修复某些从combo组件继承来的方法无法使用的问题。</LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>datagrid：改进检查行时候的性能； 
+  <LI>menu：允许追加菜单分隔符； 
+  <LI>menu：新增“hideOnUnHover”属性用于在鼠标离开菜单的时候指示是否需要隐藏菜单； 
+  <LI>slider：新增“clear”和“reset”方法； 
+  <LI>tabs：新增“unselect”方法、“onUnselect”事件； 
+  <LI>tabs：新增“selected”属性，用于指定的默认打开的面板； 
+  <LI>tabs：Tab Panel（Tab页）新增“collapsible”属性，用于设置是否允许摺叠面板； 
+  <LI>tabs：新增“showHeader”属性、“showHeader”方法和“hideHeader”方法； 
+  <LI>combobox：允许“disabled”属性禁用下拉列表选项； 
+  <LI>tree：改进数据加载时候的性能； 
+  <LI>pagination：新增“layout”属性，用于自定义控件的样式布局； 
+  <LI>accordion：新增“unselect”方法、“onUnselect”事件； 
+  <LI>accordion：新增“select”和“multiple”属性； 
+  <LI>accordion：新增“getSelections”方法； 
+  <LI>datebox：新增“sharedCalendar”属性，允许多个datebox控件共享使用同一个calendar控件； 
+  <LI>datebox：新增“buttons”属性，用于自定义日历下方的按钮。<BR><FONT 
+  color=#3366ff>（译者注：该点更新内容官方更新公告上没有注明，具体内容和用法请看datebox的API。）</FONT></LI></UL></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT>
+<P><FONT color=#ff6600 size=5><STRONG></STRONG></FONT>&nbsp;</P>
+<P><FONT color=#ff6600 size=5><STRONG>jQuery EasyUI 
+1.3.4版本更新内容：</STRONG></FONT><FONT size=3><SPAN id=wiz_font_size_span_11776359 
+style="FONT-SIZE: 11pt"><SPAN id=wiz_font_size_span_11732109 
+style="FONT-SIZE: 13pt"><FONT size=3><SPAN id=wiz_font_size_span_11764640 
+style="FONT-SIZE: 11pt"><FONT size=3><SPAN id=wiz_font_size_span_11772156 
+style="FONT-SIZE: 11pt"></P>
+<P>Bug（修复）</P>
+<UL>
+  <LI>combobox：修复在解析空的本地数据时也会触发onLoadSuccess事件的问题； 
+  <LI>form：修复调用“reset”方法的时候无法重置datebox编辑器控件里面值的问题。</LI></UL></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>移动设备：移动设备支持右键菜单和双击功能； 
+  <LI>combobox：新增的“groupField”和“groupFormatter”属性可以在组中显示指定的项目； 
+  <LI>tree：在追加或者新增节点的时候，“data”参数允许接收一个或多个节点的数据； 
+  <LI>tree：“getChecked”方法允许接收一个或多个状态值参数（'checked','unchecked','indeterminate'）； 
+  <LI>tree：新增“scrollTo”方法； 
+  <LI>datagrid：新增“multiSort”属性，支持多列排序； 
+  <LI>datagrid：datagrid的“rowStyler”属性和列的“styler”属性可以返回CSS类名或行内样式<FONT 
+  color=#3366ff>（译者注：以前不可以返回CSS类名）</FONT>； 
+  <LI>treegrid：新增“load”方法用于加载数据并返回至首页； 
+  <LI>tabs：新增“tabWidth”和“tabHeight”属性； 
+  <LI>validatebox：新增“novalidate”属性来控制是否使用验证功能<FONT 
+  color=#3366ff>（译者注：true：关闭验证，false：启用验证，默认：false）</FONT>； 
+  <LI>validatebox：新增“enableValidation”和“disableValidation”方法<FONT 
+  color=#3366ff>（译者注：用于在代码中控制开启和关闭验证的功能。）</FONT>； 
+  <LI>form：新增“enableValidation”和“disableValidation”方法<FONT 
+  color=#3366ff>（译者注：用于在form提交时控制开启和关闭整个表单验证功能。）</FONT>； 
+  <LI>slider：新增“onComplete”事件<FONT color=#3366ff>（译者注：在进度条加载完毕时触发的事件。）</FONT>； 
+  <LI>pagination：“buttons”属性允许使用已存在的元素<FONT 
+  color=#3366ff>（译者注：1.3.4版之前buttons属性只接受一个数组形式的参数传入，并且只能给按钮指定iconCls和handler属性，改为DOM以后可以给按钮设置更多的属性及样式了，使用方法同datagrid的“toolbar”属性，即：buttons:'#btnDiv'）</FONT>。<BR><BR></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></LI></UL>
+<P><STRONG><FONT color=#ff6600 size=5>jQuery EasyUI 
+1.3.3版本更新内容：</FONT></STRONG></P><FONT size=4><SPAN 
+id=wiz_font_size_span_11732109 style="FONT-SIZE: 13pt"><FONT size=3><SPAN 
+id=wiz_font_size_span_11764640 style="FONT-SIZE: 11pt"><FONT size=3><SPAN 
+id=wiz_font_size_span_11772156 style="FONT-SIZE: 11pt">
+<P>Bug（修复）</P>
+<UL>
+  <LI>datagrid：修复列styler函数不支持某些CSS样式的问题； 
+  <LI>datagrid：修复IE浏览器对单个文档最多只能使用31个样式表限制的问题； 
+  <LI>treegrid: 修复列styler函数不支持某些CSS样式的问题； 
+  <LI>menu: 修复在IE6版本下自动列宽不正确的问题； 
+  <LI>combo：修复在combo区域以外点击无法触发"onHidePanel（隐藏面板）"事件函数的问题；<BR></LI></UL>
+<P>Improvement（改进）</P>
+<UL>
+  <LI>datagrid：添加“scrollTo”和“highlightRow”方法； 
+  <LI>treegrid：允许treegrid从元素解析数据； 
+  <LI>combo：添加“selectOnNavigation”和“readonly”属性； 
+  <LI>combobox：添加“loadFilter”属性，允许用户在加载数据之前将数据格式化为combobox空间所需的类型； 
+  <LI>tree：添加“onBeforeDrop”回调事件； 
+  <LI>validatebox：验证框的消息提示现在开始依赖“tooltip”组件，并增加“deltaX”属性； 
+  <LI>numberbox："filter"属性用于设置允许按下哪些键； 
+  <LI>linkbutton：按钮支持分组； 
+  <LI>layout：为各个区域面板增加了'minWidth','maxWidth','minHeight','maxHeight' 和 
+  'collapsible' 属性。<BR></LI></UL>
+<P>New Plugins（新插件）</P>
+<UL>
+  <LI>tooltip：当鼠标移动到一个元素上时显示一个弹出消息框。</LI></UL></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></SPAN></FONT></BODY></HTML>

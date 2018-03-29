@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>datetimebox(日期时间输入框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_82_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_82_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_82_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>DateTimeBox（日期时间输入框）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>扩展自$.fn.datebox.defaults，使用$.fn.datetimebox.defaults重写默认值对象。</P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>和日期输入框类似，日期时间输入框允许用户选择日期和指定的时间并按照指定的输出格式显示。相比日期输入框，它在下拉面板中添加了一个时间微调器。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_82_files/datetimebox[1].png"> </DIV>
+<H4 style="PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>&nbsp;</H4>
+<H4 style="PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>依赖关系</H4>
+<DIV style="PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_81.htm">datebox</A> 
+
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_86.htm">timespinner</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<P align=left>使用标签创建日期时间输入框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-datetimebox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"birthday"</FONT></SPAN><SPAN>&nbsp; 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"required:true,showSeconds:false"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"3/4/2010&nbsp;2:3"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"width:150px"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建日期时间输入框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"dt"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>type</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"text"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"birthday"</FONT></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>input</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#dt'</SPAN><SPAN>).datetimebox({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;value:&nbsp;</SPAN><SPAN 
+  class=string>'3/4/2010&nbsp;2:3'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;required:&nbsp;</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;showSeconds:&nbsp;</SPAN><SPAN 
+  class=keyword>false</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>日期时间输入框扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_81.htm">datebox</A>(日期输入框)，日期时间输入框新增的属性如下：</P>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>currentText</TD>
+    <TD>string</TD>
+    <TD>文本显示为当前天按钮。<STRONG><FONT 
+    color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>Today</TD></TR>
+  <TR>
+    <TD>closeText</TD>
+    <TD>string</TD>
+    <TD>文本显示为关闭按钮。<STRONG><FONT 
+color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>Close</TD></TR>
+  <TR>
+    <TD>okText</TD>
+    <TD>string</TD>
+    <TD>文本显示为确定按钮。<STRONG><FONT 
+color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>Ok</TD></TR>
+  <TR>
+    <TD>spinnerWidth</TD>
+    <TD>number</TD>
+    <TD>定义datetimebox组件嵌入的时间微调器的宽度。</TD>
+    <TD>100%</TD></TR>
+  <TR>
+    <TD>showSeconds</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示秒钟信息。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>timeSeparator</TD>
+    <TD>string</TD>
+    <TD>定义在小时、分钟和秒之间的时间分割字符。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3版开始可用）</FONT></STRONG></TD>
+    <TD><STRONG>:</STRONG></TD></TR></TBODY></TABLE></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>日期时间输入框的方法扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_81.htm">datebox</A>(日期输入框)，日期时间输入框重写的方法如下：</P>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>spinner</TD>
+    <TD>none</TD>
+    <TD>返回时间微调器对象。</TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置日期时间输入框值。 
+      <P>代码示例：</P><PRE>$('#dt').datetimebox('setValue', '6/1/2012 12:30:56');&nbsp;&nbsp;&nbsp;&nbsp;// 设置日期时间输入框的值
+var v = $('#dt').datetimebox('getValue');		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 获取日期时间输入框的值
+alert(v);
+</PRE></TD></TR>
+  <TR>
+    <TD>cloneFrom</TD>
+    <TD>from</TD>
+    <TD>克隆一个datetimebox控件。<STRONG><FONT 
+      color=#ff0000>（该方法自1.4.1版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>&lt;input id="from" class="easyui-datetimebox"&gt;
+
+// 克隆一个存在的datebox组件
+$('.dt').datetimebox('cloneFrom', '#from');
+</PRE></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

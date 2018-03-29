@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>propertygrid(属性表格)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_89_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_89_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_89_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>PropertyGrid（属性表格）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>继承自$.fn.datagrid.defaults。使用$.fn.propertygrid.defaults重写默认值对象。</P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>属性表格提供The propertygrid 
+provide给用户浏览和编辑对象属性的一个接口。属性表格是一个行内可编辑数据表格。它使用起来相当简单。用户可以非常简单的创建一个分层的可编辑属性列表和表示任何数据类型的项。属性表格内建排序和分组功能。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_89_files/propertygrid[1].png"> </DIV>
+<H4 style="PADDING-LEFT: 10px" align=left>&nbsp;</H4>
+<H4 style="PADDING-LEFT: 10px" align=left>依赖关系</H4>
+<DIV style="PADDING-LEFT: 10px" align=left>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>使用标签创建一个属性表格。注意：列已经内置不需要再去声明它。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>table</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"pg"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-propertygrid"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:300px"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"url:'get_data.php',showGroup:true,scrollbarSize:0"</FONT></SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>table</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建一个属性表格。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>table</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"pg"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:300px"</FONT></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>table</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#pg'</SPAN><SPAN>).propertygrid({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;</SPAN><SPAN 
+  class=string>'get_data.php'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;showGroup:&nbsp;</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;scrollbarSize:&nbsp;0 &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>追加一个新行到属性表格。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN 
+  class=keyword>var</SPAN><SPAN>&nbsp;row&nbsp;=&nbsp;{ 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;name:</SPAN><SPAN class=string>'AddName'</SPAN><SPAN>, 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;value:</SPAN><SPAN 
+  class=string>''</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;group:</SPAN><SPAN 
+  class=string>'Marketing&nbsp;Settings'</SPAN><SPAN>, 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;editor:</SPAN><SPAN 
+  class=string>'text'</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>}; &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>$(</SPAN><SPAN 
+  class=string>'#pg'</SPAN><SPAN>).propertygrid(</SPAN><SPAN 
+  class=string>'appendRow'</SPAN><SPAN>,row);&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>行数据</H4>
+<P align=left>属性表格扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)。它的行数据格式和数据表格相同。作为一个属性行，以下字段是必须的：<BR>name：字段名称。<BR>value：字段值。<BR>group：分组字段值。<BR>editor：在编辑属性值的时候使用的编辑器对象。</P>
+<P align=left>行数据示例：</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>{</SPAN><SPAN 
+  class=string>"total"</SPAN><SPAN>:4,</SPAN><SPAN 
+  class=string>"rows"</SPAN><SPAN>:[ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN><SPAN 
+  class=string>"name"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Name"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"value"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Bill&nbsp;Smith"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"group"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"ID&nbsp;Settings"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"editor"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>}, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN><SPAN 
+  class=string>"name"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Address"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"value"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>""</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"group"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"ID&nbsp;Settings"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"editor"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>}, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN><SPAN 
+  class=string>"name"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"SSN"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"value"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"123-456-7890"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"group"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"ID&nbsp;Settings"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"editor"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>}, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN><SPAN 
+  class=string>"name"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Email"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"value"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"bill@gmail.com"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"group"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Marketing&nbsp;Settings"</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>"editor"</SPAN><SPAN>:{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"type"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"validatebox"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"options"</SPAN><SPAN>:{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"validType"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"email"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}} &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>]}&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>属性</H4>
+<P align=left>属性表格的属性扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)，属性表格新增的的属性如下：</P>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>showGroup</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示属性分组。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>groupField</TD>
+    <TD>string</TD>
+    <TD>定义分组的字段名。</TD>
+    <TD>group</TD></TR>
+  <TR>
+    <TD>groupFormatter</TD>
+    <TD>function(group,rows)</TD>
+    <TD>定义如何格式化分组的值。该函数拥有如下参数：<BR>group：分组字段值。<BR>rows：属于该分组的所有行。 </TD>
+    <TD></TD></TR></TBODY></TABLE></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>属性表格的方法扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)，属性表格新增的方法如下：</P>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>groups</TD>
+    <TD>none</TD>
+    <TD>
+      <P>返回所有分组。每一组包含如下属性。<STRONG><FONT 
+      color=#ff0000>（该方法自1.4.4版开始可用）</FONT></STRONG><BR>value：分组的字段值。<BR>rows：属于该分组的行。<BR>startIndex：当前行相对于所有行的索引。</P></TD></TR>
+  <TR>
+    <TD>expandGroup</TD>
+    <TD>groupIndex</TD>
+    <TD>展开指定分组。如果'groupIndex'参数未指定，则展开所有分组。</TD></TR>
+  <TR>
+    <TD>collapseGroup</TD>
+    <TD>groupIndex</TD>
+    <TD>折叠指定分组。如果'groupIndex'参数未指定，则折叠所有分组。 
+</TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

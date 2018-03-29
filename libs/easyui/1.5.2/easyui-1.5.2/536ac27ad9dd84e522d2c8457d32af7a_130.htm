@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>filebox(文件框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_130_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_130_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_130_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>FileBox（文件框）</H3>
+<P 
+align=left>扩展自$.fn.textbox.defaults，使用$.fn.filebox.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.4版开始可用）</FONT></STRONG></P>
+<P align=left>FileBox(文件框)组件在表单当中表示一个文件上传的字段。它扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A> 
+(文本框)，大部分的属性、事件和方法都继承自文本框。但是由于浏览器的安全问题，其中的某些方法（如："setValue"）则不能用于 filebox 
+组件。</P>
+<P align=left>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_130_files/filebox[1].png">&nbsp;&nbsp; 
+</P>
+<H4>依赖关系</H4>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A> 
+  </LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建验证框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter style="OVERFLOW: hidden; HEIGHT: 70px; WIDTH: 96.98%"><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;<STRONG>input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>class</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"easyui-filebox"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>style</FONT></SPAN><SPAN class=pun>=</SPAN><FONT color=#0000ff><SPAN class=atv>"</SPAN><SPAN class=pln>width</SPAN><SPAN class=pun>:</SPAN><SPAN class=lit>300px</SPAN><SPAN class=atv>"</SPAN></FONT><SPAN class=tag>&gt;</SPAN></LI></OL></PRE></DIV>使用Javascript创建验证框。</DIV>
+<DIV align=left>&nbsp;</DIV>
+<DIV align=left>
+<DIV class=dp-highlighter style="OVERFLOW: hidden; HEIGHT: 70px; WIDTH: 98.82%"><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;<STRONG>input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>id</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"fb"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>type</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"text"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>style</FONT></SPAN><SPAN class=pun>=</SPAN><FONT color=#0000ff><SPAN class=atv>"</SPAN><SPAN class=pln>width</SPAN><SPAN class=pun>:</SPAN><SPAN class=lit>300px</SPAN><SPAN class=atv>"</SPAN></FONT><SPAN class=tag>&gt;</SPAN></LI></OL></PRE></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#fb'</SPAN><SPAN>).filebox({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;buttonText: <FONT 
+  color=#339966>'选择文件'</FONT>,</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;buttonAlign: <FONT 
+  color=#339966>'left'</FONT></SPAN> 
+  <LI><SPAN>})</SPAN></LI></OL></DIV></DIV>
+<P align=left>&nbsp;</P>
+<H4 align=left>属性</H4>
+<P align=left>属性扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A>，以下是新增或重写的文件框属性。</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>buttonText</TD>
+    <TD>string</TD>
+    <TD>在文本框上附加的按钮显示的文本。</TD>
+    <TD>Choose File</TD></TR>
+  <TR>
+    <TD>buttonIcon</TD>
+    <TD>string</TD>
+    <TD>在文本框上附加的按钮显示的图标。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>buttonAlign</TD>
+    <TD>string</TD>
+    <TD>附加按钮位置。可用值有："left", "right"。</TD>
+    <TD>right</TD></TR>
+  <TR>
+    <TD>accept</TD>
+    <TD>string</TD>
+    <TD>指定接受的文件类型。</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>multiple</TD>
+    <TD>boolean</TD>
+    <TD>指定是否接受多文件选择。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>separator</TD>
+    <TD>string</TD>
+    <TD>指定多个文件名称之间的分隔符。</TD>
+    <TD>,</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>事件扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A>。</P>
+<H4 align=left>方法</H4>
+<P align=left>方法扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A>。</P></DIV></BODY></HTML>

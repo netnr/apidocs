@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>datalist(数据列表)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_132_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_132_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_132_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>DataList（数据列表）</H3>
+<P 
+align=left>扩展自$.fn.datagrid.defaults。用于$.fn.datalist.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.4.2版开始可用）</FONT></STRONG></P>
+<P align=left>datalist 
+组件专用于在列表数据上渲染，这是一个特殊的datagrid组件，专用于渲染1列数据时使用。您可以定义列当中每一行的展示格式及样式。</P>
+<P align=left>&nbsp; <IMG border=0 hspace=0 alt=""  src="536ac27ad9dd84e522d2c8457d32af7a_132_files/datalist.png"  align=baseline></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>使用标签创建数据列表。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools>&nbsp;</DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;ul</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"easyui-datalist" 
+  </FONT></SPAN></SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"DataList"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:400px;height:250px"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT color=#006699>&gt;</FONT></STRONG></SPAN></SPAN> 
+  <LI class=alt><STRONG><FONT color=#006699><SPAN class=tag>&nbsp;&nbsp;&nbsp; 
+  &lt;li</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"AL"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Alabama</SPAN><FONT 
+  color=#006699><SPAN class=tag><STRONG>&lt;/li</STRONG></SPAN><SPAN 
+  class=tag><STRONG>&gt;</STRONG><FONT color=#2b91af> </FONT>
+  <LI class=alt><STRONG><FONT color=#006699><SPAN class=tag>&nbsp;&nbsp;&nbsp; 
+  &lt;li</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"AK"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Alaska</SPAN><FONT 
+  color=#006699><SPAN class=tag><STRONG>&lt;/li</STRONG></SPAN><SPAN 
+  class=tag><STRONG>&gt;</STRONG> 
+  <LI class=alt><STRONG><FONT color=#006699><SPAN class=tag>&nbsp;&nbsp;&nbsp; 
+  &lt;li</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"AZ"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Arizona&lt;</SPAN><FONT 
+  color=#006699><SPAN class=tag><STRONG>/li</STRONG></SPAN><SPAN 
+  class=tag><STRONG>&gt;</STRONG> 
+  <LI class=alt><STRONG><FONT color=#006699><SPAN class=tag>&nbsp;&nbsp;&nbsp; 
+  &lt;li</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"AR"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Arkansas</SPAN><FONT 
+  color=#006699><SPAN class=tag><STRONG>&lt;/li</STRONG></SPAN><SPAN 
+  class=tag><STRONG>&gt;</STRONG> 
+  <LI class=alt><STRONG><FONT color=#006699><SPAN class=tag>&nbsp;&nbsp;&nbsp; 
+  &lt;li</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"CA"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>California</SPAN><FONT 
+  color=#006699><SPAN class=tag><STRONG>&lt;/li</STRONG></SPAN><SPAN 
+  class=tag><STRONG>&gt;</STRONG> 
+  <LI class=alt><STRONG><FONT color=#006699><SPAN class=tag>&nbsp;&nbsp;&nbsp; 
+  &lt;li</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"CO"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Colorado</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></FONT></SPAN></FONT><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建分割按钮。</P>
+<DIV align=left>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><STRONG><FONT color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"dl"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN></SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#dl'</SPAN><SPAN>).datalist({</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;</SPAN><SPAN 
+  class=string>'datalist_data1.json'</SPAN><SPAN>,</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;checkbox:&nbsp;<FONT 
+  color=#0000ff>true</FONT>,</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;lines: <FONT 
+  color=#0000ff>true</FONT></SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>数据列表属性扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>，数据列表新增的属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>lines</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示行号</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>checkbox</TD>
+    <TD>boolean</TD>
+    <TD>定义是否在每行开头显示复选框。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>valueField</TD>
+    <TD>string</TD>
+    <TD>行绑定的字段值名称。</TD>
+    <TD>value</TD></TR>
+  <TR>
+    <TD>textField</TD>
+    <TD>string</TD>
+    <TD>行绑定的字段名名称。</TD>
+    <TD>text</TD></TR>
+  <TR>
+    <TD>groupField</TD>
+    <TD>string</TD>
+    <TD>指定分组字段名称。</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>textFormatter</TD>
+    <TD>function(value,row,index)</TD>
+    <TD>字段名称格式化器，返回格式化后的字段内容，共3个参数：<BR>value：字段值<BR>row：行记录数据<BR>index：行索引</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>groupFormatter</TD>
+    <TD>function(value,rows)</TD>
+    <TD>分组名称格式化器，返回格式化后的分组内容，共2个参数：<BR>value：通过“groupField”属性定义的分组字段名称<BR>rows：指定分组字段名称对应的数据行记录数组</TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+<H4 align=left>事件</H4>
+<P align=left>数据列表事件扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>。</P>
+<H4 align=left>方法</H4>
+<P align=left>数据列表方法扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>。</P></DIV></BODY></HTML>

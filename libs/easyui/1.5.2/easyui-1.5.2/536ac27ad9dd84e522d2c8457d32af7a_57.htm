@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>easyloader(简单加载)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_57_files/easyui[1]_3.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_57_files/main[1]_3.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_57_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>EasyLoader（简单加载）<BR></H3>
+<H4 align=left>使用方法</H4>
+<H5 align=left>加载&nbsp;EasyUI 模块</H5>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>easyloader.base = </SPAN><SPAN 
+  class=string>'../'</SPAN><SPAN>; </SPAN><SPAN class=comment>// 设置 easyui 
+  基础目录</SPAN><SPAN>&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>easyloader.load(<SPAN class=string>'messager'</SPAN><SPAN>, 
+  </SPAN><SPAN class=keyword>function</SPAN><SPAN>(){ </SPAN><SPAN 
+  class=comment>// 加载指定模块</SPAN><SPAN>&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>$.messager.alert(<SPAN class=string>'Title'</SPAN><SPAN>, 
+  </SPAN><SPAN class=string>'load ok'</SPAN><SPAN>); </SPAN></SPAN>
+  <LI><SPAN>}); </SPAN></LI></OL></DIV><PRE class=JScript style="DISPLAY: none" name="code-easyloader">&nbsp;</PRE></DIV>
+<H5 align=left>加载来自绝对路径的脚本</H5>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>using(</SPAN><SPAN 
+  class=string>'http://code.jquery.com/jquery-1.4.4.min.js'</SPAN><SPAN>, 
+  </SPAN><SPAN class=keyword>function</SPAN><SPAN>(){ </SPAN></SPAN>
+  <LI><SPAN><SPAN class=comment>// ...</SPAN><SPAN> </SPAN></SPAN>
+  <LI class=alt><SPAN>}); </SPAN></LI></OL></DIV><PRE class=JScript style="DISPLAY: none" name="code-easyloader">&nbsp;</PRE></DIV>
+<H5 align=left>加载来自相对路径的脚本</H5>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN class=comment>// 脚本路径相对于 easyui 
+  目录</SPAN><SPAN>&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>using(<SPAN class=string>'./myscript.js'</SPAN><SPAN>, </SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(){ </SPAN></SPAN>
+  <LI class=alt><SPAN><SPAN class=comment>// ...</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN>}); </SPAN></LI></OL></DIV></DIV>
+<DIV align=left><PRE class=JScript style="DISPLAY: none" name="code-easyloader">&nbsp;</PRE></DIV>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>modules</TD>
+    <TD>object</TD>
+    <TD>预定义模块。</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>locales</TD>
+    <TD>object</TD>
+    <TD>预定义区域。</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>base</TD>
+    <TD>string</TD>
+    <TD>easyui 基础目录，必须用'/'结束。</TD>
+    <TD>基本目录被预设为相对路径下的easyload.js文件</TD></TR>
+  <TR>
+    <TD>theme</TD>
+    <TD>string</TD>
+    <TD>主题的名称预定义在themes目录下。</TD>
+    <TD>default</TD></TR>
+  <TR>
+    <TD>css</TD>
+    <TD>boolean</TD>
+    <TD>定义在加载模块的时候加载 CSS 文件。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>locale</TD>
+    <TD>string</TD>
+    <TD>区域名称</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>timeout</TD>
+    <TD>number</TD>
+    <TD>超时的值以毫秒为单位，载入如果超时则重载。</TD>
+    <TD>2000</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>预定义区域</H4>
+<UL>
+  <LI>
+  <DIV 
+  align=left>af&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  // 阿富汗</DIV>
+  <LI>
+  <DIV 
+  align=left>am&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  亚美尼亚</DIV>
+  <LI>
+  <DIV 
+  align=left>ar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  阿根廷</DIV>
+  <LI>
+  <DIV 
+  align=left>bg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  // 保加利亚语</DIV>
+  <LI>
+  <DIV 
+  align=left>ca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  加拿大</DIV>
+  <LI>
+  <DIV 
+  align=left>cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  捷克语</DIV>
+  <LI>
+  <DIV 
+  align=left>cz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  // 捷克语（捷克共和国）</DIV>
+  <LI>
+  <DIV 
+  align=left>da&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  // 丹麦语</DIV>
+  <LI>
+  <DIV 
+  align=left>de&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  德语</DIV>
+  <LI>
+  <DIV 
+  align=left>el&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  希腊</DIV>
+  <LI>
+  <DIV 
+  align=left>en&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  英语</DIV>
+  <LI>
+  <DIV 
+  align=left>es&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  西班牙语</DIV>
+  <LI>
+  <DIV 
+  align=left>fr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  法语</DIV>
+  <LI>
+  <DIV 
+  align=left>it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  // 意大利</DIV>
+  <LI>
+  <DIV 
+  align=left>jp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  日本</DIV>
+  <LI>
+  <DIV 
+  align=left>ko&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  韩国</DIV>
+  <LI>
+  <DIV 
+  align=left>nl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  荷兰</DIV>
+  <LI>
+  <DIV 
+  align=left>pl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  波兰</DIV>
+  <LI>
+  <DIV 
+  align=left>pt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  葡萄牙</DIV>
+  <LI>
+  <DIV 
+  align=left>ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  // 俄罗斯</DIV>
+  <LI>
+  <DIV align=left>sv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;萨尔瓦多</DIV>
+  <LI>
+  <DIV 
+  align=left>tr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  土耳其</DIV>
+  <LI>
+  <DIV align=left>zh_CN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  简体中文</DIV>
+  <LI>
+  <DIV align=left>zh_TW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+  繁体中文</DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onProgress</TD>
+    <TD>name</TD>
+    <TD>当一个模块加载成功的时候触发。</TD></TR>
+  <TR>
+    <TD>onLoad</TD>
+    <TD>name</TD>
+    <TD>当一个模块以及他的依赖加载成功的时候触发。</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>load</TD>
+    <TD>module, callback</TD>
+    <TD>加载指定模块。当加载成功的回调函数被调用。<BR>模块参数有效的类型包括：<BR>● 一个单一的模块名称<BR>● 模块数组<BR>● 
+      ".css"后缀结尾的CSS文件<BR>● 
+".js"后缀结尾的JS文件</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

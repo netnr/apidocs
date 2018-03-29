@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>Editable Tree(可编辑树)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_99_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_99_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_99_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Editable Tree（可编辑树）</H3>
+<P align=left><A 
+href="http://www.jeasyui.com/extension/index.php">Extension</A>&nbsp;&gt; 
+Editable Tree </P>
+<P align=left><SPAN id=wiz_font_size_span_10907390 
+style="FONT-SIZE: 16pt"><STRONG><FONT color=#ff0000>扩展下载地址：<A 
+href="http://www.jeasyui.com/extension/downloads/jquery-easyui-etree.zip">http://www.jeasyui.com/extension/downloads/jquery-easyui-etree.zip</A>&nbsp;(我发布的程序包整也有提供，在extension目录下)</FONT></STRONG></SPAN></P>
+<P align=left><IMG src="536ac27ad9dd84e522d2c8457d32af7a_99_files/etree[1].png"> 
+</P>
+<H4 align=left>创建树</H4>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>&lt;ul&nbsp;id=</SPAN><SPAN 
+  class=string>"tt"</SPAN><SPAN>&gt;&lt;/ul&gt; &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>$(</SPAN><SPAN class=string>'#tt'</SPAN><SPAN>).etree({ 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;</SPAN><SPAN 
+  class=string>'tree_data.json'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;createUrl:&nbsp;..., &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;updateUrl:&nbsp;..., 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;destroyUrl:&nbsp;..., &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;dndUrl:&nbsp;... 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>设置url,createUrl,updateUrl,destroyUrl和dndUrl属性将自动从客户端同步数据到服务器端。</P>
+<UL>
+  <LI>
+  <DIV align=left>url：返回树控件的数据。</DIV>
+  <LI>
+  <DIV 
+  align=left>createUrl：在创建一个新节点的时候，树控件将父节点ID赋值给一个名为'parentId'的参数并发送到服务器。服务器将会返回对应节点数据。<SPAN 
+  lang=zh-CN id=result_box class=short_text c="4" a="undefined" 
+  closure_uid_685577293="114" ud="null"><SPAN 
+  closure_uid_685577293="348">下面的代码</SPAN><SPAN 
+  closure_uid_685577293="349">显示了</SPAN><SPAN 
+  closure_uid_685577293="350">添加节点</SPAN><SPAN 
+  closure_uid_685577293="351">数据的例子</SPAN><SPAN 
+  closure_uid_685577293="352">：</SPAN></SPAN></DIV>
+  <DIV align=left><PRE>{"id":1,"text":"new node"}
+</PRE></DIV>
+  <LI>
+  <DIV 
+  align=left>updateUrl：在更新一个节点的时候，树控件将会发送'id'和'text'参数到服务器。服务器会执行更新并返回更新的节点数据。</DIV>
+  <LI>
+  <DIV 
+  align=left>destroyUrl：在销毁一个节点的时候，树控件将会发送'id'参数到服务器。服务器会返回{"success":true}这样的JSON字符串数据。</DIV>
+  <LI>
+  <DIV align=left>dndUrl：在拖拽一个节点的时候，数控将将会发送如下参数到服务器：<BR>id - 
+  拖拽的节点ID。<BR>targetId - 拖拽到的节点ID。<BR>point - 指明释放操作，可用值有：'append','top'&nbsp;或 
+  'bottom'。<BR>服务器会做一些动作并返回{"success":true}这样的JSON字符串数据。</DIV></LI></UL>
+<H4 align=left>方法</H4>
+<P align=left>可编辑树扩展自树控件，可扩展树的新增方法如下： </P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>create</TD>
+    <TD>none</TD>
+    <TD>创建一个新节点。</TD></TR>
+  <TR>
+    <TD>edit</TD>
+    <TD>none</TD>
+    <TD>编辑当前选中的节点。</TD></TR>
+  <TR>
+    <TD>destroy</TD>
+    <TD>none</TD>
+    <TD>销毁当前选中的节点。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

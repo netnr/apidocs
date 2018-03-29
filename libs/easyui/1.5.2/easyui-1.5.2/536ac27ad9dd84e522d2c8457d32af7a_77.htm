@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>combobox(下拉列表框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_77_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_77_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_77_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>ComboBox（下拉列表框）</H3>
+<P align=left>扩展自$.fn.combo.defaults。使用$.fn.combobox.defaults重写默认值对象。</P>
+<P 
+align=left>下拉列表框显示一个可编辑文本框和下拉式列表，用户可以选择一个值或多个值。用户可以直接输入文本到列表顶部或选择一个或多个当前列表中的值。</P>
+<P align=left>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_77_files/combobox[1].png"> </P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<P align=left>通过&lt;select&gt;元素创建一个预定义结构的下拉列表框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>select</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-combobox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"dept"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"width:200px;"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>option</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"aa"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>aitem1</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>bitem2</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>bitem3</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>ditem4</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>eitem5</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>option</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>select</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>通过&lt;input&gt;标签创建下拉列表框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-combobox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"dept"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"valueField:'id',textField:'text',url:'get_data.php'"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建下拉列表框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"dept"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"aa"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#cc'</SPAN><SPAN>).combobox({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:</SPAN><SPAN 
+  class=string>'combobox_data.json'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;valueField:</SPAN><SPAN 
+  class=string>'id'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;textField:</SPAN><SPAN 
+  class=string>'text'</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>创建2个有依赖关系的下拉列表框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc1"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-combobox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>data-options</FONT></SPAN><SPAN>=" 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueField:&nbsp;'id', 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textField:&nbsp;'text', 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;'get_data1.php', 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onSelect:&nbsp;function(rec){ 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>url</FONT></SPAN><SPAN>&nbsp;=&nbsp;</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>'get_data2.php?id='</FONT></SPAN><SPAN>+rec.id; 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#cc2').combobox('reload',&nbsp;url); 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}"&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc2"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-combobox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"valueField:'id',textField:'text'"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>JSON数据格式化例子：</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>[{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:1, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text1"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>},{ &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:2, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text2"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>},{ &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:3, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text3"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"selected"</SPAN><SPAN>:</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>},{ &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:4, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text4"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>},{ &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:5, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"text5"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>}]&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>下拉列表框属性扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)，下拉列表框新增的属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>valueField</TD>
+    <TD>string</TD>
+    <TD>基础数据值名称绑定到该下拉列表框。</TD>
+    <TD>value</TD></TR>
+  <TR>
+    <TD>textField</TD>
+    <TD>string</TD>
+    <TD>基础数据字段名称绑定到该下拉列表框。</TD>
+    <TD>text</TD></TR>
+  <TR>
+    <TD>groupField</TD>
+    <TD>string</TD>
+    <TD>指定分组的字段名称<FONT color=#3366ff>（译者注：分组的字段由数据源决定）</FONT>。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.4版开始可用）</FONT></STRONG></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>groupFormatter</TD>
+    <TD>function(group)</TD>
+    <TD><FONT color=#ff0000><FONT 
+      color=#000000>返回格式化后的分组标题文本，以显示分组项</FONT><STRONG>（该属性自1.3.4版开始可用）<BR></STRONG>
+      <P><FONT color=#000000>代码示例：</FONT></P><PRE>$('#cc').combobox({
+	groupFormatter: function(group){
+		return '&lt;span style="color:red"&gt;' + group + '&lt;/span&gt;';
+	}
+});</PRE><IMG        src="536ac27ad9dd84e522d2c8457d32af7a_77_files/23674921.png"></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>mode</TD>
+    <TD>string</TD>
+    <TD>定义了当文本改变时如何读取列表数据。设置为'remote'时，下拉列表框将会从服务器加载数据。<SPAN lang=zh-CN 
+      id=result_box class=short_text a="undefined" c="4" 
+      closure_uid_262891198="125"><SPAN 
+      closure_uid_262891198="256">当设置为</SPAN><SPAN class=atn 
+      closure_uid_262891198="257">“remote”</SPAN><SPAN 
+      closure_uid_262891198="258">模式时</SPAN><SPAN 
+      closure_uid_262891198="260">，用户输入将被发送到名为'q'的HTTP请求参数到服务器检索新数据。</SPAN></SPAN></TD>
+    <TD>local</TD></TR>
+  <TR>
+    <TD>url</TD>
+    <TD>string</TD>
+    <TD>通过URL加载远程列表数据。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>method</TD>
+    <TD>string</TD>
+    <TD>HTTP方法检索数据(POST / GET)。</TD>
+    <TD>post</TD></TR>
+  <TR>
+    <TD>data</TD>
+    <TD>array</TD>
+    <TD>数据列表加载。&nbsp; 
+      <P>代码示例：</P><PRE>&lt;input class="easyui-combobox" data-options="
+		valueField: 'label',
+		textField: 'value',
+		data: [{
+			label: 'java',
+			value: 'Java'
+		},{
+			label: 'perl',
+			value: 'Perl'
+		},{
+			label: 'ruby',
+			value: 'Ruby'
+		}]" /&gt;
+</PRE></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>queryParams</TD>
+    <TD>object</TD>
+    <TD>
+      <P>在向远程服务器请求数据的时候可以通过该属性像服务器端发送额外的参数。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></P>
+      <P>代码示例：</P><PRE>$('#cc').combobox({<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url : "127.0.0.1/xxx",
+	queryParams: {
+		"age" : 25,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"order" : "desc"
+	}
+});</PRE></TD>
+    <TD>post</TD></TR>
+  <TR>
+    <TD>limitToList</TD>
+    <TD>boolean</TD>
+    <TD>
+      <P>设置为true时，输入的值只能是列表框中的内容。<STRONG><FONT 
+      color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></P></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>showItemIcon</TD>
+    <TD>boolean</TD>
+    <TD>设置为true时，显示选中项的图标。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>groupPosition</TD>
+    <TD>string</TD>
+    <TD>
+      <P>定位分组选项。可用值有：“static”和“sticky”。当设置为“sticky”时会将分组选项标签固顶在下拉栏中。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></P></TD>
+    <TD>static</TD></TR>
+  <TR>
+    <TD>filter</TD>
+    <TD>function</TD>
+    <TD>定义当'mode'设置为'local'时如何过滤本地数据，函数有2个参数：<BR>q：用户输入的文本。<BR>row：列表行数据。<BR>返回true的时候允许行显示。 
+
+      <P>代码示例：</P><PRE>$('#cc').combobox({
+	filter: function(q, row){
+		var opts = $(this).combobox('options');
+		return row[opts.textField].indexOf(q) == 0;
+	}
+});
+</PRE></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>formatter</TD>
+    <TD>function</TD>
+    <TD>定义如何渲染行。该函数接受1个参数：row。 
+      <P>代码示例：</P><PRE>$('#cc').combobox({
+	formatter: function(row){
+		var opts = $(this).combobox('options');
+		return row[opts.textField];
+	}
+});
+</PRE></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>loader</TD>
+    <TD>function(param,success,error)</TD>
+    <TD>定义了如何从远程服务器加载数据。返回false可以忽略该动作。该函数具备如下参数：<BR>param：传递到远程服务器的参数对象。<BR>success(data)：在检索数据成功的时候调用该回调函数。<BR>error()：在检索数据失败的时候调用该回调函数。</TD>
+    <TD>json loader</TD></TR>
+  <TR>
+    <TD>loadFilter</TD>
+    <TD>function(data)</TD>
+    <TD>返回过滤后的数据并显示。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.3版开始可用）</FONT></STRONG></TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+<P align=left><BR></P>
+<H4 align=left>事件</H4>
+<P align=left>下拉列表框事件继承自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)，下拉列表框新增的事件如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onBeforeLoad</TD>
+    <TD>param</TD>
+    <TD>在请求加载数据之前触发，返回false取消该加载动作。 
+      <P>代码示例：</P><PRE>// 在加载服务器数据之前改变http请求参数的值
+$('#cc').combobox({
+	onBeforeLoad: function(param){
+		param.id = 2;
+		param.language = 'js';
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>onLoadSuccess</TD>
+    <TD>none</TD>
+    <TD>在加载远程数据成功的时候触发。</TD></TR>
+  <TR>
+    <TD>onLoadError</TD>
+    <TD>none</TD>
+    <TD>在加载远程数据失败的时候触发。</TD></TR>
+  <TR>
+    <TD>onChange</TD>
+    <TD>newValue,oldValue</TD>
+    <TD>在字段值发生更改的时候触发。<STRONG><FONT 
+      color=#ff0000>（该事件自1.4.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onClick</TD>
+    <TD>record</TD>
+    <TD>在用户点击列表项的时候触发。<STRONG><FONT 
+      color=#ff0000>（该事件自1.5.1版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onSelect</TD>
+    <TD>record</TD>
+    <TD>在用户选择列表项的时候触发。</TD></TR>
+  <TR>
+    <TD>onUnselect</TD>
+    <TD>record</TD>
+    <TD>在用户取消选择列表项的时候触发。</TD></TR></TBODY></TABLE></P>
+<P align=left><BR></P>
+<H4 align=left>方法</H4>
+<P align=left>下拉列表框扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)，下拉列表框新增或重写的方法如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>getData</TD>
+    <TD>none</TD>
+    <TD>返回加载数据。</TD></TR>
+  <TR>
+    <TD>loadData</TD>
+    <TD>data</TD>
+    <TD>读取本地列表数据。</TD></TR>
+  <TR>
+    <TD>reload</TD>
+    <TD>url</TD>
+    <TD>请求远程列表数据。通过'url'参数重写原始URL值。 
+      <P>代码示例：</P><PRE>$('#cc').combobox('reload');  &nbsp;&nbsp;&nbsp;&nbsp;// 使用旧的URL重新载入列表数据
+$('#cc').combobox('reload','get_data.php');  // 使用新的URL重新载入列表数据
+</PRE></TD></TR>
+  <TR>
+    <TD>setValues</TD>
+    <TD>values</TD>
+    <TD>设置下拉列表框值数组。 
+      <P>代码示例：</P><PRE>$('#cc').combobox('setValues', ['001','002']);
+</PRE></TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置下拉列表框的值。 
+      <P>代码示例：</P><PRE>$('#cc').combobox('setValue', '001');
+</PRE></TD></TR>
+  <TR>
+    <TD>clear</TD>
+    <TD>none</TD>
+    <TD>清除下拉列表框的值。</TD></TR>
+  <TR>
+    <TD>select</TD>
+    <TD>value</TD>
+    <TD>选择指定项。</TD></TR>
+  <TR>
+    <TD>unselect</TD>
+    <TD>value</TD>
+    <TD>取消选择指定项。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

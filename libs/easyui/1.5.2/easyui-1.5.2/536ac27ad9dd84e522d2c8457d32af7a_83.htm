@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>calendar(日历)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_83_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_83_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_83_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>Calendar（日历）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>使用$.fn.calendar.defaults重写默认值对象。</P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>日历控件显示一个月的日历，允许用户选择日期和移动到下一个或上一个月。默认情况下，一周的第一天是周日。它可以通过设置'firstDay'属性的值来更改设置。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_83_files/89731312.png">&nbsp;</DIV>
+<H4 style="PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>使用案例</H4>
+<P style="PADDING-LEFT: 10px; PADDING-RIGHT: 10px" align=left>使用标签创建日历。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-calendar"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:180px;height:180px;"</FONT></SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>使用Javascript创建日历。</DIV>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:180px;height:180px;"</FONT></SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<DIV class=dp-highlighter style="HEIGHT: 122px; WIDTH: 96.98%">
+<DIV class=bar>
+<DIV class=tools>&nbsp;</DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#cc'</SPAN><SPAN>).calendar({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;current:</SPAN><SPAN 
+  class=keyword>new</SPAN><SPAN>&nbsp;Date() &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<H4 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>属性</H4>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>number</TD>
+    <TD>日历控件宽度。</TD>
+    <TD>180</TD></TR>
+  <TR>
+    <TD>height</TD>
+    <TD>number</TD>
+    <TD>日历控件高度。</TD>
+    <TD>180</TD></TR>
+  <TR>
+    <TD>fit</TD>
+    <TD>boolean</TD>
+    <TD>当设置为true的，将设置日历控件大小自适应父容器。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>border</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示边框。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>showWeek</TD>
+    <TD>boolean</TD>
+    <TD>当设置为true时，将显示周数。<STRONG><FONT 
+      color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>weekNumberHeader</TD>
+    <TD>string</TD>
+    <TD>周数的标签显示在头部。<STRONG><FONT 
+    color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>getWeekNumber</TD>
+    <TD>function(date)</TD>
+    <TD>该函数用于返回周数值。<STRONG><FONT 
+    color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>firstDay</TD>
+    <TD>number</TD>
+    <TD>定义一周的第一天是星期几。0=星期日、1=星期一 等。</TD>
+    <TD>0</TD></TR>
+  <TR>
+    <TD>weeks</TD>
+    <TD>array</TD>
+    <TD>显示的周列表内容。</TD>
+    <TD>['S','M','T','W','T','F','S']</TD></TR>
+  <TR>
+    <TD>months</TD>
+    <TD>array</TD>
+    <TD>显示的月列表内容。</TD>
+    <TD>['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', <BR>'Sep', 
+      'Oct', 'Nov', 'Dec']</TD></TR>
+  <TR>
+    <TD>year</TD>
+    <TD>number</TD>
+    <TD>年日历。下面的例子显示了如何使用指定的年份和月份创建一个日历。<PRE>&lt;div class="easyui-calendar" data-options="year:2012,month:6" /&gt;
+</PRE></TD>
+    <TD>当前年份（4位数）</TD></TR>
+  <TR>
+    <TD>month</TD>
+    <TD>number</TD>
+    <TD>月日历。</TD>
+    <TD>当前月份（从1开始）</TD></TR>
+  <TR>
+    <TD>current</TD>
+    <TD>Date</TD>
+    <TD>当前日期。</TD>
+    <TD>当前日期</TD></TR>
+  <TR>
+    <TD>formatter</TD>
+    <TD>function(date)</TD>
+    <TD>
+      <P>日期格式化函数，返回日期值。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.6版开始可用）</FONT></STRONG></P>
+      <P>代码示例：</P><PRE>$('#cc').calendar({
+	formatter: function(date){
+		return date.getDate();
+	}
+})</PRE></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>styler</TD>
+    <TD>function(date)</TD>
+    <TD>日历天的样式函数，返回行内样式或CSS样式表的Class名称。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.6版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>$('#cc').calendar({
+	styler: function(date){
+		if (date.getDay() == 1){
+			return 'background-color:#ccc';
+			// 函数可以返回预定义的css class和预定义的行内样式
+			// return {class:'r1', style:{'color:#fff'}};	
+		} else {
+			return '';
+		}
+	}
+})</PRE></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>validator</TD>
+    <TD>function(date)</TD>
+    <TD>验证器函数用于确定是否可以选择日历上的某一天，返回false将阻止选择当前天。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.6版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>$('#cc').calendar({
+	validator: function(date){
+		if (date.getDay() == 1) {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;
+		} else {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+	}
+})</PRE></TD>
+    <TD></TD></TR></TBODY></TABLE></DIV>
+<H4 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>事件</H4>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onSelect</TD>
+    <TD>date</TD>
+    <TD>在用户选择一天的时候触发。 
+      <P>代码示例：</P><PRE>$('#cc').calendar({
+	onSelect: function(date){
+		alert(date.getFullYear()+":"+(date.getMonth()+1)+":"+date.getDate());
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>onChange</TD>
+    <TD>new Date, oldDate</TD>
+    <TD>在用户更改日期的时候触发。<STRONG><FONT 
+      color=#ff0000>（该事件自1.3.6版开始可用）</FONT></STRONG> </TD></TR></TBODY></TABLE></DIV>
+<H4 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>方法</H4>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名称</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回参数对象。</TD></TR>
+  <TR>
+    <TD>resize</TD>
+    <TD>none</TD>
+    <TD>调整日历大小。</TD></TR>
+  <TR>
+    <TD>moveTo</TD>
+    <TD>date</TD>
+    <TD>移动日历到指定日期。 
+      <P>代码示例：</P><PRE>$('#cc').calendar('moveTo', new Date(2012, 6, 1));
+</PRE></TD></TR></TBODY></TABLE></DIV></BODY></HTML>

@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>searchbox(搜索框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_63_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_63_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_63_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>SearchBox（搜索框）</H3>
+<P align=left>使用$.fn.searchbox.defaults重写默认值对象。</P>
+<P 
+align=left>搜索框提示用户需要输入搜索的值。<SPAN>它</SPAN><SPAN>可以</SPAN><SPAN>结合</SPAN><SPAN>一个菜单，允许</SPAN><SPAN>用户选择</SPAN><SPAN>不同</SPAN><SPAN>的搜索</SPAN><SPAN>类别</SPAN><SPAN>。在用户按下回车键或点击组件右边的搜索按钮的时候会执行搜索操作。</SPAN></P>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_63_files/searchbox[1].png"></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A></DIV>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_72.htm">menubutton</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建查询框</H5>
+<P align=left>1. 使用标签创建。添加'easyui-searchbox'类ID到&lt;input/&gt;标签。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>script</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>type</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"text/javascript"</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN>function qq(value,name){ </SPAN>
+  <LI class=alt><SPAN>alert(value+":"+name) </SPAN>
+  <LI><SPAN>} </SPAN>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>script</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN></SPAN>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"ss"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>class</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"easyui-searchbox"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>style</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"width:300px"</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN><SPAN class=attribute>data-options</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"searcher:qq,prompt:'Please Input 
+  Value',menu:'#mm'"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>input</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI class=alt><SPAN></SPAN>
+  <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>div</SPAN><SPAN> 
+  </SPAN><SPAN class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"mm"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>style</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"width:120px"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
+  </SPAN></SPAN>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>data-options</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"name:'all',iconCls:'icon-ok'"</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN>All News</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>div</SPAN><SPAN> 
+  </SPAN><SPAN class=attribute>data-options</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"name:'sports'"</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN>Sports News</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
+</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>2. 创建程序。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"ss"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>input</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>div</SPAN><SPAN> 
+  </SPAN><SPAN class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"mm"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>style</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"width:120px"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
+  </SPAN></SPAN>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>data-options</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"name:'all',iconCls:'icon-ok'"</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN>All News</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>div</SPAN><SPAN> 
+  </SPAN><SPAN class=attribute>data-options</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"name:'sports'"</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN>Sports News</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
+</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#ss'</SPAN><SPAN>).searchbox({ </SPAN></SPAN>
+  <LI><SPAN>searcher:<SPAN class=keyword>function</SPAN><SPAN>(value,name){ 
+  </SPAN></SPAN>
+  <LI class=alt><SPAN>alert(value + <SPAN class=string>","</SPAN><SPAN> + name) 
+  </SPAN></SPAN>
+  <LI><SPAN>}, </SPAN>
+  <LI class=alt><SPAN>menu:<SPAN class=string>'#mm'</SPAN><SPAN>, </SPAN></SPAN>
+  <LI><SPAN>prompt:<SPAN class=string>'请输入值'</SPAN><SPAN> </SPAN></SPAN>
+  <LI class=alt><SPAN>}); </SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>number</TD>
+    <TD>组件宽度。</TD>
+    <TD>auto</TD></TR>
+  <TR>
+    <TD>height</TD>
+    <TD>number</TD>
+    <TD>组件高度。<STRONG><FONT color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
+    <TD>22</TD></TR>
+  <TR>
+    <TD>prompt</TD>
+    <TD>string</TD>
+    <TD>在输入框中显示提示消息。</TD>
+    <TD>''</TD></TR>
+  <TR>
+    <TD>value</TD>
+    <TD>string</TD>
+    <TD>输入的值。</TD>
+    <TD>''</TD></TR>
+  <TR>
+    <TD>menu</TD>
+    <TD>selector</TD>
+    <TD>搜索类型菜单。每个菜单项都具备一下属性：<BR>name：搜索类型名称。<BR>selected：自定义默认选中的搜索类型名称。 
+      <P>如下示例定义了一个选择搜索类型名称的搜索框：</P><PRE>&lt;input class="easyui-searchbox" style="width:300px" data-options="menu:'#mm'" /&gt;
+&lt;div id="mm" style="width:150px"&gt;
+	&lt;div data-options="name:'item1'"&gt;Search Item1&lt;/div&gt;
+	&lt;div data-options="name:'item2',selected:true"&gt;Search Item2&lt;/div&gt;
+	&lt;div data-options="name:'item3'"&gt;Search Item3&lt;/div&gt;
+&lt;/div&gt;
+</PRE></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>searcher</TD>
+    <TD>function(value,name)</TD>
+    <TD>在用户按下搜索按钮或回车键的时候调用searcher函数。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>disabled</TD>
+    <TD>boolean</TD>
+    <TD>定义是否禁用搜索框。<STRONG><FONT 
+    color=#ff0000>（该属性自1.3.6版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>Name</STRONG></TH>
+    <TH><STRONG>Parameter</STRONG></TH>
+    <TH><STRONG>Description</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>menu</TD>
+    <TD>none</TD>
+    <TD>返回搜索类型菜单对象。下面的例子显示了更改菜单项图标。<PRE>var m = $('#ss').searchbox('menu');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 获取菜单项<BR>var item = m.menu('findItem', 'Sports News');&nbsp;&nbsp;&nbsp;&nbsp; // 查找菜单项
+// 更改菜单项图标
+m.menu('setIcon', {
+&nbsp;&nbsp;&nbsp;&nbsp;target: item.target,
+&nbsp;&nbsp;&nbsp;&nbsp;iconCls: 'icon-save'
+});
+// 选择搜索类型名
+$('#ss').searchbox('selectName', 'sports');
+</PRE></TD></TR>
+  <TR>
+    <TD>textbox</TD>
+    <TD>none</TD>
+    <TD>返回文本框对象。</TD></TR>
+  <TR>
+    <TD>getValue</TD>
+    <TD>none</TD>
+    <TD>返回当前搜索值。</TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置一个新的搜索值。</TD></TR>
+  <TR>
+    <TD>getName</TD>
+    <TD>none</TD>
+    <TD>返回当前搜索类型名。</TD></TR>
+  <TR>
+    <TD>selectName</TD>
+    <TD>name</TD>
+    <TD>选择当前搜索类型名。 
+      <P>代码示例：</P><PRE>$('#ss').searchbox('selectName', 'sports');
+</PRE></TD></TR>
+  <TR>
+    <TD>destroy</TD>
+    <TD>none</TD>
+    <TD>销毁该控件。</TD></TR>
+  <TR>
+    <TD>resize</TD>
+    <TD>width</TD>
+    <TD>重置组件宽度。</TD></TR>
+  <TR>
+    <TD>disable</TD>
+    <TD>none</TD>
+    <TD>禁用搜索框。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.6版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>enable</TD>
+    <TD>none</TD>
+    <TD>启用搜索框。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.6版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>clear</TD>
+    <TD>none</TD>
+    <TD>清除搜索框。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.6版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>reset</TD>
+    <TD>none</TD>
+    <TD>重置搜索框。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.6版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

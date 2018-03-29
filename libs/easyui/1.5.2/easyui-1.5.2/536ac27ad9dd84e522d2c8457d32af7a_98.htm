@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>Editable DataGrid(可编辑表格)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_98_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_98_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_98_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Editable DataGrid（可编辑数据表格）</H3>
+<P align=left><A 
+href="http://www.jeasyui.com/extension/index.php">Extension</A>&nbsp;&gt; 
+Editable DataGrid </P>
+<P align=left><SPAN id=wiz_font_size_span_10907390 style="FONT-SIZE: 16pt"><FONT 
+color=#ff0000><STRONG>扩展下载地址：</STRONG><A 
+href="http://www.jeasyui.com/extension/downloads/jquery-easyui-edatagrid.zip"><STRONG>http://www.jeasyui.com/extension/downloads/jquery-easyui-edatagrid.zip</STRONG></A><STRONG>&nbsp;</STRONG><STRONG>(我发布的程序包整也有提供，在extension目录下)</STRONG></FONT></SPAN></P>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_98_files/datagrid_editable[1].png"> </P>
+<H4 align=left>使用案例</H4>
+<H5 align=left>在HTML标签里面创建数据表格</H5>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>table</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"tt"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:600px;height:200px"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"Editable&nbsp;DataGrid"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>singleSelect</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"true"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN class=tag-name>thead</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>tr</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>th</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>field</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"itemid"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>width</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"100"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>editor</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"{type:'validatebox',options:{required:true}}"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Item&nbsp;ID</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>th</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>th</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>field</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"productid"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>width</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"100"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>editor</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"text"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Product&nbsp;ID</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>th</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>th</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>field</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"listprice"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>width</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"100"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>align</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"right"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>editor</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"{type:'numberbox',options:{precision:1}}"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>List&nbsp;Price</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>th</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>th</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>field</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"unitcost"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>width</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"100"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>align</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"right"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>editor</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"numberbox"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Unit&nbsp;Cost</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>th</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>th</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>field</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"attr1"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>width</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"150"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>editor</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"text"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Attribute</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>th</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>tr</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>thead</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>table</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H5 align=left>创建编辑器</H5>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#tt'</SPAN><SPAN>).edatagrid({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;</SPAN><SPAN 
+  class=string>'datagrid_data.json'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;saveUrl:&nbsp;..., 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;updateUrl:&nbsp;..., &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;destroyUrl:&nbsp;... 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>现在你可以通过双击数据表格的行开始编辑操作。你也可以设置saveUrl,updateUrl,destroyUrl 
+属性来自动从客户端同步数据到服务器端。</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>属性</H4>
+<P align=left>可编辑表格控件的熟悉扩展自DataGrid(数据表格)，可编辑表格控件新增的属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>destroyMsg</TD>
+    <TD>object</TD>
+    <TD>销毁行的时候显示的确认对话框消息。</TD>
+    <TD><PRE>destroyMsg:{
+	norecord:{&nbsp;&nbsp;&nbsp;&nbsp;// 在没有记录选择的时候执行
+		title:'Warning',
+		msg:'No record is selected.'
+	},
+	confirm:{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 在选择一行的时候执行<BR>		title:'Confirm',
+		msg:'Are you sure you want to delete?'
+	}
+}
+</PRE></TD></TR>
+  <TR>
+    <TD>autoSave</TD>
+    <TD>boolean</TD>
+    <TD>设置为true时，在点击表格外部的时候自动保存编辑的行。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>url</TD>
+    <TD>string</TD>
+    <TD>通过URL向服务器检索数据。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>saveUrl</TD>
+    <TD>string</TD>
+    <TD>通过URL保存数据到服务器并返回添加的行。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>updateUrl</TD>
+    <TD>string</TD>
+    <TD>通过URL更新数据到服务器并返回更新的行。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>destroyUrl</TD>
+    <TD>string</TD>
+    <TD>通过URL将'id'参数发送到服务器以销毁行。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>tree</TD>
+    <TD>selector</TD>
+    <TD>树选择器指示相对应的树控件。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>treeUrl</TD>
+    <TD>string</TD>
+    <TD>通过URL检索树控件数据。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>treeDndUrl</TD>
+    <TD>string</TD>
+    <TD>通过URL处理拖拽操作。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>treeTextField</TD>
+    <TD>string</TD>
+    <TD>定义树的文本字段名称。</TD>
+    <TD>name</TD></TR>
+  <TR>
+    <TD>treeParentField</TD>
+    <TD>string</TD>
+    <TD>定义树的父节点字段名。</TD>
+    <TD>parentId</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>可编辑表格的事件扩展自DataGrid(数据表格)，可编辑表格新增的事件如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onAdd</TD>
+    <TD>index,row</TD>
+    <TD>在添加新行的时候触发。</TD></TR>
+  <TR>
+    <TD>onEdit</TD>
+    <TD>index,row</TD>
+    <TD>在编辑一行数据的时候触发。</TD></TR>
+  <TR>
+    <TD>onBeforeSave</TD>
+    <TD>index</TD>
+    <TD>在保存一行记录之前触发，返回false可以取消保存操作。</TD></TR>
+  <TR>
+    <TD>onSave</TD>
+    <TD>index,row</TD>
+    <TD>在保存一行记录时触发。</TD></TR>
+  <TR>
+    <TD>onDestroy</TD>
+    <TD>index,row</TD>
+    <TD>在销毁一样记录时触发。</TD></TR>
+  <TR>
+    <TD>onError</TD>
+    <TD>index,row</TD>
+    <TD>
+      <P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+      style="FONT-FAMILY: 幼圆; mso-bidi-font-size: 10.5pt"><FONT 
+      face=微软雅黑>在服务器返回错误的时候触发。服务器端将返回一个包含”<SPAN 
+      lang=EN-US>isError</SPAN>”属性的<SPAN lang=EN-US>json</SPAN>字符串，当该参数等于<SPAN 
+      lang=EN-US>true</SPAN>时，则表示请求发生了错误。<SPAN lang=EN-US><?xml:namespace prefix 
+      = "o" ns = "urn:schemas-microsoft-com:office:office" 
+      /><o:p></o:p></SPAN></FONT></SPAN></P>
+      <P><SPAN style="FONT-SIZE: 10.5pt; FONT-FAMILY: 幼圆"><FONT 
+      face=微软雅黑>代码示例：</FONT><SPAN lang=EN-US><BR></SPAN></SPAN><SPAN lang=EN-US 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 幼圆; COLOR: #385623; mso-themecolor: accent6; mso-themeshade: 128"><FONT 
+      size=4 face=微软雅黑>// </FONT></SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 幼圆; COLOR: #385623; mso-themecolor: accent6; mso-themeshade: 128"><FONT 
+      size=4 face=微软雅黑>服务器端代码</FONT><SPAN lang=EN-US><BR><FONT size=4 
+      face=微软雅黑>echo json_encode(array(<BR><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>'isError' =&gt; 
+      true,<BR><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>'msg' 
+      =&gt; '</FONT></SPAN><FONT size=4 face=微软雅黑>请求发生了错误。</FONT><SPAN 
+      lang=EN-US><FONT size=4><FONT 
+      face=微软雅黑>'<BR>));<o:p></o:p></FONT></FONT></SPAN></SPAN></P><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 9pt; FONT-FAMILY: 幼圆; COLOR: #385623; mso-hansi-font-family: 等线; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: "Times New Roman"; mso-bidi-theme-font: minor-bidi; mso-themecolor: accent6; mso-themeshade: 128; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA'><FONT 
+      size=4 face=微软雅黑>// </FONT></SPAN><SPAN 
+      style='FONT-SIZE: 9pt; FONT-FAMILY: 幼圆; COLOR: #385623; mso-hansi-font-family: 等线; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: "Times New Roman"; mso-bidi-theme-font: minor-bidi; mso-themecolor: accent6; mso-themeshade: 128; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA'><FONT 
+      size=4 face=微软雅黑>客户端代码</FONT><SPAN lang=EN-US><BR><FONT size=4 
+      face=微软雅黑>$('#dg').edatagrid({<BR><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>onError: 
+      function(index,row){<BR><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>alert(row.msg);<BR><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+      </SPAN>}<BR>});</FONT></SPAN></SPAN></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>可编辑表格的方法扩展自DataGrid(数据表格)，可编辑表格新增或重写的方法如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>enableEditing</TD>
+    <TD>none</TD>
+    <TD>启用数据表格编辑。</TD></TR>
+  <TR>
+    <TD>disableEditing</TD>
+    <TD>none</TD>
+    <TD>禁用数据表格编辑。</TD></TR>
+  <TR>
+    <TD>editRow</TD>
+    <TD>index</TD>
+    <TD>编辑指定行。</TD></TR>
+  <TR>
+    <TD>addRow</TD>
+    <TD>none</TD>
+    <TD>添加一个新的空行。<BR>
+      <P>代码示例：</P><PRE>// 追加一个空行
+$('#dg').edatagrid('addRow');
+
+// 在第一行追加一个空行
+$('#dg').edatagrid('addRow',0);
+
+// 新增一个带默认值的行
+$('#dg').edatagrid('addRow',{
+	index: 2,
+	row:{
+		name:'name1',
+		addr:'addr1'
+	}
+});</PRE></TD></TR>
+  <TR>
+    <TD>saveRow</TD>
+    <TD>none</TD>
+    <TD>保存编辑行并发送到服务器。</TD></TR>
+  <TR>
+    <TD>cancelRow</TD>
+    <TD>none</TD>
+    <TD>取消编辑行。</TD></TR>
+  <TR>
+    <TD>destroyRow</TD>
+    <TD>none</TD>
+    <TD>销毁当前选择的行。<BR>
+      <P>代码示例：</P><PRE>// 销毁所有选择的行
+$('#dg').edatagrid('destroyRow');
+
+// 销毁首行
+$('#dg').edatagrid('destroyRow', 0);
+
+// 销毁指定的行
+$('#dg').edatagrid('destroyRow', [3,4,5]);</PRE></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

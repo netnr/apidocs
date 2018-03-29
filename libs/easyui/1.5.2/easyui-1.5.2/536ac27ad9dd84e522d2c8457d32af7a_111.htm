@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>tooltip(提示框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_111_files/easyui[1]_2.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_111_files/main[1]_2.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_111_files/prettify[1].css">
+<SCRIPT type=text/javascript 
+src="536ac27ad9dd84e522d2c8457d32af7a_111_files/prettify[1].js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="536ac27ad9dd84e522d2c8457d32af7a_111_files/jquery_1.8.0.min[1].js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="536ac27ad9dd84e522d2c8457d32af7a_111_files/jquery.easyui.min[1].js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+			$(function(){
+				$('#tt').tabs({
+					onLoad:function(panel){
+						var plugin = panel.panel('options').title;
+						panel.find('textarea[name="code-'+plugin+'"]').each(function(){
+							var data = $(this).val();
+							data = data.replace(/(\r\n|\r|\n)/g, '\n');
+							if (data.indexOf('\t') == 0){
+								data = data.replace(/^\t/, '');
+								data = data.replace(/\n\t/g, '\n');
+							}
+							data = data.replace(/\t/g, '    ');
+							var pre = $('<pre name="code" class="prettyprint linenums"></pre>').insertAfter(this);
+							pre.text(data);
+							$(this).remove();
+						});
+						prettyPrint();
+					}
+				});
+			});
+			function open1(plugin){
+				if ($('#tt').tabs('exists',plugin)){
+					$('#tt').tabs('select', plugin);
+				} else {
+					$('#tt').tabs('add',{
+						title:plugin,
+						href:plugin+'.php',
+						closable:true,
+						extractor:function(data){
+							data = $.fn.panel.defaults.extractor(data);
+							var tmp = $('<div></div>').html(data);
+							data = tmp.find('#content').html();
+							tmp.remove();
+							return data;
+						}
+					});
+				}
+			}
+		</SCRIPT>
+<!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.9600.16384"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3>Tooltip（提示框）</H3>
+<P>使用$.fn.tooltip.defaults重写默认值对象。<FONT 
+color=#3366ff><STRONG>（译者注：1.3.3版中新增的plugin）</STRONG></FONT></P>
+<P>当用户将鼠标移动到元素上的时候，将会显示一个消息提示框。提示框的内容可以是页面中任何一个HTML元素或者通过Ajax发送后台请求以获取提示框内容。 
+</P>
+<P><IMG src="536ac27ad9dd84e522d2c8457d32af7a_111_files/17226593.png"> </P>
+<H4>使用案例</H4>
+<H5>创建提示框</H5>
+<P>1. 通过标签创建提示框，给元素添加一个"easyui-tooltip"的类名，无需任何Javascript代码。</P><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;a</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>href</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"#"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>title</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"This is the tooltip message."</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>class</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"easyui-tooltip"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=pln>Hover me</SPAN><SPAN class=tag>&lt;/a&gt;</SPAN></LI></OL></PRE>
+<P>2. 通过Javascript创建提示框。</P><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;a</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>id</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"dd"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>href</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"javascript:void(0)"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=pln>Click here</SPAN><SPAN class=tag>&lt;/a&gt;</SPAN></LI></OL></PRE><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=pln>$</SPAN><SPAN class=pun>(</SPAN><SPAN class=str>'#dd'</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>tooltip</SPAN><SPAN class=pun>({</SPAN><LI class=L1><SPAN class=pln>    position</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'right'</SPAN><SPAN class=pun>,</SPAN><LI class=L2><SPAN class=pln>    content</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'&lt;span style="color:#fff"&gt;This is the tooltip message.&lt;/span&gt;'</SPAN><SPAN class=pun>,</SPAN><LI class=L3><SPAN class=pln>    onShow</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=kwd>function</SPAN><SPAN class=pun>(){</SPAN><LI class=L4><SPAN class=pln>        $</SPAN><SPAN class=pun>(</SPAN><SPAN class=kwd>this</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>tooltip</SPAN><SPAN class=pun>(</SPAN><SPAN class=str>'tip'</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>css</SPAN><SPAN class=pun>({</SPAN><LI class=L5><SPAN class=pln>            backgroundColor</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'#666'</SPAN><SPAN class=pun>,</SPAN><LI class=L6><SPAN class=pln>            borderColor</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'#666'</SPAN><LI class=L7><SPAN class=pln>        </SPAN><SPAN class=pun>});</SPAN><LI class=L8><SPAN class=pln>    </SPAN><SPAN class=pun>}</SPAN><LI class=L9><SPAN class=pun>});</SPAN></LI></OL></PRE>
+<H4>属性</H4>
+<P>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>position</TD>
+    <TD>string</TD>
+    <TD>消息框位置。可用值有："left","right","top","bottom"</TD>
+    <TD>bottom</TD></TR>
+  <TR>
+    <TD>content</TD>
+    <TD>string</TD>
+    <TD>消息框内容。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>trackMouse</TD>
+    <TD>boolean</TD>
+    <TD>为true时，允许提示框跟着鼠标移动。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>deltaX</TD>
+    <TD>number</TD>
+    <TD>水平方向提示框的位置。</TD>
+    <TD>0</TD></TR>
+  <TR>
+    <TD>deltaY</TD>
+    <TD>number</TD>
+    <TD>垂直方向提示框的位置。</TD>
+    <TD>0</TD></TR>
+  <TR>
+    <TD>showEvent</TD>
+    <TD>string</TD>
+    <TD>当激发什么事件的时候显示提示框。</TD>
+    <TD>mouseenter</TD></TR>
+  <TR>
+    <TD>hideEvent</TD>
+    <TD>string</TD>
+    <TD>当激发什么事件的时候隐藏提示框。</TD>
+    <TD>mouseleave</TD></TR>
+  <TR>
+    <TD>showDelay</TD>
+    <TD>number</TD>
+    <TD>延时多少秒显示提示框。</TD>
+    <TD>200</TD></TR>
+  <TR>
+    <TD>hideDelay</TD>
+    <TD>number</TD>
+    <TD>延时多少秒隐藏提示框。</TD>
+    <TD>100</TD></TR></TBODY></TABLE></P>
+<H4>事件</H4>
+<P>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名称</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onShow</TD>
+    <TD>e</TD>
+    <TD>在显示提示框的时候触发。</TD></TR>
+  <TR>
+    <TD>onHide</TD>
+    <TD>e</TD>
+    <TD>在隐藏提示框的时候触发。</TD></TR>
+  <TR>
+    <TD>onUpdate</TD>
+    <TD>content</TD>
+    <TD>在提示框内容更新的时候触发。</TD></TR>
+  <TR>
+    <TD>onPosition</TD>
+    <TD>left,top</TD>
+    <TD>在提示框位置改变的时候触发。</TD></TR>
+  <TR>
+    <TD>onDestroy</TD>
+    <TD>none</TD>
+    <TD>在提示框被销毁的时候触发。</TD></TR></TBODY></TABLE></P>
+<H4>方法</H4>
+<P>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回控件属性对象。</TD></TR>
+  <TR>
+    <TD>tip</TD>
+    <TD>none</TD>
+    <TD>返回tip元素对象。</TD></TR>
+  <TR>
+    <TD>arrow</TD>
+    <TD>none</TD>
+    <TD>返回箭头元素对象。</TD></TR>
+  <TR>
+    <TD>show</TD>
+    <TD>e</TD>
+    <TD>显示提示框。</TD></TR>
+  <TR>
+    <TD>hide</TD>
+    <TD>e</TD>
+    <TD>隐藏提示框。</TD></TR>
+  <TR>
+    <TD>update</TD>
+    <TD>content</TD>
+    <TD>更新提示框内容。</TD></TR>
+  <TR>
+    <TD>reposition</TD>
+    <TD>none</TD>
+    <TD>重置提示框位置。</TD></TR>
+  <TR>
+    <TD>destroy</TD>
+    <TD>none</TD>
+    <TD>销毁提示框。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

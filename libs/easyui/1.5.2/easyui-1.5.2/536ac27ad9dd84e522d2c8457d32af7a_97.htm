@@ -1,0 +1,1272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>DataGrid View(数据表格展示)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_97_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_97_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_97_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10586.162"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>DataGrid View（数据表格展示）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><A 
+href="http://www.jeasyui.com/extension/index.php">Extension</A>&nbsp;&gt; 
+DataGrid View </P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><SPAN id=wiz_font_size_span_10907390 style="FONT-SIZE: 16pt"><FONT 
+color=#ff0000><STRONG>扩展下载地址：</STRONG><A 
+href="http://www.jeasyui.com/extension/downloads/jquery-easyui-datagridview.zip"><STRONG>http://www.jeasyui.com/extension/downloads/jquery-easyui-datagridview.zip</STRONG></A><STRONG>&nbsp;</STRONG><STRONG>(我发布的程序包整也有提供，在extension目录下)</STRONG></FONT></SPAN></P>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>DataGrid DetailView（数据表格详细展示）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_97_files/datagrid_detailview[1].png"> </P>
+<H4 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>第1步：创建一个HTML页面</H4>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;head&gt;</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;script</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">type</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"text/javascript"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">src</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"datagrid-detailview.js"</SPAN><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/script&gt;</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/head&gt;</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;body&gt;</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;table</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">id</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"tt"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/table&gt;</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/body&gt;</SPAN></LI></OL></DIV>
+<H4 align=left>第2步：创建数据表格</H4>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">$</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'#tt'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">).</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">datagrid</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">({</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'DataGrid - 
+  DetailView'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">500</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">height</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">250</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">remoteSort</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">false</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">singleSelect</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L6 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">nowrap</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">false</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L7 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">fitColumns</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L8 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">url</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'datagrid_data.json'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L9 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">columns</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:[[</SPAN> 
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'itemid'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Item ID'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">80</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'productid'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Product ID'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">100</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'listprice'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'List Price'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">80</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">align</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'right'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'unitcost'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Unit Cost'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">80</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'right'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=kwd 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'attr1'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Attribute'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">150</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=kwd 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'status'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Status'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">60</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'center'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">}</SPAN> 
+  <LI class=L6 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">]],</SPAN> 
+  <LI class=L7 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">view</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> detailview</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L8 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">detailFormatter</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=kwd 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">function</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">rowIndex</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> rowData</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">){</SPAN> 
+  <LI class=L9 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=kwd 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">return</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;table&gt;&lt;tr&gt;'</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN> 
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;td rowspan=2 
+  style="border:0"&gt;&lt;img src="images/'</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> rowData</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">itemid </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'.png" 
+  style="height:50px;"&gt;&lt;/td&gt;'</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;td 
+  style="border:0"&gt;'</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;p&gt;Attribute: 
+  '</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> 
+  </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> rowData</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">attr1 </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;/p&gt;'</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;p&gt;Status: '</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> rowData</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">status </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;/p&gt;'</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;/td&gt;'</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'&lt;/tr&gt;&lt;/table&gt;'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">;</SPAN> 
+  <LI class=L6 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">}</SPAN> 
+  <LI class=L7 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">});</SPAN></LI></OL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>detailFormatter</TD>
+    <TD>function(index,row)</TD>
+    <TD>detailFormatter函数返回行详细内容。</TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onExpandRow</TD>
+    <TD>index,row</TD>
+    <TD>在展开行的时候触发。</TD></TR>
+  <TR>
+    <TD>onCollapseRow</TD>
+    <TD>index,row</TD>
+    <TD>在折叠行的时候触发。</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>fixDetailRowHeight</TD>
+    <TD>index</TD>
+    <TD>修复明细行高度。</TD></TR>
+  <TR>
+    <TD>getExpander</TD>
+    <TD>index</TD>
+    <TD>获取行展开对象。</TD></TR>
+  <TR>
+    <TD>getRowDetail</TD>
+    <TD>index</TD>
+    <TD>获取明细内容。</TD></TR>
+  <TR>
+    <TD>expandRow</TD>
+    <TD>index</TD>
+    <TD>展开一行。</TD></TR>
+  <TR>
+    <TD>collapseRow</TD>
+    <TD>index</TD>
+    <TD>折叠一行。</TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">subgrid</SPAN></TD>
+    <TD><SPAN 
+      style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">conf</SPAN></TD>
+    <TD>
+      <P>创建一个嵌套的子表格。“conf”参数有“option”和“subgrid”属性：<BR>1. options: 
+      定义数据表格的展现方式。子表格options对象有一个“foreignField”属性。foreign值将会被发送到服务器端进行数据查询。<BR>2. 
+      subgrid: 用于定义创建嵌套子表格的参数.</P>
+      <P>代码示例：</P><PRE style="BACKGROUND: rgb(250,250,250); WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,102,0); PADDING-BOTTOM: 5px; TEXT-ALIGN: left; PADDING-TOP: 5px; FONT: 12px Verdana; PADDING-LEFT: 5px; WIDOWS: 1; LETTER-SPACING: normal; PADDING-RIGHT: 5px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">var conf = {
+	options:{
+		//主表格参数
+	},
+	subgrid:{
+		options:{
+			foreignField:'orderid',	// 外键关联字段
+			// 其他表格参数
+		},
+		subgrid:{
+			options:{
+				foreignField:...,
+				// 其他表格参数
+			}
+		}
+	}
+};
+$('#dg').datagrid().datagrid('subgrid', conf);</PRE></TD></TR>
+  <TR>
+    <TD>getParentGrid</TD>
+    <TD>none</TD>
+    <TD>获取父datagrid对象。</TD></TR>
+  <TR>
+    <TD>getParentRowIndex</TD>
+    <TD>none</TD>
+    <TD>获取父行索引。</TD></TR></TBODY></TABLE></P>
+<H3 align=left>&nbsp;</H3>
+<H3 align=left>DataGrid GroupView（数据表格分组展示）</H3>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_97_files/datagrid_groupview[1].png"> </P>
+<H4 align=left>第1步：创建HTML页面</H4>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;head&gt;</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;script</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">type</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"text/javascript"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">src</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"datagrid-groupview.js"</SPAN><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/script&gt;</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/head&gt;</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;body&gt;</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;table</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">id</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"tt"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/table&gt;</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/body&gt;</SPAN></LI></OL>
+<P align=left>&nbsp;</P>
+<H4 align=left>第2步：创建数据表格</H4>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">$</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'#tt'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">).</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">datagrid</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">({</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'DataGrid - 
+  GroupView'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">500</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">height</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">250</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">rownumbers</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">remoteSort</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">false</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L6 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">nowrap</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">false</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L7 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">fitColumns</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L8 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">url</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'datagrid_data.json'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L9 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">columns</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:[[</SPAN> 
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'productid'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Product ID'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">100</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'listprice'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'List Price'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">80</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">align</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'right'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'unitcost'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Unit Cost'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">80</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'right'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=kwd 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'attr1'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Attribute'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">150</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">sortable</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=kwd 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">true</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">},</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">{</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'status'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'Status'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">60</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'center'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">}</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">]],</SPAN> 
+  <LI class=L6 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">groupField</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'productid'</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L7 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">view</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> groupview</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN> 
+  <LI class=L8 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">groupFormatter</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN 
+  class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">function</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">value</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">,</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> rows</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">){</SPAN> 
+  <LI class=L9 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=kwd 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">return</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> value </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">' - '</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> rows</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">length </SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">+</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=str 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">' Item(s)'</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">;</SPAN> 
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">}</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">});</SPAN></LI></OL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>groupField</TD>
+    <TD>string</TD>
+    <TD>声明哪些字段分组。</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>groupFormatter</TD>
+    <TD>function(value,rows)</TD>
+    <TD>groupFormatter函数返回分组内容。value参数指明了分组值定义的<SPAN lang=zh-CN id=result_box 
+      class=short_text closure_uid_685577293="114" ud="null" c="4" 
+      a="undefined"><SPAN closure_uid_685577293="331">'</SPAN><SPAN 
+      closure_uid_685577293="335">groupField'</SPAN><SPAN 
+      closure_uid_685577293="336">属性</SPAN><SPAN 
+      closure_uid_685577293="338">。</SPAN></SPAN>rows参数指明了指定分组值的数据行。</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>groupStyler</TD>
+    <TD>function(value,rows)</TD>
+    <TD>函数返回CSS样式组。<BR>value参数表名了通过'groupField'属性定义的分组值。<BR>rows参数表明了根据分组值指定的数据行。<BR><BR>
+      <P>代码示例：</P><PRE>$('#dg').datagrid({
+	groupStyler: function(value,rows){
+		if (value == 'RP-LI-02'){
+			return 'background-color:#6293BB;color:#fff;'; // return inline style
+			// the function can return predefined css class and inline style
+			// return {class:'r1', style:{'color:#fff'}};	
+		}
+	}
+});
+</PRE></TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>expandGroup</TD>
+    <TD>groupIndex</TD>
+    <TD>展开一个分组。</TD></TR>
+  <TR>
+    <TD>collapseGroup</TD>
+    <TD>groupIndex</TD>
+    <TD>折叠一个分组。</TD></TR>
+  <TR>
+    <TD>scrollToGroup</TD>
+    <TD>groupIndex</TD>
+    <TD>滚动一个分组。</TD></TR></TBODY></TABLE></P>
+<H3 align=left>&nbsp;</H3>
+<H3 align=left>DataGrid BufferView（数据表格缓存视图）</H3>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_97_files/datagrid_bufferview[1].png"> </P>
+<H4 align=left>第1步：导入 bufferview 的 js 文件</H4>
+<H4 align=left>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;head&gt;</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;script</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">type</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"text/javascript"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">src</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"datagrid-bufferview.js"</SPAN><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/script&gt;</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/head&gt;</SPAN></LI></OL></H4>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>第2步：创建数据表格</H4>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;table</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">id</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"tt"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">class</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"easyui-datagrid"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">style</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">700px</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">height</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">250px</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"DataGrid - 
+  BufferView"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> 
+  </SPAN>
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">data-options</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN 
+  class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"url:'get_data.php',view:bufferview,rownumbers:true,singleSelect:true,autoRowHeight:false,pageSize:50"</SPAN><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;thead&gt;</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;tr&gt;</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"inv"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Inv No</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L6 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"date"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"100"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Date</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L7 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"name"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Name</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L8 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"amount"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"right"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Amount</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L9 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"price"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"right"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Price</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"cost"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"100"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"right"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Cost</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"note"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"110"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Note</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/tr&gt;</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/thead&gt;</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/table&gt;</SPAN></LI></OL>
+<H3 align=left>&nbsp;</H3>
+<H3 align=left>DataGrid VirtualScrollView（数据表格虚拟滚动视图）</H3>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_97_files/datagrid_scrollview[1].png"> </P>
+<H4 align=left>第1步：导入滚动视图的JS文件</H4>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;head&gt;</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;script</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">type</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"text/javascript"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">src</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"datagrid-scrollview.js"</SPAN><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/script&gt;</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/head&gt;</SPAN></LI></OL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>第2步：创建包含虚拟滚动视图的数据表格</H4>
+<OL class=linenums 
+style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;table</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">id</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"tt"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">class</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"easyui-datagrid"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">style</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">700px</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">height</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">250px</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">title</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"DataGrid - 
+  VirtualScrollView"</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">data-options</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN 
+  class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"url:'get_data.php',view:scrollview,rownumbers:true,singleSelect:true,autoRowHeight:false,pageSize:50"</SPAN><SPAN 
+  class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;thead&gt;</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;tr&gt;</SPAN> 
+  <LI class=L5 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"inv"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Inv No</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L6 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"date"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"100"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Date</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L7 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"name"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Name</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L8 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"amount"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"right"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Amount</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L9 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"price"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"80"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"right"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Price</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L0 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"cost"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"100"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">align</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"right"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Cost</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L1 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">field</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"note"</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"110"</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Note</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN> 
+  <LI class=L2 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/tr&gt;</SPAN> 
+  <LI class=L3 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/thead&gt;</SPAN> 
+  <LI class=L4 
+  style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/table&gt;</SPAN></LI></OL>
+<P align=left>&nbsp;</P>
+<H4 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(204,0,0); TEXT-ALIGN: left; FONT: bold 16px verdana, helvetica, arial, sans-serif; WIDOWS: 1; MARGIN: 10px 0px; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">方法</H4>
+<P align=left>
+<TABLE class=doc-table 
+style="WIDTH: 95%; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; BORDER-SPACING: 0px; WIDOWS: 1; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+  <TBODY style="FONT-SIZE: 14px">
+  <TR style="FONT-SIZE: 14px">
+    <TH 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BACKGROUND: rgb(238,238,238); BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em"><STRONG 
+      style="FONT-SIZE: 14px">方法名</STRONG></TH>
+    <TH 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BACKGROUND: rgb(238,238,238); BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em"><STRONG 
+      style="FONT-SIZE: 14px">参数</STRONG></TH>
+    <TH 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BACKGROUND: rgb(238,238,238); BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em"><STRONG 
+      style="FONT-SIZE: 14px">描述</STRONG></TH></TR>
+  <TR style="FONT-SIZE: 14px">
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">gotoPage</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">page</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">跳转到指定页面。</TD></TR>
+  <TR style="FONT-SIZE: 14px">
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">scrollTo</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">index</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">滚动视图到指定的行。</TD></TR>
+  <TR style="FONT-SIZE: 14px">
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">fixDetailRowHeight</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">index</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">固定明细行行高。</TD></TR>
+  <TR style="FONT-SIZE: 14px">
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">getExpander</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">index</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">获取展开对象。</TD></TR>
+  <TR style="FONT-SIZE: 14px">
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">getRowDetail</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">index</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">获取明细内容。</TD></TR>
+  <TR style="FONT-SIZE: 14px">
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">expandRow</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">index</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">展开一行。</TD></TR>
+  <TR style="FONT-SIZE: 14px">
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">collapseRow</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">index</TD>
+    <TD 
+    style="FONT-SIZE: 14px; BORDER-TOP: rgb(140,172,187) 1px solid; BORDER-RIGHT: rgb(140,172,187) 1px solid; BORDER-BOTTOM: rgb(140,172,187) 1px solid; PADDING-BOTTOM: 0.3em; PADDING-TOP: 0.3em; PADDING-LEFT: 0.7em; BORDER-LEFT: rgb(140,172,187) 1px solid; PADDING-RIGHT: 0.7em">折叠一行。</TD></TR></TBODY></TABLE><BR 
+class=Apple-interchange-newline></P></DIV></BODY></HTML>

@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>dialog(对话框窗口)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_93_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_93_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_93_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>Dialog（对话框窗口）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>扩展自$.fn.window.defaults。使用$.fn.dialog.defaults重写默认值对象。</P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>该对话框是一种特殊类型的窗口，它在顶部有一个工具栏，在底部有一个按钮栏。对话框窗口右上角只有一个关闭按钮用户可以配置对话框的行为显示其他工具,如collapsible,minimizable,maximizable工具等。<BR>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_93_files/dialog[1].png"> </P>
+<H4 style="PADDING-LEFT: 10px" align=left>&nbsp;</H4>
+<H4 style="PADDING-LEFT: 10px" align=left>依赖关系</H4>
+<DIV style="PADDING-LEFT: 10px" align=left>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_92.htm">window</A> 
+
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_70.htm">linkbutton</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>通过已存在的DOM节点元素标签创建。下面的例子显示了一个可变大小的模式窗口。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"dd"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-dialog"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"My&nbsp;Dialog"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:400px;height:200px;"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-save',resizable:true,modal:true"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Dialog&nbsp;Content. 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P 
+align=left>使用Javascript创建对话框窗口也是允许的。现在让我们创建一个模式窗口并调用'refresh'方法通过ajax读取内容。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"dd"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Dialog&nbsp;Content.</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#dd'</SPAN><SPAN>).dialog({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;</SPAN><SPAN 
+  class=string>'My&nbsp;Dialog'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;400, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;200, &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;closed:&nbsp;</SPAN><SPAN 
+  class=keyword>false</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;cache:&nbsp;</SPAN><SPAN 
+  class=keyword>false</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;href:&nbsp;</SPAN><SPAN 
+  class=string>'get_content.php'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;modal:&nbsp;</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>}); &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>$(</SPAN><SPAN class=string>'#dd'</SPAN><SPAN>).dialog(</SPAN><SPAN 
+  class=string>'refresh'</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
+  class=string>'new_content.php'</SPAN><SPAN>);&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>对话框窗口的属性扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_92.htm">window</A>(窗口)，对话框窗口重新定义的属性如下：</P>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>title</TD>
+    <TD>string</TD>
+    <TD>对话框窗口标题文本。</TD>
+    <TD>New Dialog</TD></TR>
+  <TR>
+    <TD>collapsible</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示可折叠按钮。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>minimizable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示最小化按钮。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>maximizable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示最大化按钮。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>resizable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否可以改变对话框窗口大小。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>toolbar</TD>
+    <TD>array,selector</TD>
+    <TD>设置对话框窗口顶部工具栏，可用值有：<BR>1) 一个数组，每一个工具栏中的工具属性都和linkbutton相同。<BR>2) 
+      一个选择器指定工具栏。 
+      <P>对话框窗口工具栏可以声明在&lt;div&gt;标签里面：</P>
+      <P>&lt;div class="easyui-dialog" 
+      style="width:600px;height:300px"<BR>data-options="title:'我的对话框',toolbar:'#tb',modal:true"&gt;<BR>对话框窗口内容。<BR>&lt;/div&gt;<BR>&lt;div 
+      id="tb"&gt;<BR>&lt;a href="#" class="easyui-linkbutton" 
+      data-options="iconCls:'icon-edit',plain:true"/a&gt;<BR>&lt;a href="#" 
+      class="easyui-linkbutton" 
+      data-options="iconCls:'icon-help',plain:true"/a&gt;<BR>&lt;/div&gt;<BR></P>
+      <P>对话框窗口工具栏也可以通过数组进行定义：</P><PRE>&lt;div class="easyui-dialog" style="width:600px;height:300px"
+		data-options="title:'My Dialog',modal:true,
+			toolbar:[{
+				text:'编辑',
+				iconCls:'icon-edit',
+				handler:function(){alert('edit')}
+			},{
+				text:'帮助',
+				iconCls:'icon-help',
+				handler:function(){alert('help')}
+			}]"&gt;
+	对话框窗口内容。<BR>&lt;/div&gt;
+</PRE></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>buttons</TD>
+    <TD>array,selector</TD>
+    <TD>对话框窗口底部按钮，可用值有：<BR>1) 一个数组，每一个按钮的属性都和linkbutton相同。<BR>2) 一个选择器指定按钮栏。 
+      <P>按钮可以声明在&lt;div&gt;标签里面：</P>
+      <P>&lt;div class="easyui-dialog" 
+      style="width:600px;height:300px"<BR>data-options="title:'My 
+      Dialog',buttons:'#bb',modal:true"&gt;<BR>&nbsp;对话框窗口内容。<BR>&lt;/div&gt;<BR>&lt;div 
+      id="bb"&gt;<BR>&lt;a href="#" 
+      class="easyui-linkbutton"&gt;保存&lt;/a&gt;<BR>&lt;a href="#" 
+      class="easyui-linkbutton"&gt;关闭&lt;/a&gt;<BR>&lt;/div&gt;<BR></P>
+      <P>按钮也可以通过数组定义：</P><PRE>&lt;div class="easyui-dialog" style="width:600px;height:300px"
+		data-options="title:'我的对话框',modal:true,
+			buttons:[{
+				text:'保存',
+				handler:function(){...}
+			},{
+				text:'关闭',
+				handler:function(){...}
+			}]"&gt;
+	对话框窗口内容。
+&lt;/div&gt;
+</PRE></TD>
+    <TD>null</TD></TR></TBODY></TABLE></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>对话框窗口事件完全继承自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_92.htm">window</A>(窗口)。</P>
+<H4 align=left>方法</H4>
+<P align=left>对话框窗口的方法扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_92.htm">window</A>(窗口)，对话框窗口新增的方法如下：</P>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>dialog</TD>
+    <TD>none</TD>
+    <TD>返回外部对话框窗口对象。</TD></TR></TBODY></TABLE></DIV></DIV>
+<P align=left>? </P>
+<P align=left>&nbsp;</P>
+<P align=left>&nbsp;</P></BODY></HTML>

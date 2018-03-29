@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>passwordbox(密码框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_138_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_138_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_138_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>PasswordBox（密码框）</H3>
+<P 
+align=left>扩展自$.fn.textbox.defaults，使用$.fn.passwordbox.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.5版开始可用）</FONT></STRONG></P>
+<P align=left>该插件允许用户在具有更好交互功能的输入框中输入密码。 
+密码框会通过显示圆点的方式来保护您输入的密码文本，同时输入框中会提供一个眼睛的图标来通过点击的动作查看您输入的密码，来确保您输入的密码正确无误。</P>
+<P align=left>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_138_files/passwordbox[1].png"> </P>
+<H4>依赖关系</H4>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A></LI></UL>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建密码框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><FONT color=#006699><SPAN class=tag><SPAN 
+  class=tag><STRONG>&lt;input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN 
+  class=atn><FONT color=#ff0000>class</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv><FONT color=#0000ff>"easyui-passwordbox" <FONT 
+  color=#ff0000>prompt</FONT>="Password" <FONT 
+  color=#ff0000>iconWidth</FONT>="28" </FONT></SPAN><SPAN class=atn><FONT 
+  color=#ff0000>style</FONT></SPAN><SPAN class=pun>=</SPAN><FONT 
+  color=#3366ff><SPAN class=atv>"</SPAN><SPAN 
+  class=pln>width:100%;height:34px;padding:10px"</SPAN></FONT><SPAN 
+  class=tag>&gt;</SPAN></SPAN></FONT><SPAN>&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建密码框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;input</SPAN><SPAN class=pln> 
+  </SPAN><SPAN class=atn>id</SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv>"pb"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>type</SPAN><SPAN 
+  class=pun>=</SPAN><SPAN class=atv>"text"</SPAN><SPAN class=pln> </SPAN><SPAN 
+  class=atn>style</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"</SPAN><SPAN 
+  class=pln>width</SPAN><SPAN class=pun>:</SPAN><SPAN 
+  class=lit>300px</SPAN><SPAN class=atv>"</SPAN><SPAN class=tag>&gt;</SPAN> 
+  <LI class=L1><SPAN class=pln>$(function(){</SPAN> 
+  <LI class=L2><SPAN class=pln>&nbsp;&nbsp;&nbsp; $('#pb').passwordbox({</SPAN> 
+  <LI class=L3><SPAN 
+  class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prompt: 
+  'Password',</SPAN> 
+  <LI class=L4><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  showEye: true</SPAN> 
+  <LI class=L5><SPAN class=pln>&nbsp;&nbsp;&nbsp; });</SPAN> 
+  <LI class=L6><SPAN class=pln>});</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>属性扩展自textbox，下面的属性是密码框添加或者覆盖了文本框的属性。</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>passwordChar</TD>
+    <TD>string</TD>
+    <TD>在文本框中显示的密码字符。</TD>
+    <TD>%u25CF</TD></TR>
+  <TR>
+    <TD>checkInterval</TD>
+    <TD>number</TD>
+    <TD>在间隔的时间后检查并转换输入的字符为密码字符。</TD>
+    <TD>200</TD></TR>
+  <TR>
+    <TD>lastDelay</TD>
+    <TD>number</TD>
+    <TD><FONT color=#000000>在延迟的时间后转换最后输入的字符为密码字符。</FONT></TD>
+    <TD>500</TD></TR>
+  <TR>
+    <TD>revealed</TD>
+    <TD>boolean</TD>
+    <TD>定义是否默认显示真实密码。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>showEye</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示眼睛图标。</TD>
+    <TD>true</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>事件扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A>。</P>
+<P align=left>&nbsp;</P>
+<H4 align=left>方法</H4>
+<P align=left>方法扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_128.htm">textbox</A>，以下是新增的文本框方法。</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法属性</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>showPassword</TD>
+    <TD>none</TD>
+    <TD>
+      <P>显示密码。</P></TD></TR>
+  <TR>
+    <TD>hidePassword</TD>
+    <TD>none</TD>
+    <TD>隐藏密码。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

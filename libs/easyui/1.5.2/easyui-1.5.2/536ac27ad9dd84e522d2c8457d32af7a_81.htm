@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>datebox(日期输入框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_81_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_81_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_81_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY style="WIDTH: 100%">
+<DIV 
+style="WIDTH: 100%; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>DateBox（日期输入框）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>扩展自$.fn.combo.defaults。使用$.fn.datebox.defaults重写默认值对象。</P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>日期输入框结合了一个可编辑的文本框控件和允许用户选择日期的下拉日历面板控件。选择的日期会自动转变为一个有效的日期然后填充到文本框中。选定的日期也可以被格式化为预定格式。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><IMG src="536ac27ad9dd84e522d2c8457d32af7a_81_files/datebox[1].png"> 
+</DIV>
+<H4 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>依赖关系</H4>
+<DIV style="PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A> 
+
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_83.htm">calendar</A> 
+  </LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<P align=left>使用标签创建日期输入框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN> <SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"dd"</FONT></SPAN> 
+  <SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>type</FONT></SPAN><SPAN>=</SPAN><SPAN class=attribute-value> 
+  <FONT color=#0000ff>"text"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN> <SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-datebox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>required</FONT></SPAN> <SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"required"</FONT></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&gt;</SPAN> <SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>input</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+</LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建日期输入框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN> <SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"dd"</FONT></SPAN> 
+  <SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>type</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"text"</FONT> </SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>input</SPAN><SPAN class=tag>&gt;</SPAN> 
+  </FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> </LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#dd'</SPAN><SPAN>).datebox({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;required:</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN> </LI></OL></DIV></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>属性</H4>
+<P align=left>日期输入框扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)，日期输入框新增的属性如下：</P>
+<P style="WIDTH: 100%; DISPLAY: block" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>panelWidth</TD>
+    <TD>number</TD>
+    <TD>下拉日历面板宽度。</TD>
+    <TD>180</TD></TR>
+  <TR>
+    <TD>panelHeight</TD>
+    <TD>number</TD>
+    <TD>下拉日历面板高度。</TD>
+    <TD>auto</TD></TR>
+  <TR>
+    <TD>currentText</TD>
+    <TD>string</TD>
+    <TD>显示当天按钮。</TD>
+    <TD>Today</TD></TR>
+  <TR>
+    <TD>closeText</TD>
+    <TD>string</TD>
+    <TD>显示关闭按钮。</TD>
+    <TD>Close</TD></TR>
+  <TR>
+    <TD>okText</TD>
+    <TD>string</TD>
+    <TD>显示OK按钮。</TD>
+    <TD>Ok</TD></TR>
+  <TR>
+    <TD>disabled</TD>
+    <TD>boolean</TD>
+    <TD>该属性值为true时禁用该字段。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>buttons</TD>
+    <TD>array</TD>
+    <TD>在日历下面的按钮。<STRONG><FONT color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>var buttons = $.extend([], $.fn.datebox.defaults.buttons);
+	buttons.splice(1, 0, {
+	text: 'MyBtn',
+	handler: function(target){
+		alert('click MyBtn');
+	}
+});
+$('#dd').datebox({
+	buttons: buttons
+});
+</PRE></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>sharedCalendar</TD>
+    <TD>string,selector</TD>
+    <TD>将一个日历控件共享给多个datebox控件使用。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>&lt;input class="easyui-datebox" sharedCalendar="#sc"&gt;
+&lt;input class="easyui-datebox" sharedCalendar="#sc"&gt;
+&lt;div id="sc" class="easyui-calendar"&gt;&lt;/div&gt;
+</PRE></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>formatter</TD>
+    <TD>function</TD>
+    <TD>该函数用于格式化日期，它有一个'date'参数并且会返回一个字符串类型的值。下面的一个例子展示了如何重写默认的formatter函数。<BR><PRE>$.fn.datebox.defaults.formatter = function(date){
+	var y = date.getFullYear();
+	var m = date.getMonth()+1;
+	var d = date.getDate();
+	return m+'/'+d+'/'+y;
+}
+</PRE></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>parser</TD>
+    <TD>function</TD>
+    <TD>该函数用于解析一个日期字符串，它有一个'date'字符串参数并且会返回一个日期类型的值。下面的一个例子展示了如何重写默认的parser函数。 
+<PRE>$.fn.datebox.defaults.parser = function(s){
+	var t = Date.parse(s);
+	if (!isNaN(t)){
+		return new Date(t);
+	} else {
+		return new Date();
+	}
+}
+</PRE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P style="WIDTH: 100%; DISPLAY: block" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onSelect</TD>
+    <TD>date</TD>
+    <TD>在用户选择了一个日期的时候触发。 
+      <P>代码示例：</P><PRE>$('#dd').datebox({
+&nbsp;&nbsp;&nbsp;&nbsp;onSelect: function(date){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(date.getFullYear()+":"+(date.getMonth()+1)+":"+date.getDate());
+&nbsp;&nbsp;&nbsp;&nbsp;}
+});
+</PRE></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>方法扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)，日期输入框重写的方法如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>calendar</TD>
+    <TD>none</TD>
+    <TD>获取日历对象。下面的例子显示了如果获取日历对象并重新创建它。<PRE>// 获取日历对象
+var c = $('#dd').datebox('calendar');
+// 设置一周的第一天是星期几（0是周日，1是周一）
+c.calendar({
+	firstDay: 1
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置日期输入框的值。 
+      <P>代码示例：</P><PRE>$('#dd').datebox('setValue', '6/1/2012');	// 设置日期输入框的值
+var v = $('#dd').datebox('getValue');	// 获取日期输入框的值</PRE></TD></TR>
+  <TR>
+    <TD>cloneFrom</TD>
+    <TD>from</TD>
+    <TD>克隆一个datebox控件。<STRONG><FONT 
+      color=#ff0000>（该方法自1.4.1版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>&lt;input id="from" class="easyui-datebox"&gt;
+
+// 克隆一个存在的datebox组件
+$('.dt').datebox('cloneFrom', '#from');
+</PRE></TD></TR></TBODY></TABLE></P></DIV></DIV></BODY></HTML>

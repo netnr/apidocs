@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>form(表单)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_74_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_74_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_74_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Form（表单）</H3>
+<P align=left>使用$.fn.form.defaults重写默认值对象</P>
+<P align=left>form提供了各种方法来操作执行表单字段，比如：ajax提交, load, 
+clear等等。当提交表单的时候可以调用validate方法检查表单是否有效。</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>创建一个简单的HTML表单。构建一个包含id、action和method值的表单元素。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>form</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"ff"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>method</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"post"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>label</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>for</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"name"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Name:</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>label</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-validatebox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>type</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"text"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"name"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"required:true"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>label</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>for</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"email"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Email:</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>label</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-validatebox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>type</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"text"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"email"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"validType:'email'"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;... &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>form</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使普通表单成为ajax提交方式的表单。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#ff'</SPAN><SPAN>).form({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:..., &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;onSubmit:&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;do&nbsp;some&nbsp;check 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;return&nbsp;false&nbsp;to&nbsp;prevent&nbsp;submit; 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}, &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;success:</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(data){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(data) 
+  &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>}); &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN></SPAN><SPAN 
+  class=comment>//&nbsp;submit&nbsp;the&nbsp;form 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>$(</SPAN><SPAN 
+  class=string>'#ff'</SPAN><SPAN>).submit();&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>做一个提交操作。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN 
+  class=comment>//&nbsp;call&nbsp;'submit'&nbsp;method&nbsp;of&nbsp;form&nbsp;plugin&nbsp;to&nbsp;submit&nbsp;the&nbsp;form 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>$(</SPAN><SPAN class=string>'#ff'</SPAN><SPAN>).form(</SPAN><SPAN 
+  class=string>'submit'</SPAN><SPAN>,&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:..., &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;onSubmit:&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;do&nbsp;some&nbsp;check 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;return&nbsp;false&nbsp;to&nbsp;prevent&nbsp;submit; 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}, &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;success:</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(data){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(data) 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>提交额外的参数。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#ff'</SPAN><SPAN>).form(</SPAN><SPAN 
+  class=string>'submit'</SPAN><SPAN>,&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:..., &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;onSubmit:&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(param){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param.p1&nbsp;=&nbsp;</SPAN><SPAN 
+  class=string>'value1'</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param.p2&nbsp;=&nbsp;</SPAN><SPAN 
+  class=string>'value2'</SPAN><SPAN>; &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV><BR></DIV>
+<H5 align=left>处理提交响应</H5>
+<P align=left>提交一个ajax表单是非常简单的。用户可以在提交完成后获取响应数据。注意，响应的数据是来自服务器的原始数据。A parse 
+action to the response data is required to get the correct data. </P>
+<P align=left>例如，响应数据假设为JSON，一个典型的响应数据格式如下：</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"success"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"message"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=string>"Message&nbsp;sent&nbsp;successfully."</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>现在在'success'回调函数中处理JSON字符串。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#ff'</SPAN><SPAN>).form(</SPAN><SPAN 
+  class=string>'submit'</SPAN><SPAN>,&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;success:&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(data){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>var</SPAN><SPAN>&nbsp;data&nbsp;=&nbsp;eval(</SPAN><SPAN 
+  class=string>'('</SPAN><SPAN>&nbsp;+&nbsp;data&nbsp;+&nbsp;</SPAN><SPAN 
+  class=string>')'</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;change&nbsp;the&nbsp;JSON&nbsp;string&nbsp;to&nbsp;javascript&nbsp;object 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>if</SPAN><SPAN>&nbsp;(data.success){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(data.message) 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+  &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>novalidate</TD>
+    <TD>boolean</TD>
+    <TD>定义是否验证表单的字段，true:验证,false:不验证。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>iframe</TD>
+    <TD>boolean</TD>
+    <TD>定义是否使用iframe模式提交表单，true:使用,false:不使用。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>ajax</TD>
+    <TD>boolean</TD>
+    <TD>定义是否使用ajax提交表单，true:使用,false:不使用。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>dirty</TD>
+    <TD>boolean</TD>
+    <TD>定义是否只提交变更字段，true：是，false：不是。<STRONG><FONT 
+      color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>queryParams</TD>
+    <TD>object</TD>
+    <TD>当表单被提交到服务器的时候增加的额外参数列表。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
+    <TD>{}</TD></TR>
+  <TR>
+    <TD>url</TD>
+    <TD>string</TD>
+    <TD>提交表单动作的URL地址</TD>
+    <TD>null</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onSubmit</TD>
+    <TD>param</TD>
+    <TD>在提交之前触发，返回false可以终止提交。</TD></TR>
+  <TR>
+    <TD>onProgress</TD>
+    <TD>percent</TD>
+    <TD>在上传进度数据有效时触发。在“iframe”属性设置为true时该事件不会被触发。<STRONG><FONT 
+      color=#ff0000>（该事件自1.4.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>success</TD>
+    <TD>data</TD>
+    <TD>在表单提交成功以后触发。</TD></TR>
+  <TR>
+    <TD>onBeforeLoad</TD>
+    <TD>param</TD>
+    <TD>在请求加载数据之前触发。返回false可以停止该动作。</TD></TR>
+  <TR>
+    <TD>onLoadSuccess</TD>
+    <TD>data</TD>
+    <TD>在表单数据加载完成后触发。</TD></TR>
+  <TR>
+    <TD>onLoadError</TD>
+    <TD>none</TD>
+    <TD>在表单数据加载出现错误的时候触发。</TD></TR>
+  <TR>
+    <TD>onChange</TD>
+    <TD>target</TD>
+    <TD>在表单数据发生变化的时候触发。<STRONG><FONT 
+      color=#ff0000>（该事件自1.4.2版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>submit</TD>
+    <TD>options</TD>
+    <TD><SPAN lang=zh-CN id=result_box class=short_text 
+      closure_uid_569652002="107" c="4" a="undefined" ud="null"><SPAN 
+      closure_uid_569652002="726">执行</SPAN><SPAN 
+      closure_uid_569652002="727">提交操作</SPAN><SPAN 
+      closure_uid_569652002="728">，</SPAN><SPAN 
+      closure_uid_569652002="729">该</SPAN><SPAN 
+      closure_uid_569652002="730">选项</SPAN><SPAN 
+      closure_uid_569652002="731">的参数是一个</SPAN><SPAN 
+      closure_uid_569652002="732">对象，它包含</SPAN><SPAN 
+      closure_uid_569652002="733">以下属性</SPAN><SPAN 
+      closure_uid_569652002="734">：<BR></SPAN></SPAN>url：请求的URL地址。<BR>onSubmit: 
+      提交之前的回调函数。<BR>success: 提交成功后的回调函数。<BR>
+      <P>下面的例子演示了如何提交一个有效并且避免重复提交的表单。</P><PRE>$.messager.progress();	// 显示进度条
+$('#ff').form('submit', {
+	url: ...,
+	onSubmit: function(){
+		var isValid = $(this).form('validate');
+		if (!isValid){
+			$.messager.progress('close');	// 如果表单是无效的则隐藏进度条
+		}
+		return isValid;	// 返回false终止表单提交
+	},
+	success: function(){
+		$.messager.progress('close');	// 如果提交成功则隐藏进度条
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>load</TD>
+    <TD>data</TD>
+    <TD>读取记录填充到表单中。数据参数可以是一个字符串或一个对象类型，如果是字符串则作为远程URL，否则作为本地记录。 
+      <P>代码示例：</P><PRE>$('#ff').form('load','get_data.php');	// 读取表单的URL</PRE><PRE>$('#ff').form('load',{
+	name:'name2',
+	email:'mymail@gmail.com',
+	subject:'subject2',
+	message:'message2',
+	language:5
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>clear</TD>
+    <TD>none</TD>
+    <TD>清除表单数据。</TD></TR>
+  <TR>
+    <TD>reset</TD>
+    <TD>none</TD>
+    <TD>重置表单数据。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.2版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>validate</TD>
+    <TD>none</TD>
+    <TD>做表单字段验证，当所有字段都有效的时候返回true。该方法使用validatebox(验证框)插件。</TD></TR></ <TR>
+  <TR>
+    <TD>enableValidation</TD>
+    <TD>none</TD>
+    <TD>启用验证。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.4版开始可用）</FONT></STRONG></TD></TR></ <TR>
+  <TR>
+    <TD>disableValidation</TD>
+    <TD>none</TD>
+    <TD>禁用验证。<STRONG><FONT 
+color=#ff0000>（该方法自1.3.4版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>resetValidation</TD>
+    <TD>none</TD>
+    <TD>重置验证设置为默认值。<STRONG><FONT 
+    color=#ff0000>（该方法自1.4.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>resetDirty</TD>
+    <TD>none</TD>
+    <TD>重置只提交变更字段的设置为默认值。<STRONG><FONT 
+      color=#ff0000>（该方法自1.5版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>switchbutton(开关按钮)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_134_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_134_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_134_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>SwitchButton（开关按钮）</H3>
+<P align=left>用于$.fn.switchbutton.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.4.3版开始可用）</FONT></STRONG></P>
+<P align=left>用在"form"表单中的开关按钮。按钮有2个状态：“开”和“关”，用户可以点击或轻敲来切换，标签状态是可定制的。</P>
+<P align=left><IMG  style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(68,68,68); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"  src="536ac27ad9dd84e522d2c8457d32af7a_134_files/switchbutton[1].png"></P>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建开关按钮。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN>&nbsp;<SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;input</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">class</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"easyui-switchbutton"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">checked</SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN></SPAN> 
+  <LI class=alt><SPAN><SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&nbsp;<SPAN class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;input</SPAN><SPAN class=pln 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">class</SPAN><SPAN class=pun 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"easyui-switchbutton"</SPAN><SPAN 
+  class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn 
+  style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">data-options</SPAN><SPAN 
+  class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN 
+  class=atv 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"onText:'Yes',offText:'No'"</SPAN><SPAN 
+  class=tag 
+  style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN></SPAN></SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建开关按钮。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>a</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>href</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"javascript:void(0)"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"sb"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>onclick</FONT></SPAN><SPAN>="javascript:alert('ok')</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Ok</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>a</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"mm"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"width:100px;"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>... &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>number</TD>
+    <TD>开关按钮宽度。</TD>
+    <TD>60</TD></TR>
+  <TR>
+    <TD>height</TD>
+    <TD>number</TD>
+    <TD>开关按钮高度。</TD>
+    <TD>26</TD></TR>
+  <TR>
+    <TD>handleWidth</TD>
+    <TD>number</TD>
+    <TD>开关把手宽度。</TD>
+    <TD>auto</TD></TR>
+  <TR>
+    <TD>checked</TD>
+    <TD>boolean</TD>
+    <TD>定义按钮是否开启。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>disabled</TD>
+    <TD>boolean</TD>
+    <TD>定义按钮是否禁用。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>readonly</TD>
+    <TD>boolean</TD>
+    <TD>定义按钮是否只读。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>reversed</TD>
+    <TD>boolean</TD>
+    <TD>设置为true时，反转开关文本。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>onText</TD>
+    <TD>string</TD>
+    <TD>左边文本值（反转后是右边）。</TD>
+    <TD>ON</TD></TR>
+  <TR>
+    <TD>offText</TD>
+    <TD>string</TD>
+    <TD>右边文本值（反转后是左边）。</TD>
+    <TD>OFF</TD></TR>
+  <TR>
+    <TD>handleText</TD>
+    <TD>string</TD>
+    <TD>开关把手文本值。</TD>
+    <TD>''</TD></TR>
+  <TR>
+    <TD>value</TD>
+    <TD>string</TD>
+    <TD>给按钮绑定默认值。</TD>
+    <TD>on</TD></TR></TBODY></TABLE></P>
+<H4 align=left>事件</H4>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH>事件名</TH>
+    <TH>事件参数</TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onChange</TD>
+    <TD>checked</TD>
+    <TD>在更改控件值的时候触发。</TD></TR></TBODY></TABLE>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>resize</TD>
+    <TD>param</TD>
+    <TD>调整开关按钮大小。</TD></TR>
+  <TR>
+    <TD>disable</TD>
+    <TD>none</TD>
+    <TD>
+      <P>禁用开关按钮。</P>
+      <P>代码示例：&nbsp;</P><PRE>$('#sb').switchbutton('disable');
+</PRE></TD></TR>
+  <TR>
+    <TD>enable</TD>
+    <TD>none</TD>
+    <TD>
+      <P>启用开关按钮。</P>
+      <P>代码示例：&nbsp;</P><PRE>$('#sb').switchbutton('enable');
+</PRE></TD></TR>
+  <TR>
+    <TD>readonly</TD>
+    <TD>mode</TD>
+    <TD>启用/禁用只读模式。</TD></TR>
+  <TR>
+    <TD>check</TD>
+    <TD>none</TD>
+    <TD>启用开关按钮。</TD></TR>
+  <TR>
+    <TD>uncheck</TD>
+    <TD>none</TD>
+    <TD>禁用开关按钮。</TD></TR>
+  <TR>
+    <TD>clear</TD>
+    <TD>none</TD>
+    <TD>清除开关按钮的值。</TD></TR>
+  <TR>
+    <TD>reset</TD>
+    <TD>none</TD>
+    <TD>重置开关按钮的值。</TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置开关按钮的值。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>window(窗口)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_92_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_92_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_92_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Window（窗口）</H3>
+<P align=left>扩展自$.fn.panel.defaults。使用$.fn.window.defaults重写默认值对象。</P>
+<P 
+align=left>窗口控件是一个浮动和可拖拽的面板可以用作应用程序窗口。默认情况下,窗口可以移动,调整大小和关闭。它的内容也可以被定义为静态html或要么通过ajax动态加载。</P>
+<P align=left>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_92_files/98167140f13e927676b6c495d6b5ae90.png"> 
+</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_59.htm">draggable</A></DIV>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_61.htm">resizable</A></DIV>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建窗口</H5>
+<P align=left>1. 通过标签窗口窗口。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"win"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-window"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"My&nbsp;Window"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:600px;height:400px"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-save',modal:true"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;Window&nbsp;Content 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>2. 通过Javascript创建窗口。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"win"</FONT></SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#win'</SPAN><SPAN>).window({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;width:600, &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;height:400, &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;modal:</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>3. 创建复合布局窗口。</P>
+<P align=left>像往常一样定义窗口布局。下面的例子显示了如何将窗体分为两部分：北部和中间。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"win"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-window"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"My&nbsp;Window"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:600px;height:400px"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-save',modal:true"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-layout"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"fit:true"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"region:'north',split:true"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"height:100px"</FONT></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"region:'center'"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;Content. 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV><BR></DIV>
+<H5 align=left>窗口的一些动作</H5>
+<P align=left>打开和关闭窗口。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#win'</SPAN><SPAN>).window(</SPAN><SPAN 
+  class=string>'open'</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;open&nbsp;a&nbsp;window 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>$(</SPAN><SPAN class=string>'#win'</SPAN><SPAN>).window(</SPAN><SPAN 
+  class=string>'close'</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;close&nbsp;a&nbsp;window</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>通过ajax读取窗口内容。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#win'</SPAN><SPAN>).window(</SPAN><SPAN 
+  class=string>'refresh'</SPAN><SPAN>,&nbsp;</SPAN><SPAN 
+  class=string>'get_content.php'</SPAN><SPAN>);&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>窗口的属性扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A>(面板)，窗口新增或重新定义的属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>title</TD>
+    <TD>string</TD>
+    <TD>窗口的标题文本。</TD>
+    <TD>New Window</TD></TR>
+  <TR>
+    <TD>collapsible</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示可折叠按钮。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>minimizable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示最小化按钮。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>maximizable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示最大化按钮。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>closable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示关闭按钮。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>closed</TD>
+    <TD>boolean</TD>
+    <TD>定义是否可以关闭窗口。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>zIndex</TD>
+    <TD>number</TD>
+    <TD>窗口Z轴坐标。</TD>
+    <TD>9000</TD></TR>
+  <TR>
+    <TD>draggable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否能够拖拽窗口。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>resizable</TD>
+    <TD>boolean</TD>
+    <TD>定义是否能够改变窗口大小。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>shadow</TD>
+    <TD>boolean</TD>
+    <TD>如果设置为true，在窗体显示的时候显示阴影。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>inline</TD>
+    <TD>boolean</TD>
+    <TD>定义如何布局窗口，如果设置为true，窗口将显示在它的父容器中，否则将显示在所有元素的上面。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>modal</TD>
+    <TD>boolean</TD>
+    <TD>定义是否将窗体显示为模式化窗口。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>border</TD>
+    <TD>boolean,string</TD>
+    <TD>定义窗体边框的样式。可用值：true，false，'thin'，'thick'。<STRONG><FONT 
+      color=#ff0000>（该方法自1.4.5版开始可用）</FONT></STRONG></TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>constrain</TD>
+    <TD>boolean</TD>
+    <TD>定义是否限制窗体的位置。<STRONG><FONT 
+    color=#ff0000>（该方法自1.5版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>窗口的事件完整继承自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A>(面板)。</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>窗口的方法扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A>(面板)，窗口新增的方法如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>window</TD>
+    <TD>none</TD>
+    <TD>返回外部窗口对象。</TD></TR>
+  <TR>
+    <TD>hcenter</TD>
+    <TD>none</TD>
+    <TD>仅水平居中窗口。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.1版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>vcenter</TD>
+    <TD>none</TD>
+    <TD>仅垂直居中窗口。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.1版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>center</TD>
+    <TD>none</TD>
+    <TD>将窗口绝对居中。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.1版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

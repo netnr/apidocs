@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>Drag and Drop Rows in TreeGrid(可拖放行的树形表格)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_122_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_122_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_122_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10586.162"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3>Drag and Drop Rows in TreeGrid（可拖放的树形表格）</H3>
+<P><A href="http://www.jeasyui.com/extension/index.php">Extension</A>&nbsp;&gt; 
+Drag and Drop Rows in TreeGrid </P>
+<P><SPAN id=wiz_font_size_span_10907390 style="FONT-SIZE: 16pt"><FONT 
+color=#ff0000><STRONG>扩展下载地址：</STRONG></FONT><FONT color=#ff0000><A 
+href="http://www.jeasyui.com/extension/downloads/treegrid-dnd.zip"><STRONG>http://www.jeasyui.com/extension/downloads/treegrid-dnd.zip</STRONG></A><STRONG>&nbsp;</STRONG><STRONG>(我发布的程序包整也有提供，在extension目录下)</STRONG></FONT></SPAN></P><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_122_files/treegrid_dnd[1].png"> 
+<H4>导入'treegrid-dnd.js'文件</H4><PRE class=L0><SPAN class=tag><SPAN class=tag><DIV align=left><OL class=linenums style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><LI class=L0 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;script</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">type</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"text/javascript"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">src</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"treegrid-dnd.js"</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/script&gt;</SPAN></LI></OL></DIV><P align=left> </P></SPAN></SPAN></PRE>
+<H4>启用拖放</H4><PRE class=L0><SPAN class=tag><SPAN class=tag><DIV align=left><OL class=linenums style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><LI class=L0 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;table</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">title</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"Folder Browser"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">class</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"easyui-treegrid"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">style</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">width</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">700px</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">;</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">height</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">:</SPAN><SPAN class=lit style="FONT-SIZE: 14px; COLOR: rgb(0,102,102)">250px</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN><LI class=L1 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">data-options</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN><LI class=L2 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">data: data,</SPAN><LI class=L3 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">rownumbers: true,</SPAN><LI class=L4 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">idField: 'id',</SPAN><LI class=L5 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">treeField: 'name',</SPAN><LI class=L6 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">onLoadSuccess: function(row){</SPAN><LI class=L7 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">$(this).treegrid('enableDnd', row?row.id:null);</SPAN><LI class=L8 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">}</SPAN><LI class=L9 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><LI class=L0 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;thead&gt;</SPAN><LI class=L1 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;tr&gt;</SPAN><LI class=L2 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">data-options</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"field:'name'"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"220"</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Name</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN><LI class=L3 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">data-options</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"field:'size'"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"150"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">align</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"right"</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Size</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN><LI class=L4 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;th</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">data-options</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"field:'date'"</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=atn style="FONT-SIZE: 14px; COLOR: rgb(102,0,102)">width</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=atv style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"200"</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">Modified Date</SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/th&gt;</SPAN><LI class=L5 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/tr&gt;</SPAN><LI class=L6 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"></SPAN><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/thead&gt;</SPAN><LI class=L7 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=tag style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&lt;/table&gt;</SPAN></LI></OL></DIV><P align=left> </P></SPAN></SPAN></PRE>
+<H4>属性</H4>
+<P>下列属性扩展自Datagrid，以下是新增的属性。</P>
+<TABLE class=doc-table>
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>dropAccept</TD>
+    <TD>selector</TD>
+    <TD>确定哪些行允许被拖拽。</TD>
+    <TD>tr[node-id]</TD></TR></TBODY></TABLE>
+<H4>&nbsp;</H4>
+<H4>事件</H4>
+<P>下列事件扩展自Treegrid，以下是新增的事件。</P>
+<TABLE class=doc-table>
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onBeforeDrag</TD>
+    <TD>row</TD>
+    <TD>在行开始拖动之前触发，返回false拒绝拖动。 </TD></TR>
+  <TR>
+    <TD>onStartDrag</TD>
+    <TD>row</TD>
+    <TD>在开始拖动行的时候触发。 </TD></TR>
+  <TR>
+    <TD>onStopDrag</TD>
+    <TD>row</TD>
+    <TD>在停止拖动行的时候触发。 </TD></TR>
+  <TR>
+    <TD>onDragEnter</TD>
+    <TD>targetRow, sourceRow</TD>
+    <TD>在行被拖动到目标行内触发，返回false拒绝拖动。</TD></TR>
+  <TR>
+    <TD>onDragOver</TD>
+    <TD>targetRow, sourceRow</TD>
+    <TD>在行悬停在目标行内时触发，返回false拒绝拖动。 </TD></TR>
+  <TR>
+    <TD>onDragLeave</TD>
+    <TD>targetRow, sourceRow</TD>
+    <TD>在行被拖动到目标行内触发。</TD></TR>
+  <TR>
+    <TD>onBeforeDrop</TD>
+    <TD>targetRow,sourceRow,point</TD>
+    <TD>在行被释放前触发，返回false拒绝释放。<BR>targetRow：要释放的目标行。<BR>sourceRow：被拖动的原始行。<BR>point： 
+      指明拖放操作，可用值有：'top','bottom'。 </TD></TR>
+  <TR>
+    <TD>onDrop</TD>
+    <TD>targetRow,sourceRow,point</TD>
+    <TD>在行被释放的时候触发。<BR>targetRow：要释放的目标行。<BR>sourceRow：被拖动的原始行。<BR>point：指明拖放操作，可用值有：'top','bottom'。&nbsp; 
+    </TD></TR></TBODY></TABLE>
+<H4>方法</H4>
+<P>下列方法扩展自Treegrid，以下是新增的方法。 </P>
+<TABLE class=doc-table>
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>enableDnd</TD>
+    <TD>id</TD>
+    <TD>启用拖放行功能。'id' 参数表明什么行被拖放。如果该参数未指定将启用所有行的拖放功能。 
+</TD></TR></TBODY></TABLE></DIV></BODY></HTML>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>datetimespinner(日期时间微调框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_129_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_129_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_129_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>DateTimeSpinner（日期时间微调框）</H3>
+<P 
+align=left>扩展自$.fn.timespinner.defaults，使用$.fn.datetimespinner.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.4版开始可用）</FONT></STRONG></P>
+<P align=left>DateTimeSpinner (日期时间微调框)扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_86.htm">timespinner</A> 
+(时间微调框)，它允许用户使用微调按钮调整指定的字段。</P>
+<P align=left>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_129_files/datetimespinner[1].png">&nbsp; 
+</P>
+<H4>依赖关系</H4>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_86.htm">timespinner</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建验证框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter style="HEIGHT: 71px; WIDTH: 96.96%">
+<DIV class=bar>
+<DIV class=tools><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;<STRONG>input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>class</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"easyui-datetimespinner"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>style</FONT></SPAN><SPAN class=pun>=</SPAN><FONT color=#0000ff><SPAN class=atv>"</SPAN><SPAN class=pln>width</SPAN><SPAN class=pun>:</SPAN><SPAN class=lit>300px</SPAN><SPAN class=atv>"</SPAN></FONT><SPAN class=tag>&gt;</SPAN></LI></OL></PRE></DIV></DIV></DIV></DIV>
+<P align=left>使用Javascript创建验证框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter style="HEIGHT: 73px; WIDTH: 96.96%">
+<DIV class=bar>
+<DIV class=tools><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;<STRONG>input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>id</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"dt"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>type</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"text"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>style</FONT></SPAN><SPAN class=pun>=</SPAN><FONT color=#0000ff><SPAN class=atv>"</SPAN><SPAN class=pln>width</SPAN><SPAN class=pun>:</SPAN><SPAN class=lit>300px</SPAN><SPAN class=atv>"</SPAN></FONT><SPAN class=tag>&gt;</SPAN></LI></OL></PRE></DIV></DIV></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter style="HEIGHT: 111px; WIDTH: 96.96%">
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#tb'</SPAN><SPAN>).datetimespinner({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;//...</SPAN><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>})</SPAN></LI></OL></DIV></DIV>
+<P align=left>&nbsp;</P>
+<H4 align=left>属性</H4>
+<P align=left>属性扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_86.htm">timespinner</A>，以下是新增的日期时间微调框属性。</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH width=100><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>selections</TD>
+    <TD>array</TD>
+    <TD>选择高亮部分的值（该值必须设置正确，否则微调的时候会出问题）。</TD>
+    <TD>[[0,2],[3,5],[6,10],[11,13],[14,16],[17,19]]</TD></TR></TBODY></TABLE></P>
+<P align=left>&nbsp;</P>
+<H4 align=left>事件</H4>
+<P align=left>事件扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_86.htm">timespinner</A>。</P>
+<P align=left>&nbsp;</P>
+<H4 align=left>方法</H4>
+<P align=left>方法扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_86.htm">timespinner</A>。</P></DIV></BODY></HTML>

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>messager(消息窗口)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_94_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_94_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_94_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<H3 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>Messager（消息窗口）</H3>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>使用$.messager.defaults重写默认值对象。</P>
+<P 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>消息窗口提供了不同的消息框风格，包含alert(警告框), confirm(确认框), prompt(提示框), 
+progress(进度框)等。所有的消息框都是异步的。用户可以在交互消息之后使用回调函数去处理结果或做一些自己需要处理的事情。</P>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_94_files/messager[1].png">&nbsp;</DIV>
+<H4 style="PADDING-LEFT: 10px" align=left>&nbsp;</H4>
+<H4 style="PADDING-LEFT: 10px" align=left>依赖关系</H4>
+<DIV style="PADDING-LEFT: 10px" align=left>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_92.htm">window</A> 
+
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_70.htm">linkbutton</A> 
+
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_64.htm">progressbar</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$.messager.alert(</SPAN><SPAN 
+  class=string>'警告'</SPAN><SPAN>,</SPAN><SPAN class=string>'警告消息'</SPAN><SPAN>); 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>$.messager.confirm(</SPAN><SPAN 
+  class=string>'确认'</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>'您确认想要删除记录吗？'</SPAN><SPAN>,</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(r){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>if</SPAN><SPAN>&nbsp;(r){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(</SPAN><SPAN 
+  class=string>'确认删除'</SPAN><SPAN>); &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>属性</H4>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>ok</TD>
+    <TD>string</TD>
+    <TD>确定按钮文本。</TD>
+    <TD>Ok</TD></TR>
+  <TR>
+    <TD>cancel</TD>
+    <TD>string</TD>
+    <TD>取消按钮文本。</TD>
+    <TD>Cancel</TD></TR></TBODY></TABLE></DIV>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<DIV style="WIDTH: 100%" align=left>
+<TABLE class=doc-table width="95%" align=left>
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>$.messager.show</TD>
+    <TD>options</TD>
+    <TD>在屏幕右下角显示一条消息窗口。该选项参数是一个可配置的对象：<BR>showType：定义将如何显示该消息。可用值有：null,slide,fade,show。默认：slide。<BR>showSpeed：定义窗口显示的过度时间。默认：600毫秒。<BR>width：定义消息窗口的宽度。默认：250px。<BR>height：定义消息窗口的高度。默认：100px。<BR>title：在头部面板显示的标题文本。<BR>msg：显示的消息文本。<BR>style：定义消息窗体的自定义样式。<BR>timeout：如果定义为0，消息窗体将不会自动关闭，除非用户关闭他。如果定义成非0的树，消息窗体将在超时后自动关闭。默认：4秒。 
+
+      <P>代码示例：</P><PRE>$.messager.show({
+	title:'我的消息',
+	msg:'消息将在5秒后关闭。',
+	timeout:5000,
+	showType:'slide'
+});
+// 消息将显示在顶部中间
+$.messager.show({
+	title:'我的消息',
+	msg:'消息将在4秒后关闭。',
+	showType:'show',
+	style:{
+		right:'',
+		top:document.body.scrollTop+document.documentElement.scrollTop,
+		bottom:''
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>$.messager.alert</TD>
+    <TD>title, msg, icon, fn</TD>
+    <TD>显示警告窗口。参数：<BR>title：在头部面板显示的标题文本。<BR>msg：显示的消息文本。<BR>icon：显示的图标图像。可用值有：error,question,info,warning。<BR>fn: 
+      在窗口关闭的时候触发该回调函数。 
+      <P>代码示例：</P><PRE>$.messager.alert('我的消息','这是一个提示信息！','info');
+</PRE></TD></TR>
+  <TR>
+    <TD>$.messager.confirm</TD>
+    <TD>title, msg, fn</TD>
+    <TD>显示一个包含“确定”和“取消”按钮的确认消息窗口。参数：<BR>title：在头部面板显示的标题文本。<BR>msg：显示的消息文本。<BR>fn(b): 
+      当用户点击“确定”按钮的时侯将传递一个true值给回调函数，否则传递一个false值。 
+      <P>代码示例</P><PRE>$.messager.confirm('确认对话框', '您想要退出该系统吗？', function(r){
+	if (r){
+	&nbsp;&nbsp;&nbsp;&nbsp;// 退出操作;
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>$.messager.prompt</TD>
+    <TD>title, msg, fn</TD>
+    <TD>显示一个用户可以输入文本的并且带“确定”和“取消”按钮的消息窗体。参数：<BR>title：在头部面板显示的标题文本。<BR>msg：显示的消息文本。<BR>fn(val): 
+      在用户输入一个值参数的时候执行的回调函数。 
+      <P>代码示例：</P><PRE>$.messager.prompt('提示信息', '请输入你的姓名：', function(r){
+	if (r){
+		alert('你的姓名是：' + r);
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>$.messager.progress</TD>
+    <TD>options or method</TD>
+    <TD>显示一个进度消息窗体。<BR>属性定义为：<BR>title：在头部面板显示的标题文本。默认：空。<BR>msg：显示的消息文本。默认：空。 
+      <BR>text：在进度条上显示的文本。默认：undefined。<BR>interval：每次进度更新的间隔时间。默认：300毫秒。<BR><BR>方法定义为：<BR>bar：获取进度条对象。<BR>close：关闭进度窗口。<BR>
+      <P>代码示例：</P>显示进度消息窗口。<BR><PRE>	$.messager.progress(); 
+</PRE>关闭进度消息窗口。<PRE>	$.messager.progress('close');
+</PRE></TD></TR></TBODY></TABLE></DIV></DIV>&nbsp; </BODY></HTML>

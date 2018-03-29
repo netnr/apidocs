@@ -1,0 +1,880 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>tree(树)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_90_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_90_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_90_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Tree（树）</H3>
+<P align=left>使用$.fn.tree.defaults重写默认值对象。</P>
+<P align=left>树控件在web页面中一个将分层数据以树形结构进行显示。它提供用户展开、折叠、拖拽、编辑和异步加载等功能。</P>
+<P align=left><IMG src="536ac27ad9dd84e522d2c8457d32af7a_90_files/tree[1].png"> 
+</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_59.htm">draggable</A></DIV>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_60.htm">droppable</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<P 
+align=left>树控件使用&lt;ul&gt;元素定义。标签能够定义分支和子节点。节点都定义在&lt;ul&gt;列表内的&lt;li&gt;元素中。以下显示的元素将被用作树节点嵌套在&lt;ul&gt;元素中。 
+</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>ul</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"tt"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"easyui-tree"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>Folder</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>Sub&nbsp;Folder&nbsp;1</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>a</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>href</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"#"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>File&nbsp;11</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>a</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>File&nbsp;12</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>File&nbsp;13</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>File&nbsp;2</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>File&nbsp;3</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>File21</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>span</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>li</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>树控件也可以定义在一个空&lt;ul&gt;元素中并使用Javascript加载数据。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>ul</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"tt"</FONT></SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#tt'</SPAN><SPAN>).tree({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:</SPAN><SPAN 
+  class=string>'tree_data.json'</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>使用loadFilter函数处理来自Web Services的JSON数据。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#tt'</SPAN><SPAN>).tree({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;..., &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;loadFilter:&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(data){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>if</SPAN><SPAN>&nbsp;(data.d){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>return</SPAN><SPAN>&nbsp;data.d; &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</SPAN><SPAN 
+  class=keyword>else</SPAN><SPAN>&nbsp;{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>return</SPAN><SPAN>&nbsp;data; &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+  &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>树控件数据格式化</H4>
+<P align=left>每个节点都具备以下属性：</P>
+<UL>
+  <LI>
+  <DIV align=left>id：节点ID，对加载远程数据很重要。</DIV>
+  <LI>
+  <DIV align=left>text：显示节点文本。</DIV>
+  <LI>
+  <DIV align=left>state：节点状态，'open'&nbsp;或 
+  'closed'，默认：'open'。如果为'closed'的时候，将不自动展开该节点。</DIV>
+  <LI>
+  <DIV align=left>checked：表示该节点是否被选中。</DIV>
+  <LI>
+  <DIV align=left>attributes: 被添加到节点的自定义属性。</DIV>
+  <LI>
+  <DIV align=left>children: 一个节点数组声明了若干节点。</DIV></LI></UL>
+<P align=left>一些案例：</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>[{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:1, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Folder1"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"iconCls"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"icon-save"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"children"</SPAN><SPAN>:[{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"File1"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"checked"</SPAN><SPAN>:</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;},{ &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Books"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"state"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"open"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"attributes"</SPAN><SPAN>:{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"url"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"/demo/book/abc"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"price"</SPAN><SPAN>:100 &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"children"</SPAN><SPAN>:[{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"PhotoShop"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"checked"</SPAN><SPAN>:</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{ 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:&nbsp;8, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Sub&nbsp;Bookds"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"state"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"closed"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}] 
+  &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}] &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>},{ &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Languages"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"state"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"closed"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"children"</SPAN><SPAN>:[{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"Java"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;},{ &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:</SPAN><SPAN 
+  class=string>"C#"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}] &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>}]&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>异步树控件</H4>
+<P align=left>树控件内建异步加载模式的支持，用户先创建一个空的树，然后指定一个服务器端，执行检索后动态返回JSON数据<!--WizRtf2Html Charset=134  --><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: '宋体'; BACKGROUND-COLOR: black"><FONT 
+style="BACKGROUND-COLOR: #ffffff" face=Arial>来填充树并完成异步请求。</FONT></SPAN>例子如下： 
+</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>ul</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-tree"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"url:'get_data.php'"</FONT></SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>ul</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P 
+align=left>树控件读取URL。子节点的加载依赖于父节点的状态。当展开一个封闭的节点，如果节点没有加载子节点，它将会把节点id的值作为http请求参数并命名为'id'，通过URL发送到服务器上面检索子节点。</P>
+<P align=left>下面是从服务器端返回的数据。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>[{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:&nbsp;1, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=string>"Node&nbsp;1"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"state"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=string>"closed"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"children"</SPAN><SPAN>:&nbsp;[{ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:&nbsp;11, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=string>"Node&nbsp;11"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;},{ &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:&nbsp;12, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=string>"Node&nbsp;12"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}] &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>},{ &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"id"</SPAN><SPAN>:&nbsp;2, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"text"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=string>"Node&nbsp;2"</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=string>"state"</SPAN><SPAN>:&nbsp;</SPAN><SPAN 
+  class=string>"closed"</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>}]&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>节点1和节点2是封闭的，当展开节点1的时候将直接显示它的子节点。当展开节点2的时候它将发送值(2)到服务器获取子节点。</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>url</TD>
+    <TD>string</TD>
+    <TD>检索远程数据的URL地址。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>method</TD>
+    <TD>string</TD>
+    <TD>检索数据的HTTP方法。（POST / GET）</TD>
+    <TD>post</TD></TR>
+  <TR>
+    <TD>animate</TD>
+    <TD>boolean</TD>
+    <TD>定义节点在展开或折叠的时候是否显示动画效果。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>checkbox</TD>
+    <TD>boolean</TD>
+    <TD>定义是否在每一个借点之前都显示复选框。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>cascadeCheck</TD>
+    <TD>boolean</TD>
+    <TD>定义是否层叠选中状态。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>onlyLeafCheck</TD>
+    <TD>boolean</TD>
+    <TD>定义是否只在末级节点之前显示复选框。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>lines</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示树控件上的虚线。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>dnd</TD>
+    <TD>boolean</TD>
+    <TD>定义是否启用拖拽功能。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>data</TD>
+    <TD>array</TD>
+    <TD>节点数据加载。 <PRE>$('#tt').tree({
+	data: [{
+		text: 'Item1',
+		state: 'closed',
+		children: [{
+			text: 'Item11'
+		},{
+			text: 'Item12'
+		}]
+	},{
+		text: 'Item2'
+	}]
+});
+</PRE></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>queryParams</TD>
+    <TD>object</TD>
+    <TD><SPAN>在请求远程数据的时候增加查询参数并发送到服务器。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></SPAN></TD>
+    <TD>{}</TD></TR>
+  <TR>
+    <TD>formatter</TD>
+    <TD>function(node)</TD>
+    <TD><SPAN>定义</SPAN><SPAN>如何渲染</SPAN><SPAN>节点的</SPAN><SPAN>文本</SPAN><SPAN>。<BR>
+      <P>代码示例：</P><PRE>$('#tt').tree({
+	formatter:function(node){
+		return node.text;
+	}
+});</PRE></SPAN></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>filter</TD>
+    <TD>function(q,node)</TD>
+    <TD>定义如何过滤本地展示的数据，返回true将允许节点进行展示。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></TD>
+    <TD>json loader</TD></TR>
+  <TR>
+    <TD>loader</TD>
+    <TD>function(param,success,error)</TD>
+    <TD>定义如何从远程服务器加载数据。返回false可以忽略本操作。该函数具备以下参数：<BR>param：发送到远程服务器的参数对象。<BR>success(data)：当检索数据成功的时候调用的回调函数。<BR>error()：当检索数据失败的时候调用的回调函数。</TD>
+    <TD>json loader</TD></TR>
+  <TR>
+    <TD>loadFilter</TD>
+    <TD>function(data,parent)</TD>
+    <TD>返回过滤过的数据进行展示。返回数据是标准树格式。该函数具备以下参数：<BR>data：加载的原始数据。<BR>parent: 
+      DOM对象，代表父节点。 </TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>很多事件的回调函数都包含'node'参数，其具备如下属性：</P>
+<UL>
+  <LI>
+  <DIV align=left>id：绑定节点的标识值。</DIV>
+  <LI>
+  <DIV align=left>text：显示的节点文本。</DIV>
+  <LI>
+  <DIV align=left>iconCls：显示的节点图标CSS类ID。</DIV>
+  <LI>
+  <DIV align=left>checked：该节点是否被选中。</DIV>
+  <LI>
+  <DIV align=left>state：节点状态，'open'&nbsp;或 'closed'。</DIV>
+  <LI>
+  <DIV align=left>attributes：绑定该节点的自定义属性。</DIV>
+  <LI>
+  <DIV align=left>target：目标DOM对象。</DIV></LI></UL>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onClick</TD>
+    <TD>node</TD>
+    <TD>
+      <P>在用户点击一个节点的时候触发。</P>
+      <P>代码示例：&nbsp;</P><PRE style="COLOR: #006600">$('#tt').tree({
+	onClick: function(node){
+		alert(node.text);  // 在用户点击的时候提示
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>onDblClick</TD>
+    <TD>node</TD>
+    <TD>在用户双击一个节点的时候触发。</TD></TR>
+  <TR>
+    <TD>onBeforeLoad</TD>
+    <TD>node, param</TD>
+    <TD>在请求加载远程数据之前触发，返回false可以取消加载操作。</TD></TR>
+  <TR>
+    <TD>onLoadSuccess</TD>
+    <TD>node, data</TD>
+    <TD>在数据加载成功以后触发。</TD></TR>
+  <TR>
+    <TD>onLoadError</TD>
+    <TD>arguments</TD>
+    <TD>在数据加载失败的时候触发，arguments参数和jQuery的$.ajax()函数里面的'error'回调函数的参数相同。</TD></TR>
+  <TR>
+    <TD>onBeforeExpand</TD>
+    <TD>node</TD>
+    <TD>在节点展开之前触发，返回false可以取消展开操作。</TD></TR>
+  <TR>
+    <TD>onExpand</TD>
+    <TD>node</TD>
+    <TD>在节点展开的时候触发。</TD></TR>
+  <TR>
+    <TD>onBeforeCollapse</TD>
+    <TD>node</TD>
+    <TD>在节点折叠之前触发，返回false可以取消折叠操作。</TD></TR>
+  <TR>
+    <TD>onCollapse</TD>
+    <TD>node</TD>
+    <TD>在节点折叠的时候触发。</TD></TR>
+  <TR>
+    <TD>onBeforeCheck</TD>
+    <TD>node, checked</TD>
+    <TD>在用户点击勾选复选框之前触发，返回false可以取消选择动作。<STRONG><FONT 
+      color=#ff0000>（该事件自1.3.1版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onCheck</TD>
+    <TD>node, checked</TD>
+    <TD>在用户点击勾选复选框的时候触发。</TD></TR>
+  <TR>
+    <TD>onBeforeSelect</TD>
+    <TD>node</TD>
+    <TD>在用户选择一个节点之前触发，返回false可以取消选择动作。</TD></TR>
+  <TR>
+    <TD>onSelect</TD>
+    <TD>node</TD>
+    <TD>在用户选择节点的时候触发。</TD></TR>
+  <TR>
+    <TD>onContextMenu</TD>
+    <TD>e, node</TD>
+    <TD>
+      <P>在右键点击节点的时候触发。</P>
+      <P>代码示例：&nbsp;</P><PRE style="COLOR: #006600">// 右键点击节点并显示快捷菜单
+$('#tt').tree({
+	onContextMenu: function(e, node){
+		e.preventDefault();
+		// 查找节点
+		$('#tt').tree('select', node.target);
+		// 显示快捷菜单
+		$('#mm').menu('show', {
+			left: e.pageX,
+			top: e.pageY
+		});
+	}
+});
+
+// 右键菜单定义如下：
+&lt;div id="mm" class="easyui-menu" style="width:120px;"&gt;
+	&lt;div onclick="append()" data-options="iconCls:'icon-add'"&gt;追加&lt;/div&gt;
+	&lt;div onclick="remove()" data-options="iconCls:'icon-remove'"&gt;移除&lt;/div&gt;
+&lt;/div&gt;
+</PRE></TD></TR>
+  <TR>
+    <TD>onBeforeDrag</TD>
+    <TD>node</TD>
+    <TD>在开始拖动节点之前触发，返回false可以拒绝拖动。<STRONG><FONT 
+      color=#ff0000>（该事件自1.3.2版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onStartDrag</TD>
+    <TD>node</TD>
+    <TD>在开始拖动节点的时候触发。<STRONG><FONT 
+      color=#ff0000>（该事件自1.3.2版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onStopDrag</TD>
+    <TD>node</TD>
+    <TD>在停止拖动节点的时候触发。<STRONG><FONT 
+      color=#ff0000>（该事件自1.3.2版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onDragEnter</TD>
+    <TD>target, source</TD>
+    <TD>在拖动一个节点进入到某个目标节点并释放的时候触发，返回false可以拒绝拖动。<BR>target：释放的目标节点元素。<BR>source：开始拖动的源节点。<BR><STRONG><FONT 
+      color=#ff0000>（该事件自1.3.2版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onDragOver</TD>
+    <TD>target, source</TD>
+    <TD>在拖动一个节点经过某个目标节点并释放的时候触发，返回false可以拒绝拖动。<BR>target：释放的目标节点元素。<BR>source：开始拖动的源节点。<BR><STRONG><FONT 
+      color=#ff0000>（该事件自1.3.2版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onDragLeave</TD>
+    <TD>target, source</TD>
+    <TD>在拖动一个节点离开某个目标节点并释放的时候触发，返回false可以拒绝拖动。<BR>target：释放的目标节点元素。<BR>source：开始拖动的源节点。<BR><STRONG><FONT 
+      color=#ff0000>（该事件自1.3.2版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onBeforeDrop</TD>
+    <TD>target, source, point</TD>
+    <TD>在拖动一个节点之前触发，返回false可以拒绝拖动。<BR>target：释放的目标节点元素。<BR>source：开始拖动的源节点。<BR>point：表示哪一种拖动操作，可用值有：'append','top'&nbsp;或 
+      'bottom'。<BR><STRONG><FONT color=#ff0000>（该事件自1.3.3版开始可用）</FONT></STRONG> 
+    <TD></TD>
+  <TR>
+    <TD>onDrop</TD>
+    <TD>target, source, point</TD>
+    <TD>当节点位置被拖动时触发。<BR>target：DOM对象，需要被拖动动的目标节点。<BR>source：源节点。<BR>point：表示哪一种拖动操作，可用值有：'append','top'&nbsp;或 
+      'bottom'。</TD></TR>
+  <TR>
+    <TD>onBeforeEdit</TD>
+    <TD>node</TD>
+    <TD>在编辑节点之前触发。</TD></TR>
+  <TR>
+    <TD>onAfterEdit</TD>
+    <TD>node</TD>
+    <TD>在编辑节点之后触发。</TD></TR>
+  <TR>
+    <TD>onCancelEdit</TD>
+    <TD>node</TD>
+    <TD>在取消编辑操作的时候触发。</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回树控件属性。</TD></TR>
+  <TR>
+    <TD>loadData</TD>
+    <TD>data</TD>
+    <TD>读取树控件数据。</TD></TR>
+  <TR>
+    <TD>getNode</TD>
+    <TD>target</TD>
+    <TD>获取指定节点对象。</TD></TR>
+  <TR>
+    <TD>getData</TD>
+    <TD>target</TD>
+    <TD>获取指定节点数据，包含它的子节点。</TD></TR>
+  <TR>
+    <TD>reload</TD>
+    <TD>target</TD>
+    <TD>重新载入树控件数据。</TD></TR>
+  <TR>
+    <TD>getRoot</TD>
+    <TD>nodeEl</TD>
+    <TD>获取通过“nodeEl”参数指定的节点的顶部父节点元素。<STRONG><FONT 
+      color=#ff0000>（该方法自1.4版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>getRoots</TD>
+    <TD>none</TD>
+    <TD>获取所有根节点，返回节点数组。</TD></TR>
+  <TR>
+    <TD>getParent</TD>
+    <TD>target</TD>
+    <TD>获取父节点，'target'参数代表节点的DOM对象。</TD></TR>
+  <TR>
+    <TD>getChildren</TD>
+    <TD>target</TD>
+    <TD>获取所有子节点，'target'参数代表节点的DOM对象。</TD></TR>
+  <TR>
+    <TD>getChecked</TD>
+    <TD>state</TD>
+    <TD>获取所有选中的节点。'state'可用值有：'checked','unchecked','indeterminate'。如果'state'未指定，将返回'checked'节点。 
+
+      <P>代码示例：</P><PRE>var nodes = $('#tt').tree('getChecked');	// get checked nodes
+var nodes = $('#tt').tree('getChecked', 'unchecked');	// 获取未选择节点
+var nodes = $('#tt').tree('getChecked', 'indeterminate');	// 获取不确定的节点</PRE><PRE><FONT color=#ff0000><STRONG>译者注：（1.3.4新增获取方式）</STRONG></FONT><BR><BR>var nodes = $('#tt').tree('getChecked', ['unchecked','indeterminate']);</PRE></TD></TR>
+  <TR>
+    <TD>getSelected</TD>
+    <TD>none</TD>
+    <TD>获取选择节点并返回它，如果未选择则返回null。</TD></TR>
+  <TR>
+    <TD>isLeaf</TD>
+    <TD>target</TD>
+    <TD>判断指定的节点是否是叶子节点，target参数是一个节点DOM对象。</TD></TR>
+  <TR>
+    <TD>find</TD>
+    <TD>id</TD>
+    <TD>
+      <P>查找指定节点并返回节点对象。</P>
+      <P>代码示例：&nbsp;</P><PRE style="COLOR: #006600">// 查找一个节点并选择它
+var node = $('#tt').tree('find', 12);
+$('#tt').tree('select', node.target);
+</PRE></TD></TR>
+  <TR>
+    <TD>select</TD>
+    <TD>target</TD>
+    <TD>选择一个节点，'target'参数表示节点的DOM对象。</TD></TR>
+  <TR>
+    <TD>check</TD>
+    <TD>target</TD>
+    <TD>选中指定节点。</TD></TR>
+  <TR>
+    <TD>uncheck</TD>
+    <TD>target</TD>
+    <TD>取消选中指定节点。</TD></TR>
+  <TR>
+    <TD>collapse</TD>
+    <TD>target</TD>
+    <TD>折叠一个节点，'target'参数表示节点的DOM对象。</TD></TR>
+  <TR>
+    <TD>expand</TD>
+    <TD>target</TD>
+    <TD>展开一个节点，'target'参数表示节点的DOM对象。在节点关闭或没有子节点的时候，节点ID的值(名为'id'的参数)将会发送给服务器<BR>请求子节点的数据。 
+    </TD></TR>
+  <TR>
+    <TD>collapseAll</TD>
+    <TD>target</TD>
+    <TD>折叠所有节点。</TD></TR>
+  <TR>
+    <TD>expandAll</TD>
+    <TD>target</TD>
+    <TD>展开所有节点。</TD></TR>
+  <TR>
+    <TD>expandTo</TD>
+    <TD>target</TD>
+    <TD>打开从根节点到指定节点之间的所有节点。</TD></TR>
+  <TR>
+    <TD>scrollTo</TD>
+    <TD>target</TD>
+    <TD>滚动到指定节点。<STRONG><FONT 
+  color=#ff0000>（该方法自1.3.4版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>append</TD>
+    <TD>param</TD>
+    <TD>
+      <P>追加若干子节点到一个父节点，param参数有2个属性：<BR>parent：DOM对象，将要被追加子节点的父节点，如果未指定，子节点将被追加至根节点。<BR>data：数组，节点数据。</P>
+      <P>代码示例：</P><PRE style="COLOR: #006600">// 追加若干个节点并选中他们
+var selected = $('#tt').tree('getSelected');
+$('#tt').tree('append', {
+	parent: selected.target,
+	data: [{
+		id: 23,
+		text: 'node23'
+	},{
+		text: 'node24',
+		state: 'closed',
+		children: [{
+			text: 'node241'
+		},{
+			text: 'node242'
+		}]
+	}]
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>toggle</TD>
+    <TD>target</TD>
+    <TD>打开或关闭节点的触发器，target参数是一个节点DOM对象。</TD></TR>
+  <TR>
+    <TD>insert</TD>
+    <TD>param</TD>
+    <TD>在一个指定节点之前或之后插入节点，'param'参数包含如下属性：<BR>before：DOM对象，在某个节点之前插入。<BR>after：DOM对象，在某个节点之后插入。<BR>data：对象，节点数据。 
+
+      <P>下面的代码展示了如何将一个新节点插入到选择的节点之前：</P><PRE>var node = $('#tt').tree('getSelected');
+if (node){
+	$('#tt').tree('insert', {
+		before: node.target,
+		data: {
+			id: 21,
+			text: 'node text'
+		}
+	});
+}</PRE><PRE><STRONG><FONT color=#ff0000>译者注<FONT size=3>：（1.3.4新增获取方式）</FONT></FONT></STRONG><BR>var node = $('#tt').tree('getSelected');
+if (node){
+	$('#tt').tree('insert', {
+		before: node.target,
+		data: [{
+		&nbsp;&nbsp;&nbsp;&nbsp;id: 23,
+		&nbsp;&nbsp;&nbsp;&nbsp;text: 'node23'
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{
+	&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;text: 'node24',
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; state: 'closed',
+		&nbsp;&nbsp;&nbsp;&nbsp;children: [{
+			text: 'node241'
+		&nbsp;&nbsp;&nbsp;&nbsp;},{
+			text: 'node242'
+		&nbsp;&nbsp;&nbsp;&nbsp;}]
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]
+	});
+}<BR></PRE></TD></TR>
+  <TR>
+    <TD>remove</TD>
+    <TD>target</TD>
+    <TD>移除一个节点和它的子节点，'target'参数是该节点的DOM对象。</TD></TR>
+  <TR>
+    <TD>pop</TD>
+    <TD>target</TD>
+    <TD>移除一个节点和它的子节点，该方法跟remove方法一样，不同的是它将返回被移除的节点数据。</TD></TR>
+  <TR>
+    <TD>update</TD>
+    <TD>param</TD>
+    <TD>更新指定节点。'param'参数包含以下属性：<BR>target(DOM对象，将被更新的目标节点)，id，text，iconCls，checked等。 
+
+      <P>代码示例：</P><PRE>// 更新选择的节点文本
+var node = $('#tt').tree('getSelected');
+if (node){
+	$('#tt').tree('update', {
+		target: node.target,
+		text: 'new text'
+	});
+}</PRE></TD></TR>
+  <TR>
+    <TD>enableDnd</TD>
+    <TD>none</TD>
+    <TD>启用拖拽功能。</TD></TR>
+  <TR>
+    <TD>disableDnd</TD>
+    <TD>none</TD>
+    <TD>禁用拖拽功能。</TD></TR>
+  <TR>
+    <TD>beginEdit</TD>
+    <TD>target</TD>
+    <TD>开始编辑一个节点。</TD></TR>
+  <TR>
+    <TD>endEdit</TD>
+    <TD>target</TD>
+    <TD>结束编辑一个节点。</TD></TR>
+  <TR>
+    <TD>cancelEdit</TD>
+    <TD>target</TD>
+    <TD>取消编辑一个节点。</TD></TR>
+  <TR>
+    <TD>doFilter</TD>
+    <TD>text</TD>
+    <TD>过滤操作，和filter属性功能类似。<FONT 
+      color=#ff0000><STRONG>（该方法自1.4.2版开始可用）</STRONG> 
+      <P><FONT color=#000000>代码示例：</FONT></P><PRE>$('#tt').tree('doFilter', 'easyui');
+$('#tt').tree('doFilter', '');	// 清除过滤器</PRE></FONT></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>draggable(拖动)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_59_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_59_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_59_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Draggable（拖动）</H3>
+<P align=left>使用$.fn.draggable.defaults重写默认值对象。</P>
+<H4 align=left>
+<H4 id=usage align=left>使用案例</H4></H4>
+<P align=left>通过标签创建一个可拖动的元素。</P>
+<DIV align=left>
+<DIV class=dp-highlighter style="HEIGHT: 118px; WIDTH: 97.01%">
+<DIV class=bar><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;div</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>id</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"dd"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>class</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"easyui-draggable"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>data-options</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"handle:'#title'"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>style</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"</SPAN><SPAN class=pln>width</SPAN><SPAN class=pun>:</SPAN><SPAN class=lit>100px</SPAN><SPAN class=pun>;</SPAN><SPAN class=pln>height</SPAN><SPAN class=pun>:</SPAN><SPAN class=lit>100px</SPAN><SPAN class=pun>;</SPAN><SPAN class=atv>"</SPAN><SPAN class=tag>&gt;</SPAN><LI class=L1><SPAN class=pln>    </SPAN><SPAN class=tag>&lt;div</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>id</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"title"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>style</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"</SPAN><SPAN class=pln>background</SPAN><SPAN class=pun>:#</SPAN><SPAN class=pln>ccc</SPAN><SPAN class=pun>;</SPAN><SPAN class=atv>"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=pln>title</SPAN><SPAN class=tag>&lt;/div&gt;</SPAN><LI class=L2><SPAN class=tag>&lt;/div&gt;</SPAN></LI></OL></PRE></DIV></DIV></DIV>
+<P align=left>使用Javascript创建一个可拖动的元素。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"dd"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>style</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"width:100px;height:100px;"</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI><SPAN><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>div</SPAN><SPAN> 
+  </SPAN><SPAN class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"title"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>style</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"background:#ccc;"</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN>title</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
+</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#dd'</SPAN><SPAN>).draggable({ </SPAN></SPAN>
+  <LI><SPAN>handle:<SPAN class=string>'#title'</SPAN><SPAN> </SPAN></SPAN>
+  <LI class=alt><SPAN>}); </SPAN></LI></OL></DIV></DIV>
+<P align=left>&nbsp;</P>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>proxy</TD>
+    <TD>string,function</TD>
+    <TD>
+      <P>在拖动的时候使用的代理元素，当使用'clone'的时候，将使用该元素的一个复制元素来作为替代元素。如果指定了一个函数, </P>
+      <P>它将返回一个jquery对象。 </P>
+      <P>下面的例子显示了如何创建一个简单的代理对象。</P><PRE>$('.dragitem').draggable({
+	proxy: function(source){
+		var p = $('&lt;div style="border:1px solid #ccc;width:80px"&gt;&lt;/div&gt;');
+		p.html($(source).html()).appendTo('body');
+		return p;
+	}
+});
+</PRE></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>revert</TD>
+    <TD>boolean</TD>
+    <TD>如果设置为true，在拖动停止时元素将返回起始位置。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>cursor</TD>
+    <TD>string</TD>
+    <TD>拖动时的CSS指针样式。</TD>
+    <TD>move</TD></TR>
+  <TR>
+    <TD>deltaX</TD>
+    <TD>number</TD>
+    <TD><SPAN lang=zh-CN id=result_box class=short_text a="undefined" c="4" 
+      closure_uid_569652002="107" ud="null"><SPAN 
+      closure_uid_569652002="597">被拖动的元素</SPAN><SPAN 
+      closure_uid_569652002="598">对应</SPAN><SPAN 
+      closure_uid_569652002="599">于</SPAN><SPAN 
+      closure_uid_569652002="600">当前光标</SPAN><SPAN 
+      closure_uid_569652002="601">位置x。</SPAN></SPAN></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>deltaY</TD>
+    <TD>number</TD>
+    <TD><SPAN lang=zh-CN id=result_box class=short_text a="undefined" c="4" 
+      closure_uid_569652002="107" ud="null"><SPAN 
+      closure_uid_569652002="597">被拖动的元素</SPAN><SPAN 
+      closure_uid_569652002="598">对应</SPAN><SPAN 
+      closure_uid_569652002="599">于</SPAN><SPAN 
+      closure_uid_569652002="600">当前光标</SPAN><SPAN 
+      closure_uid_569652002="601">位置y。</SPAN></SPAN></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>handle</TD>
+    <TD>selector</TD>
+    <TD>开始拖动的句柄。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>disabled</TD>
+    <TD>boolean</TD>
+    <TD>如果设置为true，则停止拖动。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>edge</TD>
+    <TD>number</TD>
+    <TD>可以在其中拖动的容器的宽度。</TD>
+    <TD>0</TD></TR>
+  <TR>
+    <TD>axis</TD>
+    <TD>string</TD>
+    <TD>定义元素移动的轴向，可用值有：'v'或'h'，当没有设置或设置为null时可同时在水平和垂直方向上拖动。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>delay</TD>
+    <TD>number</TD>
+    <TD>定义元素在多少毫秒后开始移动。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></TD>
+    <TD>100</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>Name</STRONG></TH>
+    <TH><STRONG>Parameters</STRONG></TH>
+    <TH><STRONG>Description</STRONG></TH></TR>
+  <TR>
+    <TD>onBeforeDrag</TD>
+    <TD>e</TD>
+    <TD>在拖动之前触发，返回false将取消拖动。</TD></TR>
+  <TR>
+    <TD>onStartDrag</TD>
+    <TD>e</TD>
+    <TD>在目标对象开始被拖动时触发。</TD></TR>
+  <TR>
+    <TD>onDrag</TD>
+    <TD>e</TD>
+    <TD>在拖动过程中触发，当不能再拖动时返回false。</TD></TR>
+  <TR>
+    <TD>onStopDrag</TD>
+    <TD>e</TD>
+    <TD>在拖动停止时触发。</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>Name</STRONG></TH>
+    <TH><STRONG>Parameter</STRONG></TH>
+    <TH><STRONG>Description</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>proxy</TD>
+    <TD>none</TD>
+    <TD>如果代理属性被设置则返回该拖动代理元素。</TD></TR>
+  <TR>
+    <TD>enable</TD>
+    <TD>none</TD>
+    <TD>允许拖动。</TD></TR>
+  <TR>
+    <TD>disable</TD>
+    <TD>none</TD>
+    <TD>禁止拖动。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

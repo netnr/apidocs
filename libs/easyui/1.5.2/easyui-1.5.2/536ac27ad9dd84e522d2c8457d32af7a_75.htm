@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>validatebox(验证框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_75_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_75_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_75_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>ValidateBox（验证框）</H3>
+<P align=left>使用$.fn.validatebox.defaults重写默认值对象。</P>
+<P 
+align=left>validatebox(验证框)的设计目的是为了验证输入的表单字段是否有效。如果用户输入了无效的值，它将会更改输入框的背景颜色，并且显示警告图标和提示信息。该验证框可以结合form(表单)插件并防止表单重复提交。 
+</P>
+<P align=left><IMG src="536ac27ad9dd84e522d2c8457d32af7a_75_files/90163750.png"> 
+</P>
+<H4>依赖关系</H4>
+<UL>
+  <LI><A 
+href="536ac27ad9dd84e522d2c8457d32af7a_111.htm">tooltip</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建验证框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"vv"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-validatebox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"required:true,validType:'email'"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建验证框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"vv"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#vv'</SPAN><SPAN>).validatebox({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;required:&nbsp;</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;validType:&nbsp;</SPAN><SPAN 
+  class=string>'email'</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>检查密码和确认密码是否相同。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN 
+  class=comment>//&nbsp;extend&nbsp;the&nbsp;'equals'&nbsp;rule 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>$.extend($.fn.validatebox.defaults.rules,&nbsp;{ &nbsp;&nbsp;</SPAN> 
+
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;equals:&nbsp;{ &nbsp;&nbsp;</SPAN> 
+
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validator:&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(value,param){ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>return</SPAN><SPAN>&nbsp;value&nbsp;==&nbsp;$(param[0]).val(); 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message:&nbsp;</SPAN><SPAN 
+  class=string>'Field&nbsp;do&nbsp;not&nbsp;match.'</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"pwd"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"pwd"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>type</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"password"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-validatebox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"required:true"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"rpwd"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"rpwd"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>type</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"password"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-validatebox"</FONT></SPAN><SPAN>&nbsp; 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>required</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"required"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>validType</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"equals['#pwd']"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>验证规则</H4>
+<P align=left>验证规则是根据使用需求和验证类型属性来定义的，这些规则已经实现：</P>
+<UL>
+  <LI>
+  <DIV align=left>email：匹配E-Mail的正则表达式规则。</DIV>
+  <LI>
+  <DIV align=left>url：匹配URL的正则表达式规则。</DIV>
+  <LI>
+  <DIV align=left>length[0,100]：允许在x到x之间个字符。</DIV>
+  <LI>
+  <DIV 
+  align=left>remote['http://.../action.do','paramName']：发送ajax请求需要验证的值，当成功时返回true。</DIV></LI></UL>
+<P 
+align=left>自定义验证规则，需要重写$.fn.validatebox.defaults.rules中定义的验证器函数和无效消息。例如，定义一个最小长度(minLength)的自定义验证：</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$.extend($.fn.validatebox.defaults.rules,&nbsp;{ 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;minLength:&nbsp;{ &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validator:&nbsp;</SPAN><SPAN 
+  class=keyword>function</SPAN><SPAN>(value,&nbsp;param){ 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=keyword>return</SPAN><SPAN>&nbsp;value.length&nbsp;&gt;=&nbsp;param[0]; 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message:&nbsp;</SPAN><SPAN 
+  class=string>'Please&nbsp;enter&nbsp;at&nbsp;least&nbsp;{0}&nbsp;characters.'</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>现在你可以在输入框中限制最小长度为5的自定义最小长度验证了：</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-validatebox"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"validType:'minLength[5]'"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>required</TD>
+    <TD>boolean</TD>
+    <TD>定义为必填字段。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>validType</TD>
+    <TD>string,array</TD>
+    <TD>定义字段验证类型，比如：email, 
+      url等等。可用值有：<BR>1).一个有效类型字符串运用一个验证规则。<BR>2).一个有效类型数组运用多个验证规则。<STRONG><FONT 
+      color=#ff0000>（多验证规则验证一个字段在1.3.2或更高版本中才可以使用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>&lt;input class="easyui-validatebox" data-options="required:true,validType:'url'"&gt;
+&lt;input class="easyui-validatebox" data-options="
+	required:true,
+	validType:['email','length[0,20]']
+"&gt;
+</PRE></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>delay</TD>
+    <TD>number</TD>
+    <TD>延迟到最后验证输入值。<STRONG><FONT 
+    color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
+    <TD>200</TD></TR>
+  <TR>
+    <TD>missingMessage</TD>
+    <TD>string</TD>
+    <TD>当文本框未填写时出现的提示信息。</TD>
+    <TD>This field is required.</TD></TR>
+  <TR>
+    <TD>invalidMessage</TD>
+    <TD>string</TD>
+    <TD>当文本框的内容被验证为无效时出现的提示。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>tipPosition</TD>
+    <TD>string</TD>
+    <TD>定义当文本框内容无效的时候提示消息显示的位置，有效的值有：'left','right'。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
+    <TD>right</TD></TR></ <TR>
+  <TR>
+    <TD>deltaX</TD>
+    <TD>number</TD>
+    <TD>提示框在水平方向上位移。<FONT 
+      color=#ff0000><STRONG>（该属性自1.3.3版开始可用）</STRONG></FONT></TD>
+    <TD>0</TD></TR></ <TR>
+  <TR>
+    <TD>novalidate</TD>
+    <TD>boolean</TD>
+    <TD>为true时关闭验证功能。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.4版开始可用）</FONT></STRONG></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>editable</TD>
+    <TD>boolean</TD>
+    <TD>为true时用户可以在文本域中输入内容。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>disabled</TD>
+    <TD>boolean</TD>
+    <TD>为true时禁用验证框（在表单提交时不会被提交）。<FONT 
+      color=#ff0000><STRONG>（该属性自1.</STRONG><STRONG>4.5</STRONG><STRONG>版开始可用）</STRONG></FONT></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>readonly</TD>
+    <TD>boolean</TD>
+    <TD>为true时将验证框设为只读（在表单提交时会被提交）。<FONT 
+      color=#ff0000><STRONG>（该属性自1.</STRONG><STRONG>4.5</STRONG><STRONG>版开始可用）</STRONG></FONT></TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>validateOnCreate</TD>
+    <TD>boolean</TD>
+    <TD>为true时在创建该组件时就进行验证。<FONT 
+      color=#ff0000><STRONG>（该属性自1.</STRONG><STRONG>4.5</STRONG><STRONG>版开始可用）</STRONG></FONT></TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>validateOnBlur</TD>
+    <TD>boolean</TD>
+    <TD>为true时在该组件失去焦点的时候进行验证。<FONT 
+      color=#ff0000><STRONG>（该属性自1.</STRONG><STRONG>4.5</STRONG><STRONG>版开始可用）</STRONG></FONT></TD>
+    <TD>false</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onBeforeValidate</TD>
+    <TD>none</TD>
+    <TD>在验证一个字段之前触发。<STRONG><FONT 
+    color=#ff0000>（该事件自1.4版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onValidate</TD>
+    <TD>valid</TD>
+    <TD>在验证一个字段的时候触发。<STRONG><FONT 
+    color=#ff0000>（该事件自1.4版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法属性</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>destroy</TD>
+    <TD>none</TD>
+    <TD>移除并销毁组件。</TD></TR>
+  <TR>
+    <TD>validate</TD>
+    <TD>none</TD>
+    <TD>验证文本框的内容是否有效。</TD></TR>
+  <TR>
+    <TD>isValid</TD>
+    <TD>none</TD>
+    <TD>调用validate方法并且返回验证结果，true或者false。</TD></TR>
+  <TR>
+    <TD>enableValidation</TD>
+    <TD>none</TD>
+    <TD>启用验证。<STRONG><FONT 
+color=#ff0000>（该方法自1.3.4版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>disableValidation</TD>
+    <TD>none</TD>
+    <TD>禁用验证。<STRONG><FONT 
+color=#ff0000>（该方法自1.3.4版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>resetValidation</TD>
+    <TD>none</TD>
+    <TD>重置验证。<STRONG><FONT 
+color=#ff0000>（该方法自1.4.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>enable</TD>
+    <TD>none</TD>
+    <TD>启用该组件。<FONT 
+      color=#ff0000><STRONG>（该方法自1.</STRONG><STRONG>4.5</STRONG><STRONG>版开始可用）</STRONG></FONT></TD></TR>
+  <TR>
+    <TD>disable</TD>
+    <TD>none</TD>
+    <TD>禁用该组件。<FONT 
+      color=#ff0000><STRONG>（该方法自1.</STRONG><STRONG>4.5</STRONG><STRONG>版开始可用）</STRONG></FONT></TD></TR>
+  <TR>
+    <TD>readonly</TD>
+    <TD>mode</TD>
+    <TD>
+      <P>启用/禁用只读模式。<FONT 
+      color=#ff0000><STRONG>（该方法自1.</STRONG><STRONG>4.5</STRONG><STRONG>版开始可用）</STRONG></FONT></P>
+      <P>代码示例：</P><PRE>$('#tt').validatebox('readonly');	// 启用只读模式
+$('#tt').validatebox('readonly',true);	// 启用只读模式
+$('#tt').validatebox('readonly',false);	// 禁用只读模式<BR></PRE></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

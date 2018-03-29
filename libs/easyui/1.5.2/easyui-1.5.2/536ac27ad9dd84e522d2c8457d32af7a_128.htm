@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>textbox(文本框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_128_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_128_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_128_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>TextBox（文本框）</H3>
+<P 
+align=left>扩展自$.fn.validatebox.defaults，使用$.fn.textbox.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.4版开始可用）</FONT></STRONG></P>
+<P align=left>TextBox(文本框)是一个增强的输入字段组件， 
+它允许用户非常简单的创建一组表单。它是一个用于构建其他组合控件的基础组件，如：combo，databox、spinner等 </P>
+<P align=left>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_128_files/textbox[1].png"> </P>
+<H4>依赖关系</H4>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_75.htm">validatebox</A> 
+
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_70.htm">linkbutton</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建文本框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><FONT color=#006699><SPAN class=tag><SPAN 
+  class=tag><STRONG>&lt;input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN 
+  class=atn><FONT color=#ff0000>class</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv><FONT color=#0000ff>"easyui-textbox"</FONT></SPAN><SPAN class=pln> 
+  </SPAN><SPAN class=atn><FONT color=#ff0000>data-options</FONT></SPAN><SPAN 
+  class=pun>=</SPAN><SPAN class=atv><FONT 
+  color=#0000ff>"iconCls:'icon-search'"</FONT></SPAN><SPAN class=pln> 
+  </SPAN><SPAN class=atn><FONT color=#ff0000>style</FONT></SPAN><SPAN 
+  class=pun>=</SPAN><FONT color=#0000ff><SPAN class=atv>"</SPAN></FONT><FONT 
+  color=#0000ff><SPAN class=pln>width:300px"</SPAN></FONT><SPAN 
+  class=tag>&gt;</SPAN></SPAN></FONT><SPAN>&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建文本框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter style="HEIGHT: 100px; WIDTH: 96.96%">
+<DIV class=bar>
+<DIV class=tools><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;<STRONG>input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>id</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"tb"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>type</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"text"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN class=atn><FONT color=#ff0000>style</FONT></SPAN><SPAN class=pun>=</SPAN><FONT color=#0000ff><SPAN class=atv>"</SPAN><SPAN class=pln>width</SPAN><SPAN class=pun>:</SPAN><SPAN class=lit>300px</SPAN><SPAN class=atv>"</SPAN></FONT><SPAN class=tag>&gt;</SPAN></LI></OL></PRE></DIV></DIV></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#tb'</SPAN><SPAN>).textbox({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;buttonText:'<FONT 
+  color=#339966>Search</FONT>'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;iconCls:'<FONT 
+  color=#339966>icon-man</FONT>',</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;iconAlign:'<FONT 
+  color=#339966>left</FONT>'</SPAN><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></SPAN> 
+
+  <LI><SPAN>})</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>number</TD>
+    <TD>组件的宽度。</TD>
+    <TD>auto</TD></TR>
+  <TR>
+    <TD>height</TD>
+    <TD>number</TD>
+    <TD>组件的高度。</TD>
+    <TD>22</TD></TR>
+  <TR>
+    <TD>cls</TD>
+    <TD>string</TD>
+    <TD>允许给组件添加一个自定义css类名。<STRONG><FONT 
+      color=#ff0000>（该属性自1.5.1版开始可用）</FONT></STRONG></TD>
+    <TD>22</TD></TR>
+  <TR>
+    <TD>prompt</TD>
+    <TD>string</TD>
+    <TD><FONT color=#000000>在输入框显示提示消息。</FONT></TD>
+    <TD>''</TD></TR>
+  <TR>
+    <TD>value</TD>
+    <TD>string</TD>
+    <TD>默认值</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>type</TD>
+    <TD>string</TD>
+    <TD>文本框类型。可用值有："text"和"password"。</TD>
+    <TD>text</TD></TR>
+  <TR>
+    <TD>label</TD>
+    <TD>string,selector</TD>
+    <TD>文本框标签。<STRONG><FONT color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>$('#email').textbox({
+	label: 'Email:'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labelPosition: 'top',<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prompt: 'Ent'
+});
+</PRE><PRE><IMG src="536ac27ad9dd84e522d2c8457d32af7a_128_files/88645625.png"></PRE></TD>
+    <TD>null</TD></TR></ <TR>
+  <TR>
+    <TD>labelWidth</TD>
+    <TD>number</TD>
+    <TD>标签宽度。<STRONG><FONT color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></TD>
+    <TD>auto</TD></TR></ <TR>
+  <TR>
+    <TD>labelPosition</TD>
+    <TD>string</TD>
+    <TD>标签位置。可用值：'before','after','top'<STRONG><FONT 
+      color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></TD>
+    <TD>before</TD></TR></ <TR>
+  <TR>
+    <TD>labelAlign</TD>
+    <TD>string</TD>
+    <TD>标签对齐方式。可用值：'left','right'<STRONG><FONT 
+      color=#ff0000>（该属性自1.5版开始可用）</FONT></STRONG></TD>
+    <TD>left</TD></TR></ <TR>
+  <TR>
+    <TD>multiline</TD>
+    <TD>boolean</TD>
+    <TD>定义是否是多行文本框。</TD>
+    <TD>false</TD></TR></ <TR>
+  <TR>
+    <TD>editable</TD>
+    <TD>boolean</TD>
+    <TD>定义用户是否可以直接在该字段内输入文字。</TD>
+    <TD>true</TD></TR></ <TR>
+  <TR>
+    <TD>disabled</TD>
+    <TD>boolean</TD>
+    <TD>定义是否禁用该字段。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>readonly</TD>
+    <TD>boolean</TD>
+    <TD>定义是否将该控件设为只读。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>icons</TD>
+    <TD>array</TD>
+    <TD>在文本框删贡献是图标。每一项都有以下属性：<BR>iconCls：类型string，图标的class名称；<BR>disabled：类型boolean，指明是否禁用该图标；<BR>handler：类型function，用于处理点击该图标以后的动作。 
+
+      <P>代码示例：</P><PRE>$('#tb').textbox({
+	icons: [{
+		iconCls:'icon-add',
+		handler: function(e){
+			$(e.data.target).textbox('setValue', 'Something added!');
+		}
+	},{
+		iconCls:'icon-remove',
+		handler: function(e){
+			$(e.data.target).textbox('clear');
+		}
+	}]
+})
+</PRE></TD>
+    <TD>[]</TD></TR>
+  <TR>
+    <TD>iconCls</TD>
+    <TD>string</TD>
+    <TD>在文本框显示背景图标。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>iconAlign</TD>
+    <TD>string</TD>
+    <TD>背景图标的位置。可用值有："left", "right"。</TD>
+    <TD>right</TD></TR>
+  <TR>
+    <TD>iconWidth</TD>
+    <TD>number</TD>
+    <TD>图标宽度。</TD>
+    <TD>18</TD></TR>
+  <TR>
+    <TD>buttonText</TD>
+    <TD>string</TD>
+    <TD>文本框附加按钮显示的文本内容。</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>buttonIcon</TD>
+    <TD>string</TD>
+    <TD>文本框附加按钮显示的图标。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>buttonAlign</TD>
+    <TD>string</TD>
+    <TD>附加按钮的位置。可用值有："left", "right"。</TD>
+    <TD>right</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>事件扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_75.htm">validatebox</A>，以下是新增的文本框事件。</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onChange</TD>
+    <TD>newValue, oldValue</TD>
+    <TD>在字段值更改的时候触发。</TD></TR>
+  <TR>
+    <TD>onResize</TD>
+    <TD>width, height</TD>
+    <TD>在文本框大小改变的时候触发。</TD></TR>
+  <TR>
+    <TD>onClickButton</TD>
+    <TD>none</TD>
+    <TD>在用户点击按钮的时候触发。</TD></TR>
+  <TR>
+    <TD>onClickIcon</TD>
+    <TD>index</TD>
+    <TD>在用户点击图标的时候触发。</TD></TR></TBODY></TABLE></P>
+<P align=left>&nbsp;</P>
+<H4 align=left>方法</H4>
+<P align=left>方法扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_75.htm">validatebox</A>，以下是新增的文本框方法。</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法属性</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>textbox</TD>
+    <TD>none</TD>
+    <TD>
+      <P>返回文本框对象。</P>
+      <P>代码示例：</P><PRE>var t = $('#tt');
+t.textbox('textbox').bind('keydown', function(e){
+	if (e.keyCode == 13){	// 当按下回车键时接受输入的值。
+		t.textbox('setValue', $(this).val());
+	}
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>button</TD>
+    <TD>none</TD>
+    <TD>返回按钮对象。</TD></TR>
+  <TR>
+    <TD>destroy</TD>
+    <TD>none</TD>
+    <TD>销毁文本框组件。</TD></TR>
+  <TR>
+    <TD>resize</TD>
+    <TD>width</TD>
+    <TD>调整文本框组件宽度。</TD></TR>
+  <TR>
+    <TD>disable</TD>
+    <TD>none</TD>
+    <TD>禁用组件。</TD></TR>
+  <TR>
+    <TD>enable</TD>
+    <TD>none</TD>
+    <TD>启用组件。</TD></TR>
+  <TR>
+    <TD>readonly</TD>
+    <TD>mode</TD>
+    <TD>启用/禁用只读模式。 
+      <P>代码示例：</P><PRE>$('#tb').textbox('readonly');	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 启用只读模式
+$('#tb').textbox('readonly',true);	// 启用只读模式
+$('#tb').textbox('readonly',false);	// 禁用只读模式</PRE></TD></TR>
+  <TR>
+    <TD>clear</TD>
+    <TD>none</TD>
+    <TD>清除组件中的值。</TD></TR>
+  <TR>
+    <TD>reset</TD>
+    <TD>none</TD>
+    <TD>重置组件中的值。</TD></TR>
+  <TR>
+    <TD>initValue</TD>
+    <TD>value</TD>
+    <TD>初始化组件值。调用该方法不会触发“onChange”事件。<STRONG><FONT 
+      color=#ff0000>（该方法自1.4.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>setText</TD>
+    <TD>text</TD>
+    <TD>设置显示的文本值。</TD></TR>
+  <TR>
+    <TD>getText</TD>
+    <TD>none</TD>
+    <TD>获取显示的文本值。</TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置组件的值。</TD></TR>
+  <TR>
+    <TD>getValue</TD>
+    <TD>none</TD>
+    <TD>获取组件的值。</TD></TR>
+  <TR>
+    <TD>getIcon</TD>
+    <TD>index</TD>
+    <TD>获取指定图标对象。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

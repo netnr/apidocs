@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>tagbox(标签框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_142_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_142_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_142_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>TagBox（文本框）</H3>
+<P 
+align=left>扩展自$.fn.combobox.defaults，使用$.fn.tagbox.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.5.1版开始可用）</FONT></STRONG></P>
+<P align=left>TagBox(标签框)扩展自combobox， 
+他包含combobox的所有功能。TagBox允许用户将输入内容显示在标签框中，而不是显示在输入框中。</P>
+<P align=left><BR class=Apple-interchange-newline><IMG  style='BOX-SIZING: border-box; FONT-SIZE: 14px; MAX-WIDTH: 100%; BORDER-TOP: 0px; HEIGHT: auto; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: middle; BACKGROUND: rgb(255,255,255); WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; BORDER-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; LETTER-SPACING: normal; OUTLINE-COLOR: invert; PADDING-RIGHT: 0px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'  src="536ac27ad9dd84e522d2c8457d32af7a_142_files/tagbox[1].png">&nbsp;</P>
+<H4>依赖关系</H4>
+<UL>
+  <LI><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_77.htm">combobox</A></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建文本框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools>&nbsp;</DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><FONT color=#006699><SPAN class=tag><SPAN 
+  class=tag><STRONG>&lt;input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN 
+  class=atn><FONT color=#ff0000>class</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv><FONT color=#0000ff>"easyui-tagbox"</FONT></SPAN><SPAN class=pln> 
+  </SPAN><SPAN class=atn><FONT color=#ff0000>value</FONT></SPAN><SPAN 
+  class=pun>=</SPAN><SPAN class=atv><FONT color=#0000ff>"Apple, 
+  Orange"</FONT></SPAN><SPAN class=pln> <FONT color=#ff0000>label</FONT>="<FONT 
+  color=#0000ff>Add a tag</FONT>" </SPAN><SPAN class=atn><FONT 
+  color=#ff0000>style</FONT></SPAN><SPAN class=pun>=</SPAN><FONT 
+  color=#0000ff><SPAN class=atv>"</SPAN></FONT><SPAN class=pln><FONT 
+  color=#0000ff>width:100%</FONT><FONT color=#0000ff>"</SPAN></FONT><SPAN 
+  class=tag>&gt;</SPAN></SPAN></FONT><SPAN>&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建文本框。</P>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools>&nbsp;</DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><FONT color=#006699><SPAN class=tag><SPAN 
+  class=tag><STRONG>&lt;input</STRONG></SPAN><SPAN class=pln> </SPAN><SPAN 
+  class=atn><FONT color=#ff0000>id</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv><FONT color=#0000ff>"tb"</FONT></SPAN><SPAN class=pln> </SPAN><SPAN 
+  class=atn><FONT color=#ff0000>type</FONT></SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv><FONT color=#0000ff>"text"</FONT></SPAN><SPAN class=pln> 
+  </SPAN><SPAN class=atn><FONT color=#ff0000>style</FONT></SPAN><SPAN 
+  class=pun>=</SPAN><FONT color=#0000ff><SPAN class=atv>"</SPAN></FONT><SPAN 
+  class=pln><FONT color=#0000ff>width:300px</FONT><FONT 
+  color=#0000ff>"</SPAN></FONT><SPAN 
+  class=tag>&gt;</SPAN></SPAN></FONT><SPAN>&nbsp;</SPAN></SPAN></LI></OL></DIV>
+<DIV align=left>&nbsp;</DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#tb'</SPAN><SPAN>).<SPAN 
+  style='FONT-SIZE: 14px; FONT-FAMILY: Menlo, Monaco, Consolas, "Courier New", monospace; WHITE-SPACE: pre; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'>tagbox</SPAN>({ 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;label:'<FONT color=#339966>Add a 
+  tag</FONT>'</SPAN><SPAN>,&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;value:['Apple', 
+  'Orange']</SPAN></SPAN> 
+  <LI><SPAN>})</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>标签框属性扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_77.htm">combobox</A>&nbsp;(标签框)，标签框重写的属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'>hasDownArrow</SPAN></TD>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'>boolean</SPAN></TD>
+    <TD>定义是否显示向下的箭头</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'>tagFormatter</SPAN></TD>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'>function(value,row)</SPAN></TD>
+    <TD>
+      <P>该格式化器用于格式化返回值。</P>
+      <P 
+      style='BOX-SIZING: border-box; FONT-SIZE: 14px; BORDER-TOP: 0px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BACKGROUND: rgb(255,255,255); WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; BORDER-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 14px 0px; LETTER-SPACING: normal; OUTLINE-COLOR: invert; LINE-HEIGHT: 14px; PADDING-RIGHT: 0px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>代码示例：</FONT></P><PRE style="BOX-SIZING: border-box; FONT-SIZE: 12px; OVERFLOW: auto; BORDER-TOP: 0px; FONT-FAMILY: Verdana; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BACKGROUND: rgb(250,250,250); WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,102,0); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 5px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 5px; OUTLINE-STYLE: none; PADDING-LEFT: 5px; BORDER-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 12px 0px; LETTER-SPACING: normal; OUTLINE-COLOR: invert; LINE-HEIGHT: 14px; PADDING-RIGHT: 5px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial">$('#tb').tagbox({
+	tagFormatter: function(value,row){
+		var opts = $(this).tagbox('options');
+		return row ? row[opts.textField] : value;
+	}	
+});</PRE></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'>tagStyler</SPAN></TD>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'>function(value,row)</SPAN></TD>
+    <TD>
+      <P>该格式化器用于格式化标签样式，返回自定义标签样式字符串。</P>
+      <P 
+      style='BOX-SIZING: border-box; FONT-SIZE: 14px; BORDER-TOP: 0px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BACKGROUND: rgb(255,255,255); WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; BORDER-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 14px 0px; LETTER-SPACING: normal; OUTLINE-COLOR: invert; LINE-HEIGHT: 14px; PADDING-RIGHT: 0px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>代码示例：</FONT></P><PRE style="BOX-SIZING: border-box; FONT-SIZE: 12px; OVERFLOW: auto; BORDER-TOP: 0px; FONT-FAMILY: Verdana; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BACKGROUND: rgb(250,250,250); WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,102,0); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 5px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 5px; OUTLINE-STYLE: none; PADDING-LEFT: 5px; BORDER-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 12px 0px; LETTER-SPACING: normal; OUTLINE-COLOR: invert; LINE-HEIGHT: 14px; PADDING-RIGHT: 5px; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial">$('#tb').tagbox({
+	tagStyler: function(value){
+		if (value == 3){
+			return 'background:#ffd7d7;color:#c65353';
+		} else if (value == 4){
+			return 'background:#b8eecf;color:#45872c';
+		}
+	}	
+});</PRE></TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>事件扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_77.htm">combobox</A>，以下是新增的文本框事件。</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>onClickTag</FONT></SPAN></TD>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>value</FONT></SPAN></TD>
+    <TD>在点击标签框的时候触发该事件。</TD></TR>
+  <TR>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>onBeforeRemoveTag</FONT></SPAN></TD>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>value</FONT></SPAN></TD>
+    <TD>在移除一个标签框之前触发，返回false则取消移除操作。</TD></TR>
+  <TR>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>onRemoveTag</FONT></SPAN></TD>
+    <TD><SPAN 
+      style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; caret-color: auto; text-decoration-style: initial; text-decoration-color: initial'><FONT 
+      color=#000000>value</FONT></SPAN></TD>
+    <TD>在移除标签框时触发。</TD></TR></TBODY></TABLE></P>
+<P align=left>&nbsp;</P>
+<H4 align=left>方法</H4>
+<P align=left>方法扩展自 <A 
+href="536ac27ad9dd84e522d2c8457d32af7a_77.htm">combobox</A>。</P></DIV></BODY></HTML>

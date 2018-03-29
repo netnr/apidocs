@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>progressbar(进度条)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_64_files/easyui[1]_4.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_64_files/main[1]_4.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_64_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>ProgressBar（进度条）</H3>
+<P align=left>使用$.fn.progressbar.defaults重写默认值对象。</P>
+<P align=left>进度条提供了一个反馈显示一个长时间运行的操作进展。可以更新的进展条，让用户知道当前正在执行操作。</P>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_64_files/progressbar[1].png"></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建进度条</H5>
+<P 
+align=left>使用HTML标签或程序创建进度条组件。从标签创建更加简单，添加'easyui-progressbar'类ID到&lt;div/&gt;标签。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"p"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>class</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"easyui-progressbar"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>data-options</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"value:60"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>style</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"width:400px;"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>使用Javascript创建进度条。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>id</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"p"</SPAN><SPAN> </SPAN><SPAN 
+  class=attribute>style</SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value>"width:400px;"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN><SPAN> </SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#p'</SPAN><SPAN>).progressbar({ </SPAN></SPAN>
+  <LI><SPAN>value: 60 </SPAN>
+  <LI class=alt><SPAN>}); </SPAN></LI></OL></DIV><BR></DIV>
+<H5 align=left>获取值和设置值</H5>
+<P align=left>获取当前值和设置一个新的值到进度条控件。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN class=keyword>var</SPAN><SPAN> value = 
+  $(</SPAN><SPAN class=string>'#p'</SPAN><SPAN>).progressbar(</SPAN><SPAN 
+  class=string>'getValue'</SPAN><SPAN>); </SPAN></SPAN>
+  <LI><SPAN><SPAN class=keyword>if</SPAN><SPAN> (value &lt; 100){ </SPAN></SPAN>
+  <LI class=alt><SPAN>value += Math.floor(Math.random() * 10); </SPAN>
+  <LI><SPAN>$(<SPAN class=string>'#p'</SPAN><SPAN>).progressbar(</SPAN><SPAN 
+  class=string>'setValue'</SPAN><SPAN>, value); </SPAN></SPAN>
+  <LI class=alt><SPAN>} </SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>string</TD>
+    <TD>设置进度条宽度。</TD>
+    <TD>auto</TD></TR>
+  <TR>
+    <TD>height</TD>
+    <TD>number</TD>
+    <TD>设置进度条高度。<STRONG><FONT 
+color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
+    <TD>22</TD></TR>
+  <TR>
+    <TD>value</TD>
+    <TD>number</TD>
+    <TD>The percentage value.</TD>
+    <TD>0</TD></TR>
+  <TR>
+    <TD>text</TD>
+    <TD>string</TD>
+    <TD>The text template to be displayed on component.</TD>
+    <TD>{value}%</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onChange</TD>
+    <TD>newValue,oldValue</TD>
+    <TD>在值更改的时候触发。 
+      <P>代码示例：</P><PRE>$('#p').progressbar({
+	onChange: function(value){
+		alert(value)
+	}
+});
+</PRE></TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>resize</TD>
+    <TD>width</TD>
+    <TD>组件大小。&nbsp; 
+      <P>代码示例：</P><PRE>$('#p').progressbar('resize');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 更改进度条到原始宽度
+$('#p').progressbar('resize', 350);&nbsp;&nbsp;&nbsp;// 更改进度条到新的宽度</PRE></TD></TR>
+  <TR>
+    <TD>getValue</TD>
+    <TD>none</TD>
+    <TD>返回当前进度值。</TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置一个新的进度值。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

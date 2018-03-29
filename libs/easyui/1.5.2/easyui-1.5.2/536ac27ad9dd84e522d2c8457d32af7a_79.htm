@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>combogrid(数据表格下拉框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_79_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_79_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_79_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>ComboGrid（数据表格下拉框）</H3>
+<P 
+align=left>扩展自$.fn.combo.defaults和$.fn.datagrid.defaults。使用$.fn.combogrid.defaults重写默认值对象。</P>
+<P 
+align=left>数据表格下拉框结合了可编辑文本框控件和下拉数据表格面板控件，该控件允许用户快速查找和选择，并且该控件提供了键盘导航支持，对行进行筛选。 
+</P>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_79_files/combogrid[1].png"> </P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A></DIV>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建数据表格下拉框</H5>
+<P align=left>1. 使用标签创建一个数据表格下拉框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>select</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-combogrid"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"dept"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:250px;"</FONT></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>data-options</FONT></SPAN><SPAN>=" 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panelWidth:450, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value:'006', 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idField:'code', 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textField:'name', 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:'datagrid_data.json', 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columns:[[ 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:'code',title:'Code',width:60}, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:'name',title:'Name',width:100}, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:'addr',title:'Address',width:120}, 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:'col4',title:'Col41',width:100} 
+  &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]] 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
+  class=tag-name>select</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>2. 
+使用Javascript通过已经定义的&lt;select&gt;或&lt;input&gt;标签来创建数据表格下拉框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>input</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"cc"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>name</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"dept"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>value</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"01"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>/&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#cc'</SPAN><SPAN>).combogrid({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;panelWidth:450, &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;value:</SPAN><SPAN 
+  class=string>'006'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp; &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;idField:</SPAN><SPAN 
+  class=string>'code'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;textField:</SPAN><SPAN 
+  class=string>'name'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:</SPAN><SPAN 
+  class=string>'datagrid_data.json'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;columns:[[ &nbsp;&nbsp;</SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:</SPAN><SPAN 
+  class=string>'code'</SPAN><SPAN>,title:</SPAN><SPAN 
+  class=string>'Code'</SPAN><SPAN>,width:60}, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:</SPAN><SPAN 
+  class=string>'name'</SPAN><SPAN>,title:</SPAN><SPAN 
+  class=string>'Name'</SPAN><SPAN>,width:100}, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:</SPAN><SPAN 
+  class=string>'addr'</SPAN><SPAN>,title:</SPAN><SPAN 
+  class=string>'Address'</SPAN><SPAN>,width:120}, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:</SPAN><SPAN 
+  class=string>'col4'</SPAN><SPAN>,title:</SPAN><SPAN 
+  class=string>'Col41'</SPAN><SPAN>,width:100} &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;]] &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV><BR></DIV>
+<H5 align=left>自动完成功能</H5>
+<P align=left>让我们为数据表格下拉框控件添加高级的自动完成功能。下拉数据表格会根据用户输入显示适合的结果。 </P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#cc'</SPAN><SPAN>).combogrid({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;delay:&nbsp;500, &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;mode:&nbsp;</SPAN><SPAN 
+  class=string>'remote'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;</SPAN><SPAN 
+  class=string>'get_data.php'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;idField:&nbsp;</SPAN><SPAN 
+  class=string>'id'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;textField:&nbsp;</SPAN><SPAN 
+  class=string>'name'</SPAN><SPAN>, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;columns:&nbsp;[[ 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:</SPAN><SPAN 
+  class=string>'code'</SPAN><SPAN>,title:</SPAN><SPAN 
+  class=string>'Code'</SPAN><SPAN>,width:120,sortable:</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>}, &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{field:</SPAN><SPAN 
+  class=string>'name'</SPAN><SPAN>,title:</SPAN><SPAN 
+  class=string>'Name'</SPAN><SPAN>,width:400,sortable:</SPAN><SPAN 
+  class=keyword>true</SPAN><SPAN>} &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;]] &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>在服务器端，参数'q'必须先检索。<SPAN lang=zh-CN id=result_box class=short_text 
+c="4" a="undefined" closure_uid_685577293="114"><SPAN 
+closure_uid_685577293="150">用户可以查询</SPAN><SPAN 
+closure_uid_685577293="151">数据库，然后</SPAN><SPAN 
+closure_uid_685577293="152">返回一个</SPAN><SPAN 
+closure_uid_685577293="153">SQL查询结果</SPAN><SPAN 
+closure_uid_685577293="154">的</SPAN><SPAN 
+closure_uid_685577293="155">JSON</SPAN><SPAN 
+closure_uid_685577293="156">格式给</SPAN><SPAN 
+closure_uid_685577293="158">浏览器</SPAN><SPAN 
+closure_uid_685577293="159">。</SPAN></SPAN></P>
+<P align=left>get_data.php: </P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$q&nbsp;=&nbsp;isset($_POST[</SPAN><SPAN 
+  class=string>'q'</SPAN><SPAN>])&nbsp;?&nbsp;$_POST[</SPAN><SPAN 
+  class=string>'q'</SPAN><SPAN>]&nbsp;:&nbsp;</SPAN><SPAN 
+  class=string>''</SPAN><SPAN>;&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;the&nbsp;request&nbsp;parameter 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN></SPAN><SPAN 
+  class=comment>//&nbsp;query&nbsp;database&nbsp;and&nbsp;return&nbsp;JSON&nbsp;result&nbsp;data 
+  </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>$rs&nbsp;=&nbsp;mysql_query(</SPAN><SPAN 
+  class=string>"select&nbsp;*&nbsp;from&nbsp;item&nbsp;where&nbsp;name&nbsp;like&nbsp;'$q%'"</SPAN><SPAN>); 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>echo&nbsp;json_encode(...);&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>数据表格下拉框的属性扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)和<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)，树形下拉框新增属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>loadMsg</TD>
+    <TD>string</TD>
+    <TD>在数据表格加载远程数据的时候显示消息。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>idField</TD>
+    <TD>string</TD>
+    <TD>ID字段名称。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>textField</TD>
+    <TD>string</TD>
+    <TD><SPAN lang=zh-CN id=result_box class=short_text c="4" a="undefined" 
+      closure_uid_685577293="114"><SPAN 
+      closure_uid_685577293="180">要显示</SPAN><SPAN 
+      closure_uid_685577293="181">在文本框中</SPAN><SPAN 
+      closure_uid_685577293="182">的文本字段</SPAN><SPAN 
+      closure_uid_685577293="183">。</SPAN></SPAN></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>mode</TD>
+    <TD>string</TD>
+    <TD>定义在文本改变的时候如何读取数据网格数据。设置为'remote'，数据表格将从远程服务器加载数据。当设置为'remote'模式的时候，用户输入将会发送到名为'q'的http请求参数，向服务器检索新的数据。</TD>
+    <TD>local</TD></TR>
+  <TR>
+    <TD>filter</TD>
+    <TD>function(q, row)</TD>
+    <TD>定义在'mode'设置为'local'的时候如何选择本地数据，返回true时则选择该行。 
+      <P>代码示例：</P><PRE>$('#cc').combogrid({
+	filter: function(q, row){
+		var opts = $(this).combogrid('options');
+		return row[opts.textField].indexOf(q) == 0;
+	}
+});
+</PRE></TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+<P align=left><BR></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>数据表格下拉框事件完全扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)和<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)。</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>数据表格下拉框的方法扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)，数据表格下拉框新增或重写的方法如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>grid</TD>
+    <TD>none</TD>
+    <TD>返回数据表格对象。下面的例子显示了如何获取选择的行： <PRE>var g = $('#cc').combogrid('grid');	// 获取数据表格对象
+var r = g.datagrid('getSelected');	// 获取选择的行
+alert(r.name);
+</PRE></TD></TR>
+  <TR>
+    <TD>setValues</TD>
+    <TD>values</TD>
+    <TD>设置组件值数组。 
+      <P>代码示例：</P><PRE>$('#cc').combogrid('setValues', ['001','007']);
+$('#cc').combogrid('setValues', ['001','007',{id:'008',name:'name008'}]);</PRE></TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置组件值。 
+      <P>代码示例：</P><PRE>$('#cc').combogrid('setValue', '002');
+$('#cc').combogrid('setValue', {id:'003',name:'name003'});</PRE></TD></TR>
+  <TR>
+    <TD>clear</TD>
+    <TD>none</TD>
+    <TD>清除组件的值。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

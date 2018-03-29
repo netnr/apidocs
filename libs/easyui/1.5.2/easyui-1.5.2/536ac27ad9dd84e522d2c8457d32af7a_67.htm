@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>accordion(分类)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_67_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_67_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_67_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Accordion（分类）</H3>
+<P align=left>使用$.fn.accordion.defaults重写默认值对象。</P>
+<P 
+align=left>分类空间允许用户使用多面板，但在同一时间只会显示一个。每个面板都内建支持展开和折叠功能。点击一个面板的标题将会展开或折叠面板主体。面板内容可以通过指定的'href'属性使用ajax方式读取面板内容。用户可以定义一个被默认选中的面板，如果未指定，那么第一个面板就是默认的。</P>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_67_files/accordion[1].png"> </P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建分类</H5>
+<P align=left>通过标签创建分类，给&lt;div/&gt;标签添加一个名为'easyui-accordion'的类ID。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>id</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"aa"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN class=attribute><FONT 
+  color=#ff0000>class</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"easyui-accordion"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"width:300px;height:200px;"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"Title1"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-save'"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"overflow:auto;padding:10px;"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>h3</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"color:#0099FF;"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>Accordion&nbsp;for&nbsp;jQuery</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>h3</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN class=tag-name>p</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>Accordion&nbsp;is&nbsp;a&nbsp;part&nbsp;of&nbsp;easyui&nbsp;framework&nbsp;for&nbsp;jQuery.&nbsp; 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI 
+  class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It&nbsp;lets&nbsp;you&nbsp;define&nbsp;your&nbsp;accordion&nbsp;component&nbsp;on&nbsp;web&nbsp;page&nbsp;more&nbsp;easily.</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>p</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"Title2"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT 
+  color=#ff0000>data-options</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT 
+  color=#0000ff>"iconCls:'icon-reload',selected:true"</FONT></SPAN><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>style</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"padding:10px;"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content2 
+  &nbsp;&nbsp;</SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT 
+  color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;</SPAN><SPAN 
+  class=tag-name>div</SPAN></FONT></STRONG><SPAN>&nbsp;</SPAN><SPAN 
+  class=attribute><FONT color=#ff0000>title</FONT></SPAN><SPAN>=</SPAN><SPAN 
+  class=attribute-value><FONT color=#0000ff>"Title3"</FONT></SPAN><SPAN 
+  class=tag><STRONG><FONT 
+  color=#006699>&gt;</FONT></STRONG></SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content3 
+  &nbsp;&nbsp;</SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
+  class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
+  class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<P align=left>我们可以更改或修改面板的一些功能以后再重新创建它。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN>$(</SPAN><SPAN 
+  class=string>'#aa'</SPAN><SPAN>).accordion({ &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;animate:</SPAN><SPAN 
+  class=keyword>false</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H5 align=left>刷新分类面板内容</H5>
+<P align=left>调用'getSelected'方法获取当前面板，此外我们还可以调用'refresh'方法重新载入新内容。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><SPAN 
+  class=keyword>var</SPAN><SPAN>&nbsp;pp&nbsp;=&nbsp;$(</SPAN><SPAN 
+  class=string>'#aa'</SPAN><SPAN>).accordion(</SPAN><SPAN 
+  class=string>'getSelected'</SPAN><SPAN>);&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;获取选择的面板</SPAN></SPAN> 
+  <LI><SPAN></SPAN><SPAN class=keyword>if</SPAN><SPAN>&nbsp;(pp){ 
+  &nbsp;&nbsp;</SPAN></SPAN> 
+  <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;pp.panel(</SPAN><SPAN 
+  class=string>'refresh'</SPAN><SPAN>,</SPAN><SPAN 
+  class=string>'new_content.php'</SPAN><SPAN>);&nbsp;&nbsp;</SPAN><SPAN 
+  class=comment>//&nbsp;调用'refresh'方法刷新</SPAN> 
+  <LI><SPAN>}&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
+<P align=left>&nbsp;</P>
+<H4 align=left>容器属性</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>number</TD>
+    <TD>分类容器的宽度。</TD>
+    <TD>auto</TD></TR>
+  <TR>
+    <TD>height</TD>
+    <TD>number</TD>
+    <TD>分类容器的高度。</TD>
+    <TD>auto</TD></TR>
+  <TR>
+    <TD>fit</TD>
+    <TD>boolean</TD>
+    <TD>如果设置为true，分类容器大小将自适应父容器。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>border</TD>
+    <TD>boolean</TD>
+    <TD>定义是否显示边框。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>animate</TD>
+    <TD>boolean</TD>
+    <TD>定义在展开和折叠的时候是否显示动画效果。</TD>
+    <TD>true</TD></TR>
+  <TR>
+    <TD>multiple</TD>
+    <TD>boolean</TD>
+    <TD>如果为true时，同时展开多个面板。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG> </TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>selected</TD>
+    <TD>number</TD>
+    <TD>设置初始化时默认选中的面板索引号。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG> </TD>
+    <TD>0</TD></TR>
+  <TR>
+    <TD>halign</TD>
+    <TD>string</TD>
+    <TD>设置分类面板头部对齐方式。可用值有：'top', 'left', 'right'。<STRONG><FONT 
+      color=#ff0000>（该属性自1.5.2版开始可用）</FONT></STRONG> </TD>
+    <TD>top</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>面板属性</H4>
+<P align=left>分类面板属性继承自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A>(面板)，分类面板新增的属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>selected</TD>
+    <TD>boolean</TD>
+    <TD>如果设置为true将展开面板。</TD>
+    <TD>false</TD></TR>
+  <TR>
+    <TD>collapsible</TD>
+    <TD>boolean</TD>
+    <TD>如果设置为true将显示折叠按钮。</TD>
+    <TD>true</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onSelect</TD>
+    <TD>title,index</TD>
+    <TD>在面板被选中的时候触发。</TD></TR>
+  <TR>
+    <TD>onUnselect</TD>
+    <TD>title,index</TD>
+    <TD>在面板被取消选中的时候触发。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>onAdd</TD>
+    <TD>title,index</TD>
+    <TD>在添加新面板的时候触发。</TD></TR>
+  <TR>
+    <TD>onBeforeRemove</TD>
+    <TD>title,index</TD>
+    <TD>在移除面板之前触发，返回false可以取消移除操作。</TD></TR>
+  <TR>
+    <TD>onRemove</TD>
+    <TD>title,index</TD>
+    <TD>在面板被移除的时候触发。</TD></TR></TBODY></TABLE></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回分类组件的属性。</TD></TR>
+  <TR>
+    <TD>panels</TD>
+    <TD>none</TD>
+    <TD>获取所有面板。</TD></TR>
+  <TR>
+    <TD>resize</TD>
+    <TD>none</TD>
+    <TD>调整分类组件大小。</TD></TR>
+  <TR>
+    <TD>getSelected</TD>
+    <TD>none</TD>
+    <TD>获取选中的面板。</TD></TR>
+  <TR>
+    <TD>getSelections</TD>
+    <TD>none</TD>
+    <TD>获取所有选中的面板。<STRONG><FONT 
+    color=#ff0000>（该方法自1.3.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>getPanel</TD>
+    <TD>which</TD>
+    <TD>获取指定的面板，'which'参数可以是面板的标题或者索引。</TD></TR>
+  <TR>
+    <TD>getPanelIndex</TD>
+    <TD>panel</TD>
+    <TD>获取指定面板的索引。<STRONG><FONT color=#ff0000>（该方法自1.3版开始可用）</FONT></STRONG> 
+      <P>以下示例显示如何获取选中面板的索引。</P><PRE>var p = $('#aa').accordion('getSelected');
+if (p){
+	var index = $('#aa').accordion('getPanelIndex', p);
+	alert(index);
+}
+</PRE></TD></TR>
+  <TR>
+    <TD>select</TD>
+    <TD>which</TD>
+    <TD>选择指定面板。'which'参数可以是面板标题或者索引。</TD></TR>
+  <TR>
+    <TD>unselect</TD>
+    <TD>which</TD>
+    <TD>取消选择指定面板。'which'参数可以是面板标题或者索引。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3.5版开始可用）</FONT></STRONG></TD></TR>
+  <TR>
+    <TD>add</TD>
+    <TD>options</TD>
+    <TD>添加一个新面板。在默认情况下，新增的面板会变成当前面板。如果要添加一个非选中面板，不要忘记将'selected'属性设置为false。 
+      <P>代码示例：</P><PRE>$('#aa').accordion('add', {
+	title: '新标题',
+	content: '新内容',
+	selected: false
+});
+</PRE></TD></TR>
+  <TR>
+    <TD>remove</TD>
+    <TD>which</TD>
+    <TD>移除指定面板。'which'参数可以使面板的标题或者索引。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

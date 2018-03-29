@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>Columns Extension for DataGrid(列扩展表格)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_137_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_137_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_137_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10586.162"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>Columns Extension for DataGrid（列扩展表格）</H3>
+<P align=left><A 
+href="http://www.jeasyui.com/extension/index.php">Extension</A>&nbsp;&gt; 
+Columns Extension for DataGrid </P>
+<P align=left><SPAN id=wiz_font_size_span_10907390 
+style="FONT-SIZE: 16pt"><STRONG><FONT color=#ff0000>扩展下载地址：<A 
+href="http://www.jeasyui.com/extension/downloads/columns-ext.zip">http://www.jeasyui.com/extension/downloads/columns-ext.zip</A>&nbsp;(我发布的程序包整也有提供，在extension目录下)</FONT></STRONG></SPAN></P>
+<P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_137_files/99221812.png"> </P>
+<H4 align=left>导入'columns-ext.js'文件</H4>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-c>
+  <LI class=alt><SPAN><FONT color=#3366ff><SPAN class=tag>&lt;script</SPAN><SPAN 
+  class=pln> </SPAN><SPAN class=atn>type</SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv><FONT color=#008080>"text/javascript"</FONT></SPAN><SPAN class=pln> 
+  </SPAN><SPAN class=atn>src</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv><FONT 
+  color=#008080>"columns-ext.js"</FONT></SPAN><SPAN 
+  class=tag>&gt;&lt;/script&gt;</SPAN></FONT>&nbsp;</SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4>事件</H4>
+<P>事件扩展自 datagrid，<FONT face=Verdana>以下是本插件新增事件。</FONT></P>
+<TABLE class=doc-table>
+  <TBODY>
+  <TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>onBeforeDragColumn</TD>
+    <TD>field</TD>
+    <TD>在拖拽一列的之前触发，返回false的时候取消该动作。 </TD></TR>
+  <TR>
+    <TD>onStartDragColumn</TD>
+    <TD>field</TD>
+    <TD>在开始拖拽一列的时候触发，返回false的时候取消该动作。</TD></TR>
+  <TR>
+    <TD>onStopDragColumn</TD>
+    <TD>field</TD>
+    <TD>在停止拖拽一列的时候触发，返回false的时候取消该动作。</TD></TR>
+  <TR>
+    <TD>onBeforeDropColumn</TD>
+    <TD>toField, fromField, point</TD>
+    <TD>在释放一列之前触发，返回false的时候取消该动作。<BR>toField：释放的目标列。<BR>fromField：来源列。<BR>point：指明释放操作，可用值包含：'before'&nbsp;或 
+      'after'。</TD></TR>
+  <TR>
+    <TD>onDropColumn</TD>
+    <TD>toField, fromField, point</TD>
+    <TD>在释放一列的时候触发，返回false的时候取消该动作。<BR>toField：释放的目标列。<BR>fromField：来源列。<BR>point：指明释放操作，可用值包含：'before'&nbsp;或 
+      'after'。 </TD></TR></TBODY></TABLE>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>可编辑树扩展自树控件，可扩展树的新增方法如下： </P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>columnMoving</TD>
+    <TD>none</TD>
+    <TD>启用列移动，该方法允许用户拖拽表格的列。</TD></TR>
+  <TR>
+    <TD>freezeColumn</TD>
+    <TD>field</TD>
+    <TD>冻结一个列。</TD></TR>
+  <TR>
+    <TD>unfreezeColumn</TD>
+    <TD>field</TD>
+    <TD>解冻一个列。</TD></TR>
+  <TR>
+    <TD>moveColumn</TD>
+    <TD>param</TD>
+    <TD>
+      <P>移动一个列。</P>代码示例：<PRE>$('#dg').datagrid('moveColumn', {
+	field: 'itemid',
+	before: 'listprice'
+	// after: 'listprice'
+});</PRE></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

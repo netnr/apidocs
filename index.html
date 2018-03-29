@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/favicon.svg" rel="Shortcut Icon" type="image/svg" />
+
+    <title>APIDocs NET牛人</title>
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #docs li {
+            float: left;
+            margin: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>APIDocs</h1>
+
+    <ul id="docs">
+        <li><a href="#">EasyUI-1.5.2</a></li>
+    </ul>
+
+    <script>
+        document.getElementById('docs').onclick = function (e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            if (target.nodeName == "A") { location.href = "docs.html#" + target.innerHTML; }
+            return false;
+        }
+    </script>
+</body>
+</html>

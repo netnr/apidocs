@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<TITLE>combotreegrid(树形表格下拉框)</TITLE>
+<LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_139_files/easyui[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_139_files/main[1]_9.css"><LINK 
+rel=stylesheet type=text/css 
+href="536ac27ad9dd84e522d2c8457d32af7a_139_files/SyntaxHighlighter[1].css"><!-- saved by CyberArticle from url=http://www.jeasyui.com/documentation/index.php -->
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV 
+style="PADDING-BOTTOM: 10px; PADDING-TOP: 2px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
+align=left>
+<H3 align=left>ComboTreeGrid（树形表格下拉框）</H3>
+<P 
+align=left>扩展自$.fn.combo.defaults和$.fn.treegrid.defaults。使用$.fn.combotreegrid.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.5版开始可用）</FONT></STRONG></P>
+<P align=left>树形表格下拉框结合了可编辑文本框控件和下拉树形表格面板控件，该控件允许用户快速从树形表格中选择一条或多条记录。 </P>
+<P align=left>&nbsp;<IMG  src="536ac27ad9dd84e522d2c8457d32af7a_139_files/combotreegrid[1].png"> </P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>依赖关系</H4>
+<UL>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A></DIV>
+  <LI>
+  <DIV align=left><A 
+  href="536ac27ad9dd84e522d2c8457d32af7a_91.htm">treegrid</A></DIV></LI></UL>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建树形表格下拉框</H5>
+<P align=left>1. 使用标签创建一个数据表格下拉框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;input</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>class</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"easyui-combotreegrid"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>data-options</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"</SPAN><LI class=L1><SPAN class=atv>        width:'100%',</SPAN><LI class=L2><SPAN class=atv>        panelWidth:500,</SPAN><LI class=L3><SPAN class=atv>        label:'Select Item:',</SPAN><LI class=L4><SPAN class=atv>        labelPosition:'top',</SPAN><LI class=L5><SPAN class=atv>        url:'treegrid_data1.json',</SPAN><LI class=L6><SPAN class=atv>        idField:'id',</SPAN><LI class=L7><SPAN class=atv>        treeField:'name',</SPAN><LI class=L8><SPAN class=atv>        columns:[[</SPAN><LI class=L9><SPAN class=atv>            {field:'name',title:'Name',width:200},</SPAN><LI class=L0><SPAN class=atv>            {field:'size',title:'Size',width:100},</SPAN><LI class=L1><SPAN class=atv>            {field:'date',title:'Date',width:100}</SPAN><LI class=L2><SPAN class=atv>        ]]"</SPAN><SPAN class=tag>&gt;</SPAN></LI></OL></PRE></DIV></DIV>
+<P align=left>2. 
+使用Javascript通过已经定义的&lt;select&gt;或&lt;input&gt;标签来创建数据表格下拉框。</P>
+<DIV align=left>
+<DIV class=dp-highlighter>
+<DIV class=bar>
+<DIV class=tools></DIV></DIV>
+<OL class=dp-xml>
+  <LI class=alt><SPAN><SPAN><SPAN class=tag>&lt;input</SPAN><SPAN class=pln> 
+  </SPAN><SPAN class=atn>id</SPAN><SPAN class=pun>=</SPAN><SPAN 
+  class=atv>"cc"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>name</SPAN><SPAN 
+  class=pun>=</SPAN><SPAN class=atv>"name"</SPAN><SPAN class=tag>&gt;</SPAN> 
+  <LI class=L1><SPAN class=pln>$(function(){</SPAN> 
+  <LI class=L2><SPAN class=pln>&nbsp;&nbsp;&nbsp; $('#cc').combogrid({</SPAN> 
+  <LI class=L3><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  value:'006',</SPAN> 
+  <LI class=L4><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  width:'100%',</SPAN> 
+  <LI class=L5><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  panelWidth:500,</SPAN> 
+  <LI class=L6><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  label:'Select Item:',</SPAN> 
+  <LI class=L7><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  labelPosition:'top',</SPAN> 
+  <LI class=L8><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  url:'treegrid_data1.json',</SPAN> 
+  <LI class=L9><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  idField:'id',</SPAN> 
+  <LI class=L0><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  treeField:'name',</SPAN> 
+  <LI class=L1><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  columns:[[</SPAN> 
+  <LI class=L2><SPAN 
+  class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  {field:'name',title:'Name',width:200},</SPAN> 
+  <LI class=L3><SPAN 
+  class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  {field:'size',title:'Size',width:100},</SPAN> 
+  <LI class=L4><SPAN 
+  class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  {field:'date',title:'Date',width:100}</SPAN> 
+  <LI class=L5><SPAN class=pln>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  ]]</SPAN> 
+  <LI class=L6><SPAN class=pln>&nbsp;&nbsp;&nbsp; });</SPAN> 
+  <LI class=L7><SPAN 
+class=pln>});</SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
+<DIV align=left>&nbsp;</DIV>
+<H4 align=left>属性</H4>
+<P align=left>树形表格下拉框的属性扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)和<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_91.htm">treegrid</A>(树形表格)，combotreegrid新增属性如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
+  <TR>
+    <TD>idField</TD>
+    <TD>string</TD>
+    <TD>ID字段名称。</TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>treeField</TD>
+    <TD>string</TD>
+    <TD><SPAN lang=zh-CN id=result_box class=short_text 
+      closure_uid_685577293="114" a="undefined" c="4"><SPAN 
+      closure_uid_685577293="180">要显示</SPAN><SPAN 
+      closure_uid_685577293="181">在文本框中</SPAN><SPAN 
+      closure_uid_685577293="182">的文本字段</SPAN><SPAN 
+      closure_uid_685577293="183">。</SPAN></SPAN></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>textField</TD>
+    <TD>string</TD>
+    <TD>要绑定到该组件对应的底层数据结构的字段名。<FONT 
+      color=#ff0000><STRONG>（该属性自1.5.2版开始可用）</STRONG></FONT></TD>
+    <TD>null</TD></TR>
+  <TR>
+    <TD>limitToGrid</TD>
+    <TD>boolean</TD>
+    <TD><SPAN lang=zh-CN id=result_box class=short_text 
+      closure_uid_685577293="114" a="undefined" c="4"><SPAN 
+      closure_uid_685577293="180">限制输入的值只能是树形表格中的值。</SPAN></SPAN></TD>
+    <TD>false</TD></TR></TBODY></TABLE></P>
+<P align=left><BR></P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>事件</H4>
+<P align=left>数据表格下拉框事件完全扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)和<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)。</P>
+<H4 align=left>&nbsp;</H4>
+<H4 align=left>方法</H4>
+<P align=left>数据表格下拉框的方法扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_76.htm">combo</A>(自定义下拉框)，数据表格下拉框新增或重写的方法如下：</P>
+<P align=left>
+<TABLE class=doc-table width="95%">
+  <TBODY>
+  <TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
+  <TR>
+    <TD>options</TD>
+    <TD>none</TD>
+    <TD>返回属性对象。</TD></TR>
+  <TR>
+    <TD>grid</TD>
+    <TD>none</TD>
+    <TD>返回数据表格对象。下面的例子显示了如何获取选择的行： <PRE>var g = $('#cc').combogrid('grid');	// 获取数据表格对象
+var r = g.datagrid('getSelected');	// 获取选择的行
+alert(r.name);
+</PRE></TD></TR>
+  <TR>
+    <TD>setValue</TD>
+    <TD>value</TD>
+    <TD>设置组件值。 
+      <P>代码示例：</P><PRE>$('#cc').combogrid('setValue', '002');
+$('#cc').combogrid('setValue', {id:'003',name:'name003'});</PRE></TD></TR>
+  <TR>
+    <TD>setValues</TD>
+    <TD>values</TD>
+    <TD>设置组件值数组。 
+      <P>代码示例：</P><PRE>$('#cc').combogrid('setValues', ['001','007']);
+$('#cc').combogrid('setValues', ['001','007',{id:'008',name:'name008'}]);</PRE></TD></TR>
+  <TR>
+    <TD>clear</TD>
+    <TD>none</TD>
+    <TD>清除组件的值。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>
