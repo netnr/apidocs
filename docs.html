@@ -43,46 +43,57 @@
                 display: inline-block;
             }
 
-        .bv {
-            position: fixed;
-            top: 36px;
-            left: 0;
-            right: 0;
-            bottom: 0;
+        .ibox {
+            float: left;
+            width: 100%;
         }
 
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+            .ibox iframe {
+                border: 0;
+                float: left;
+                margin-left: 0;
+            }
+
+            .ibox #f1 {
+                width: 24%;
+            }
+
+            .ibox #f2 {
+                width: 75%;
+                float: right;
+            }
     </style>
 </head>
 <body>
+
     <div class="bh">
         <img src="favicon.ico" /><a href="/">APIDocs</a><b id="bt"></b>
     </div>
-    <div class="bv">
-        <iframe src="about:balnk" id="vi"></iframe>
+    <div class="ibox">
+        <iframe src="about:blank" id="f1"></iframe>
+        <iframe name="body" src="about:blank" id="f2"></iframe>
     </div>
-
     <script>
-        var vi = document.getElementById('vi'), visrc = location.hash.substring(1).toLowerCase(), arrv = visrc.split('-');
-        vi.src = "../libs/" + arrv[0] + "/" + arrv[1] + "/" + visrc + ".html";
-        document.title = visrc + " " + document.title;
-        document.getElementById('bt').innerHTML = visrc;
+        var f1 = document.getElementById('f1'), f2 = document.getElementById('f2');
+
+        window.onload = window.onresize = function () {
+            var ch = document.documentElement.clientHeight || document.body.clientHeight,
+                sh = ch - 38;
+            f1.style.height = f2.style.height = sh + "px";
+        }
+
+        var isrc = location.hash.substring(1), arri = isrc.split('-');
+        document.title = isrc + " " + document.title;
+        document.getElementById('bt').innerHTML = isrc;
+        isrc = isrc.toLowerCase();
+        f1.src = "libs/" + arri[0] + "/" + arri[1] + "/" + isrc + "/___left.htm";
 
         try {
             var deep = 20, si = setInterval(function () {
                 if (deep) {
                     deep--;
                     try {
-                        var fr = vi.contentWindow.document.getElementsByTagName('FRAME')[0].contentWindow;
+                        var fr = f1.contentWindow;
                         if (fr) {
                             var as = fr.document.getElementsByTagName('a'), ha, fa;
                             as[0].innerHTML = "全部展开";
@@ -100,7 +111,7 @@
                             (ha || fa).click();
 
                             var ft = fr.document.getElementsByTagName('font')[0];
-                            ft.innerHTML = "<div style='font-size:14px;margin-top:5px;'><a href='../" + visrc + ".chm' target='_blank' style='color:#009a61'>下载CHM</a> , powered by <a href='https://www.netnr.com' target='_blank' style='color:#009a61'>netnr</a></div>";
+                            ft.innerHTML = "<div style='font-size:14px;margin-top:5px;'><a href='../" + isrc + ".chm' target='_blank' style='color:#009a61'>下载CHM</a> , powered by <a href='https://www.netnr.com' target='_blank' style='color:#009a61'>netnr</a></div>";
                             fr.d.openAll();
                             clearInterval(si);
                         }
