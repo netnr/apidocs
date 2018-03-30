@@ -208,6 +208,9 @@
     //阻止事件冒泡
     jz.stopEvent = function (e) { if (e && e.stopPropagation) { e.stopPropagation() } else { window.event.cancelBubble = true } };
 
+    //阻止浏览器默认行为
+    jz.stopDefault = function (e) { if (e && e.preventDefault) { e.preventDefault() } else { window.event.returnValue = false } };
+
     //随机数字 长度（默认4位）1到15
     jz.random = function (len) { len = arguments.length ? len > 15 ? 15 : len : 4; return Math.random().toString().substr(2, len) };
 
@@ -269,7 +272,7 @@
 
 //浏览自适应
 function vauto() {
-    var ch = j(window).px().height, sh = ch - 38;
+    var ch = j(window).px().height, sh = ch - 45;
     j('#f1')[0].style.height = j('#f2')[0].style.height = sh + "px";
 }
 
@@ -320,8 +323,9 @@ function vshow() {
                                 fa = ai;
                             }
                         }
-                        var tar = ha || fa;
-                        fr.location.hash = "#" + tar.id;
+                        var tar = ha || fa, ch = fr.document.documentElement.clientHeight || fr.document.body.clientHeight,
+                            sh = tar.getBoundingClientRect().top - ch / 2;
+                        fr.window.scrollTo(0, Math.max(sh, 0));
                         tar.click();
                         clearInterval(si);
                     }
