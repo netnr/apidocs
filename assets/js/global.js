@@ -326,7 +326,7 @@ function vshow() {
                         var tar = ha || fa, ch = fr.document.documentElement.clientHeight || fr.document.body.clientHeight,
                             sh = tar.getBoundingClientRect().top - ch / 2;
                         fr.window.scrollTo(0, Math.max(sh, 0));
-                        tar.click();
+                        setTimeout(function () { tar.click() }, 50);
                         clearInterval(si);
                     }
                 } catch (e) { }
