@@ -82,10 +82,11 @@
             f1.style.height = f2.style.height = sh + "px";
         }
 
-        var isrc = location.hash.substring(1), arri = isrc.split('-');
+        var isrc = location.hash.substring(1);
         document.title = isrc + " " + document.title;
         document.getElementById('bt').innerHTML = isrc;
         isrc = isrc.toLowerCase();
+        var arri = isrc.split('-');
         f1.src = "libs/" + arri[0] + "/" + arri[1] + "/" + isrc + "/left.html";
 
         try {
