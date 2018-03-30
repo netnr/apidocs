@@ -13,9 +13,12 @@
     <title>APIDocs NET牛人</title>
 
     <style>
+
         ul {
             margin: 0;
             padding: 0;
+            float: left;
+            width: 100%;
             list-style: none;
         }
 
@@ -23,14 +26,35 @@
             float: left;
             margin: 10px 15px;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>APIDocs</h1>
+    <h1>APIDocs <sup style="font-size:0.5em;">Beta</sup></h1>
+
+    <h4>收集API文档，支持chm格式，用工具转换成html格式提供在线浏览，文档来源于互联网。</h4>
+    <h4>
+        文档托管于<a href="https://github.com/netnr/apidocs">github</a>，同步<a href="https://gitee.com/netnr/apidocs">gitee</a>,
+        如需添加文档，请提交PR或<a href="https://www.netnr.com/mix/contact">联系我</a>
+    </h4>
+
+    <hr />
 
     <ul id="docs">
         <li><a href="#">EasyUI-1.5.2</a></li>
     </ul>
+
+    <footer>
+        <div>powered by <a href="https://www.netnr.com">netnr</a></div>
+    </footer>
 
     <script>
         document.getElementById('docs').onclick = function (e) {
