@@ -303,14 +303,15 @@ function vshow() {
     document.title = isrc + " " + window.origintitle;
     j('#bt')[0].innerHTML = "<a href='" + path + ".chm' target='_blank'>" + isrc + "</a>";
     isrc = isrc.toLowerCase();
-    f1.src = path + "/nav.html";
+    j('#f2')[0].src = "about:blank";
+    j('#f1')[0].src = path + "/nav.html";
 
     try {
         var deep = 20, si = setInterval(function () {
             if (deep) {
                 deep--;
                 try {
-                    var fr = f1.contentWindow;
+                    var fr = j('#f1')[0].contentWindow;
                     if (fr) {
                         var as = fr.document.getElementsByTagName('a'), ha, fa;
                         for (var i = 0; i < as.length; i++) {
