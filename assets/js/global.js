@@ -272,7 +272,7 @@
 
 //‰Ø¿¿◊‘  ”¶
 function vauto() {
-    var ch = j(window).px().height, sh = ch - 45;
+    var ch = j(window).px().height, sh = ch - 48;
     j('#f1')[0].style.height = j('#f2')[0].style.height = sh + "px";
 }
 
