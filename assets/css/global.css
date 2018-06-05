@@ -87,6 +87,11 @@
     border-top: 1px solid #ddd;
 }
 
+    .footer p {
+        font-size: 1.3em;
+        margin-top: .5em;
+    }
+
     .footer .logo {
         user-select: none;
         animation: myrotate 60s infinite;
