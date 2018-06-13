@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>DataGrid Filter Row(¿É¹ıÂËĞĞµÄÊı¾İ±í¸ñ)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>DataGrid Filter Row(å¯è¿‡æ»¤è¡Œçš„æ•°æ®è¡¨æ ¼)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_120_files/easyui[1]_9.css"><LINK 
@@ -15,13 +16,13 @@ href="536ac27ad9dd84e522d2c8457d32af7a_120_files/SyntaxHighlighter[1].css"><!-- 
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3>DataGrid Filter Row£¨¿É¹ıÂËĞĞµÄÊı¾İ±í¸ñ£©</H3>
+<H3>DataGrid Filter Rowï¼ˆå¯è¿‡æ»¤è¡Œçš„æ•°æ®è¡¨æ ¼ï¼‰</H3>
 <P><A href="/extension/index.php">Extension</A>&nbsp;&gt; DataGrid Filter Row 
 </P>
 <P><SPAN id=wiz_font_size_span_10907390 style="FONT-SIZE: 16pt"><FONT 
-color=#ff0000><STRONG>À©Õ¹ÏÂÔØµØÖ·£º</STRONG><A 
-href="http://www.jeasyui.com/extension/downloads/datagrid-filter.zip"><STRONG>http://www.jeasyui.com/extension/downloads/datagrid-filter.zip</STRONG></A><STRONG>&nbsp;</STRONG><STRONG>(ÎÒ·¢²¼µÄ³ÌĞò°üÕûÒ²ÓĞÌá¹©£¬ÔÚextensionÄ¿Â¼ÏÂ)</STRONG></FONT></SPAN></P><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_120_files/datagrid_filter[1].png"> 
-<H4>µ¼Èë'datagrid-filter.js'ÎÄ¼ş<SPAN class=tag> </SPAN></H4>
+color=#ff0000><STRONG>æ‰©å±•ä¸‹è½½åœ°å€ï¼š</STRONG><A 
+href="http://www.jeasyui.com/extension/downloads/datagrid-filter.zip"><STRONG>http://www.jeasyui.com/extension/downloads/datagrid-filter.zip</STRONG></A><STRONG>&nbsp;</STRONG><STRONG>(æˆ‘å‘å¸ƒçš„ç¨‹åºåŒ…æ•´ä¹Ÿæœ‰æä¾›ï¼Œåœ¨extensionç›®å½•ä¸‹)</STRONG></FONT></SPAN></P><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_120_files/datagrid_filter[1].png"> 
+<H4>å¯¼å…¥'datagrid-filter.js'æ–‡ä»¶<SPAN class=tag> </SPAN></H4>
 <DIV align=left><SPAN class=tag>
 <OL class=linenums 
 style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
@@ -39,125 +40,125 @@ style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px;
   class=tag 
   style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;&lt;/script&gt;</SPAN></LI></OL></DIV>
 <H4>&nbsp;</H4></SPAN>
-<H4>ÆôÓÃ¹ıÂË</H4><PRE class=L0><SPAN class=kwd></SPAN><SPAN class=com><DIV align=left><OL class=linenums style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><LI class=L0 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">var</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> dg </SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> $</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'#dg'</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">);</SPAN><LI class=L1 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">dg</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">datagrid</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">();</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=com style="FONT-SIZE: 14px; COLOR: rgb(136,0,0)">// ´´½¨Êı¾İ±í¸ñ</SPAN><LI class=L2 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">dg</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">datagrid</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'enableFilter'</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">);</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=com style="FONT-SIZE: 14px; COLOR: rgb(136,0,0)">// ÆôÓÃ¹ıÂË</SPAN></LI></OL></DIV></SPAN></PRE>
-<H4>ÊôĞÔ</H4>
-<P>ÏÂÁĞÊôĞÔÀ©Õ¹×ÔDatagrid£¬ÒÔÏÂÊÇĞÂÔöµÄÊôĞÔ¡£.</P>
+<H4>å¯ç”¨è¿‡æ»¤</H4><PRE class=L0><SPAN class=kwd></SPAN><SPAN class=com><DIV align=left><OL class=linenums style="MARGIN-BOTTOM: 0px; WHITE-SPACE: pre; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px monospace; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><LI class=L0 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=kwd style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">var</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> dg </SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">=</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> $</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'#dg'</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">);</SPAN><LI class=L1 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">dg</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">datagrid</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">();</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=com style="FONT-SIZE: 14px; COLOR: rgb(136,0,0)">// åˆ›å»ºæ•°æ®è¡¨æ ¼</SPAN><LI class=L2 style="LIST-STYLE-TYPE: decimal; FONT-SIZE: 14px; BACKGROUND: rgb(255,255,255); COLOR: rgb(43,145,175); PADDING-LEFT: 10px; MARGIN-LEFT: 5px; BORDER-LEFT: rgb(209,215,220) 1px solid; LINE-HEIGHT: 18px"><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">dg</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">.</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)">datagrid</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">(</SPAN><SPAN class=str style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">'enableFilter'</SPAN><SPAN class=pun style="FONT-SIZE: 14px; COLOR: rgb(102,102,0)">);</SPAN><SPAN class=pln style="FONT-SIZE: 14px; COLOR: rgb(0,0,0)"> </SPAN><SPAN class=com style="FONT-SIZE: 14px; COLOR: rgb(136,0,0)">// å¯ç”¨è¿‡æ»¤</SPAN></LI></OL></DIV></SPAN></PRE>
+<H4>å±æ€§</H4>
+<P>ä¸‹åˆ—å±æ€§æ‰©å±•è‡ªDatagridï¼Œä»¥ä¸‹æ˜¯æ–°å¢çš„å±æ€§ã€‚.</P>
 <TABLE class=doc-table>
   <TBODY>
   <TR>
-    <TH><STRONG>ÊôĞÔÃû</STRONG></TH>
-    <TH><STRONG>ÊôĞÔÖµÀàĞÍ</STRONG></TH>
-    <TH><STRONG>ÃèÊö</STRONG></TH>
-    <TH><STRONG>Ä¬ÈÏÖµ</STRONG></TH></TR>
+    <TH><STRONG>å±æ€§å</STRONG></TH>
+    <TH><STRONG>å±æ€§å€¼ç±»å‹</STRONG></TH>
+    <TH><STRONG>æè¿°</STRONG></TH>
+    <TH><STRONG>é»˜è®¤å€¼</STRONG></TH></TR>
   <TR>
     <TD>filterMenuIconCls</TD>
     <TD>string</TD>
-    <TD>ÓÃÀ´±íÊ¾Ñ¡ÔñÁËÄÄ¸ö¹ıÂËÆ÷²Ëµ¥ÏîµÄÍ¼±êclassÃû³Æ¡£</TD>
+    <TD>ç”¨æ¥è¡¨ç¤ºé€‰æ‹©äº†å“ªä¸ªè¿‡æ»¤å™¨èœå•é¡¹çš„å›¾æ ‡classåç§°ã€‚</TD>
     <TD>icon-ok</TD></TR>
   <TR>
     <TD>filterBtnIconCls</TD>
     <TD>string</TD>
-    <TD>¹ıÂËÆ÷°´Å¥µÄÍ¼±êclassÃû³Æ¡£</TD>
+    <TD>è¿‡æ»¤å™¨æŒ‰é’®çš„å›¾æ ‡classåç§°ã€‚</TD>
     <TD>icon-filter</TD></TR>
   <TR>
     <TD>filterBtnPosition</TD>
     <TD>string</TD>
-    <TD>¹ıÂËÆ÷°´Å¥µÄÎ»ÖÃ¡£¿ÉÓÃÖµÓĞ£º'left' ºÍ 'right'</TD>
+    <TD>è¿‡æ»¤å™¨æŒ‰é’®çš„ä½ç½®ã€‚å¯ç”¨å€¼æœ‰ï¼š'left' å’Œ 'right'</TD>
     <TD>right</TD></TR>
   <TR>
     <TD>filterPosition</TD>
     <TD>string</TD>
-    <TD>¹ıÂËÆ÷À¸µÄ¿ÉÕÛµş²Ëµ¥ÏÔÊ¾Î»ÖÃ¡£¿ÉÓÃÖµÓĞ£º'top' ºÍ&nbsp;'bottom'</TD>
+    <TD>è¿‡æ»¤å™¨æ çš„å¯æŠ˜å èœå•æ˜¾ç¤ºä½ç½®ã€‚å¯ç”¨å€¼æœ‰ï¼š'top' å’Œ&nbsp;'bottom'</TD>
     <TD>bottom</TD></TR>
   <TR>
     <TD>showFilterBar</TD>
     <TD>boolean</TD>
-    <TD>ÉèÖÃÎªtrueÊ±£¬ÏÔÊ¾¹ıÂËÆ÷À¸¡£</TD>
+    <TD>è®¾ç½®ä¸ºtrueæ—¶ï¼Œæ˜¾ç¤ºè¿‡æ»¤å™¨æ ã€‚</TD>
     <TD>true</TD></TR>
   <TR>
     <TD>remoteFilter</TD>
     <TD>boolean</TD>
-    <TD>ÉèÖÃÎªtrueÊ±£¬ÆôÓÃÔ¶³Ì¹ıÂË¡£ÔÚÆôÓÃÔ¶³Ì¹ıÂËµÄÊ±ºò 'filterRules' ²ÎÊı½«»á·¢ËÍµ½Ô¶³Ì·şÎñÆ÷¡£'filterRules' 
-      ²ÎÊıÖµÊÇ´Ó 'filterStringify'&nbsp;º¯Êı»ñÈ¡µÄ·µ»ØÖµ¡£</TD>
+    <TD>è®¾ç½®ä¸ºtrueæ—¶ï¼Œå¯ç”¨è¿œç¨‹è¿‡æ»¤ã€‚åœ¨å¯ç”¨è¿œç¨‹è¿‡æ»¤çš„æ—¶å€™ 'filterRules' å‚æ•°å°†ä¼šå‘é€åˆ°è¿œç¨‹æœåŠ¡å™¨ã€‚'filterRules' 
+      å‚æ•°å€¼æ˜¯ä» 'filterStringify'&nbsp;å‡½æ•°è·å–çš„è¿”å›å€¼ã€‚</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>filterDelay</TD>
     <TD>number</TD>
     <TD><SPAN lang=zh-CN id=result_box 
-      class=short_text><SPAN>ÑÓ³Ù¹ıÂË</SPAN><SPAN> 'text' 
-      </SPAN><SPAN>¹ıÂËÆ÷</SPAN><SPAN>×é¼şÖĞ</SPAN><SPAN>×îºóÒ»´Î¼üÅÌ</SPAN><SPAN>ÊäÈëÊÂ¼ş¡£</SPAN></SPAN></TD>
+      class=short_text><SPAN>å»¶è¿Ÿè¿‡æ»¤</SPAN><SPAN> 'text' 
+      </SPAN><SPAN>è¿‡æ»¤å™¨</SPAN><SPAN>ç»„ä»¶ä¸­</SPAN><SPAN>æœ€åä¸€æ¬¡é”®ç›˜</SPAN><SPAN>è¾“å…¥äº‹ä»¶ã€‚</SPAN></SPAN></TD>
     <TD>400</TD></TR>
   <TR>
     <TD>filterRules</TD>
     <TD>array</TD>
-    <TD>¹ıÂËÆ÷¹æÔò¶¨Òå¡£Ã¿¸ö¹æÔò¶¼°üº¬ 'field','op'ºÍ'value'ÊôĞÔ¡£</TD>
+    <TD>è¿‡æ»¤å™¨è§„åˆ™å®šä¹‰ã€‚æ¯ä¸ªè§„åˆ™éƒ½åŒ…å« 'field','op'å’Œ'value'å±æ€§ã€‚</TD>
     <TD>[]</TD></TR>
   <TR>
     <TD>filterMatchingType</TD>
     <TD>string</TD>
-    <TD>Ö¸¶¨¹ıÂËĞĞÊÇ·ñĞèÒªÆ¥ÅäÈ«²¿»ò²¿·ÖÓ¦ÓÃ¹ıÂËÆ÷¡£¿ÉÓÃÖµÓĞ£º"<FONT color=#434343 size=2 
+    <TD>æŒ‡å®šè¿‡æ»¤è¡Œæ˜¯å¦éœ€è¦åŒ¹é…å…¨éƒ¨æˆ–éƒ¨åˆ†åº”ç”¨è¿‡æ»¤å™¨ã€‚å¯ç”¨å€¼æœ‰ï¼š"<FONT color=#434343 size=2 
       face=Tahoma>all", </FONT><SPAN 
-      style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(67,67,67); TEXT-ALIGN: justify; FONT: 12px/24px Tahoma, Arial, ËÎÌå, 'Malgun Gothic'; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">"any"</SPAN></TD>
+      style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(67,67,67); TEXT-ALIGN: justify; FONT: 12px/24px Tahoma, Arial, å®‹ä½“, 'Malgun Gothic'; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">"any"</SPAN></TD>
     <TD>all</TD></TR>
   <TR>
     <TD><SPAN 
       style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">defaultFilterType</SPAN></TD>
     <TD><SPAN 
       style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">string</SPAN></TD>
-    <TD>Ä¬ÈÏ¹ıÂËÀàĞÍ¡£</TD>
+    <TD>é»˜è®¤è¿‡æ»¤ç±»å‹ã€‚</TD>
     <TD>text</TD></TR>
   <TR>
     <TD><SPAN 
       style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">defaultFilterOperator</SPAN></TD>
     <TD><SPAN 
       style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">string</SPAN></TD>
-    <TD>Ä¬ÈÏ¹ıÂË²Ù×÷Æ÷¡£</TD>
+    <TD>é»˜è®¤è¿‡æ»¤æ“ä½œå™¨ã€‚</TD>
     <TD>contains</TD></TR>
   <TR>
     <TD><SPAN 
       style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">defaultFilterOptions</SPAN></TD>
     <TD>object</TD>
-    <TD>Ä¬ÈÏ¹ıÂËÑ¡Ïî¡£</TD>
+    <TD>é»˜è®¤è¿‡æ»¤é€‰é¡¹ã€‚</TD>
     <TD></TD></TR>
   <TR>
     <TD>filterStringify</TD>
     <TD>function</TD>
-    <TD>×Ö·û´®»¯¹ıÂËÆ÷¹æÔòµÄº¯Êı¡£</TD>
+    <TD>å­—ç¬¦ä¸²åŒ–è¿‡æ»¤å™¨è§„åˆ™çš„å‡½æ•°ã€‚</TD>
     <TD><PRE>function(data){
 	return JSON.stringify(data);
 }
 </PRE></TD></TR></TBODY></TABLE>
-<H4>ÊÂ¼ş</H4>
-<P>ÏÂÁĞÊÂ¼şÀ©Õ¹×ÔDatagrid£¬ÒÔÏÂÊÇĞÂÔöµÄÊÂ¼ş¡£ </P>
+<H4>äº‹ä»¶</H4>
+<P>ä¸‹åˆ—äº‹ä»¶æ‰©å±•è‡ªDatagridï¼Œä»¥ä¸‹æ˜¯æ–°å¢çš„äº‹ä»¶ã€‚ </P>
 <TABLE class=doc-table>
   <TBODY>
   <TR>
-    <TH><STRONG>·½·¨Ãû</STRONG></TH>
-    <TH><STRONG>·½·¨²ÎÊı</STRONG></TH>
-    <TH><STRONG>ÃèÊö</STRONG></TH></TR>
+    <TH><STRONG>æ–¹æ³•å</STRONG></TH>
+    <TH><STRONG>æ–¹æ³•å‚æ•°</STRONG></TH>
+    <TH><STRONG>æè¿°</STRONG></TH></TR>
   <TR>
     <TD>onClickMenu</TD>
     <TD>item,button,field</TD>
-    <TD>ÔÚµã»÷²Ëµ¥ÏîµÄÊ±ºò´¥·¢£¬·µ»ØfalseÈ¡Ïû¸Ã¶¯×÷¡£<BR>item£ºµã»÷µÄ²Ëµ¥Ïî¡£<BR>button£º°ó¶¨µ½¹ıÂËÆ÷µÄ¹ıÂË°´Å¥¡£<BR>field£º×Ö¶ÎÃû¡£ 
+    <TD>åœ¨ç‚¹å‡»èœå•é¡¹çš„æ—¶å€™è§¦å‘ï¼Œè¿”å›falseå–æ¶ˆè¯¥åŠ¨ä½œã€‚<BR>itemï¼šç‚¹å‡»çš„èœå•é¡¹ã€‚<BR>buttonï¼šç»‘å®šåˆ°è¿‡æ»¤å™¨çš„è¿‡æ»¤æŒ‰é’®ã€‚<BR>fieldï¼šå­—æ®µåã€‚ 
     </TD></TR></TBODY></TABLE>
-<H4>·½·¨</H4>
-<P>ÏÂÁĞ·½·¨À©Õ¹×ÔDatagrid£¬ÒÔÏÂÊÇĞÂÔöµÄ·½·¨¡£ </P>
+<H4>æ–¹æ³•</H4>
+<P>ä¸‹åˆ—æ–¹æ³•æ‰©å±•è‡ªDatagridï¼Œä»¥ä¸‹æ˜¯æ–°å¢çš„æ–¹æ³•ã€‚ </P>
 <TABLE class=doc-table>
   <TBODY>
   <TR>
-    <TH><STRONG>·½·¨Ãû</STRONG></TH>
-    <TH><STRONG>·½·¨²ÎÊı</STRONG></TH>
-    <TH><STRONG>ÃèÊö</STRONG></TH></TR>
+    <TH><STRONG>æ–¹æ³•å</STRONG></TH>
+    <TH><STRONG>æ–¹æ³•å‚æ•°</STRONG></TH>
+    <TH><STRONG>æè¿°</STRONG></TH></TR>
   <TR>
     <TD>enableFilter</TD>
     <TD>filters</TD>
-    <TD>´´½¨²¢ÆôÓÃ¹ıÂË¹¦ÄÜ¡£'filters'²ÎÊıÊÇÒ»¸ö¹ıÂËÆ÷ÅäÖÃÊı×é¡£Ã¿Ò»¸öÏîÄ¿¶¼°üº¬ÒÔÏÂÊôĞÔ£º<BR>1) 
-      field£º×Ô¶¨Òå¹æÔòµÄ×Ö¶ÎÃû¡£<BR>2) 
-      type£º¹ıÂËÀàĞÍ£¬¿ÉÓÃÖµÓĞ£ºlabel,text,textarea,checkbox,numberbox,validatebox,datebox,combobox,combotree¡£<BR>3) 
-      options£º¹ıÂËÀàĞÍ²ÎÊı¡£<BR>4) 
-      op£º¹ıÂËÌõ¼ş£º¿ÉÓÃÖµÓĞ£ºcontains,equal,notequal,beginwith,endwith,less,lessorequal,greater,greaterorequal¡£ 
+    <TD>åˆ›å»ºå¹¶å¯ç”¨è¿‡æ»¤åŠŸèƒ½ã€‚'filters'å‚æ•°æ˜¯ä¸€ä¸ªè¿‡æ»¤å™¨é…ç½®æ•°ç»„ã€‚æ¯ä¸€ä¸ªé¡¹ç›®éƒ½åŒ…å«ä»¥ä¸‹å±æ€§ï¼š<BR>1) 
+      fieldï¼šè‡ªå®šä¹‰è§„åˆ™çš„å­—æ®µåã€‚<BR>2) 
+      typeï¼šè¿‡æ»¤ç±»å‹ï¼Œå¯ç”¨å€¼æœ‰ï¼šlabel,text,textarea,checkbox,numberbox,validatebox,datebox,combobox,combotreeã€‚<BR>3) 
+      optionsï¼šè¿‡æ»¤ç±»å‹å‚æ•°ã€‚<BR>4) 
+      opï¼šè¿‡æ»¤æ¡ä»¶ï¼šå¯ç”¨å€¼æœ‰ï¼šcontains,equal,notequal,beginwith,endwith,less,lessorequal,greater,greaterorequalã€‚ 
 
-      <P>´úÂëÊ¾Àı£º</P><PRE>$('#dg').datagrid('enableFilter');
+      <P>ä»£ç ç¤ºä¾‹ï¼š</P><PRE>$('#dg').datagrid('enableFilter');
 $('#dg').datagrid('enableFilter', [{
 	field:'listprice',
 	type:'numberbox',
@@ -168,20 +169,20 @@ $('#dg').datagrid('enableFilter', [{
   <TR>
     <TD>disableFilter</TD>
     <TD>none</TD>
-    <TD>½ûÓÃ¹ıÂË¹¦ÄÜ¡£</TD></TR>
+    <TD>ç¦ç”¨è¿‡æ»¤åŠŸèƒ½ã€‚</TD></TR>
   <TR>
     <TD>destroyFilter</TD>
     <TD>none</TD>
-    <TD>Ïú»Ù¹ıÂËÆ÷À¸¡£</TD></TR>
+    <TD>é”€æ¯è¿‡æ»¤å™¨æ ã€‚</TD></TR>
   <TR>
     <TD><SPAN 
       style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">getFilterRule</SPAN></TD>
     <TD>field</TD>
-    <TD>»ñÈ¡¹ıÂË¹æÔò¡£</TD></TR></TR>
+    <TD>è·å–è¿‡æ»¤è§„åˆ™ã€‚</TD></TR></TR>
   <TR>
     <TD>addFilterRule</TD>
     <TD>param</TD>
-    <TD>Ìí¼ÓÒ»¸ö¹ıÂË¹æÔò¡£&nbsp;<PRE>$('#dg').datagrid('addFilterRule', {
+    <TD>æ·»åŠ ä¸€ä¸ªè¿‡æ»¤è§„åˆ™ã€‚&nbsp;<PRE>$('#dg').datagrid('addFilterRule', {
 	field: 'desp',
 	op: 'contains',
 	value: 'easyui'
@@ -190,17 +191,17 @@ $('#dg').datagrid('enableFilter', [{
   <TR>
     <TD>removeFilterRule</TD>
     <TD>field</TD>
-    <TD>Ô¶³Ì¹ıÂË¹æÔò¡£Èç¹û 'field' ²ÎÊıÎ´Ö¸¶¨£¬½«É¾³ıËùÓĞ¹ıÂË¹æÔò¡£ </TD></TR>
+    <TD>è¿œç¨‹è¿‡æ»¤è§„åˆ™ã€‚å¦‚æœ 'field' å‚æ•°æœªæŒ‡å®šï¼Œå°†åˆ é™¤æ‰€æœ‰è¿‡æ»¤è§„åˆ™ã€‚ </TD></TR>
   <TR>
     <TD>doFilter</TD>
     <TD>none</TD>
-    <TD>»ùÓÚÒ»Ğ©¹ıÂË¹æÔò½øĞĞ¹ıÂË¡£</TD></TR>
+    <TD>åŸºäºä¸€äº›è¿‡æ»¤è§„åˆ™è¿›è¡Œè¿‡æ»¤ã€‚</TD></TR>
   <TR>
     <TD>getFilterComponent</TD>
     <TD>field</TD>
-    <TD>¸ù¾İÖ¸¶¨µÄ×Ö¶Î»ñÈ¡¹ıÂËÆ÷¡£</TD></TR>
+    <TD>æ ¹æ®æŒ‡å®šçš„å­—æ®µè·å–è¿‡æ»¤å™¨ã€‚</TD></TR>
   <TR>
     <TD><SPAN 
       style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">resizeFilter</SPAN></TD>
     <TD>field</TD>
-    <TD>µ÷Õû¹ıÂËÆ÷´óĞ¡¡£</TD></TR></TBODY></TABLE></DIV></BODY></HTML>
+    <TD>è°ƒæ•´è¿‡æ»¤å™¨å¤§å°ã€‚</TD></TR></TBODY></TABLE></DIV></BODY></HTML>

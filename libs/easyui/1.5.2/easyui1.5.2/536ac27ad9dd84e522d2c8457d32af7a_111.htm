@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>tooltip(ÌáÊ¾¿ò)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>tooltip(æç¤ºæ¡†)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_111_files/easyui[1]_2.css"><LINK 
@@ -65,135 +66,135 @@ src="536ac27ad9dd84e522d2c8457d32af7a_111_files/jquery.easyui.min[1].js"></SCRIP
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3>Tooltip£¨ÌáÊ¾¿ò£©</H3>
-<P>Ê¹ÓÃ$.fn.tooltip.defaultsÖØĞ´Ä¬ÈÏÖµ¶ÔÏó¡£<FONT 
-color=#3366ff><STRONG>£¨ÒëÕß×¢£º1.3.3°æÖĞĞÂÔöµÄplugin£©</STRONG></FONT></P>
-<P>µ±ÓÃ»§½«Êó±êÒÆ¶¯µ½ÔªËØÉÏµÄÊ±ºò£¬½«»áÏÔÊ¾Ò»¸öÏûÏ¢ÌáÊ¾¿ò¡£ÌáÊ¾¿òµÄÄÚÈİ¿ÉÒÔÊÇÒ³ÃæÖĞÈÎºÎÒ»¸öHTMLÔªËØ»òÕßÍ¨¹ıAjax·¢ËÍºóÌ¨ÇëÇóÒÔ»ñÈ¡ÌáÊ¾¿òÄÚÈİ¡£ 
+<H3>Tooltipï¼ˆæç¤ºæ¡†ï¼‰</H3>
+<P>ä½¿ç”¨$.fn.tooltip.defaultsé‡å†™é»˜è®¤å€¼å¯¹è±¡ã€‚<FONT 
+color=#3366ff><STRONG>ï¼ˆè¯‘è€…æ³¨ï¼š1.3.3ç‰ˆä¸­æ–°å¢çš„pluginï¼‰</STRONG></FONT></P>
+<P>å½“ç”¨æˆ·å°†é¼ æ ‡ç§»åŠ¨åˆ°å…ƒç´ ä¸Šçš„æ—¶å€™ï¼Œå°†ä¼šæ˜¾ç¤ºä¸€ä¸ªæ¶ˆæ¯æç¤ºæ¡†ã€‚æç¤ºæ¡†çš„å†…å®¹å¯ä»¥æ˜¯é¡µé¢ä¸­ä»»ä½•ä¸€ä¸ªHTMLå…ƒç´ æˆ–è€…é€šè¿‡Ajaxå‘é€åå°è¯·æ±‚ä»¥è·å–æç¤ºæ¡†å†…å®¹ã€‚ 
 </P>
 <P><IMG src="536ac27ad9dd84e522d2c8457d32af7a_111_files/17226593.png"> </P>
-<H4>Ê¹ÓÃ°¸Àı</H4>
-<H5>´´½¨ÌáÊ¾¿ò</H5>
-<P>1. Í¨¹ı±êÇ©´´½¨ÌáÊ¾¿ò£¬¸øÔªËØÌí¼ÓÒ»¸ö"easyui-tooltip"µÄÀàÃû£¬ÎŞĞèÈÎºÎJavascript´úÂë¡£</P><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;a</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>href</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"#"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>title</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"This is the tooltip message."</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>class</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"easyui-tooltip"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=pln>Hover me</SPAN><SPAN class=tag>&lt;/a&gt;</SPAN></LI></OL></PRE>
-<P>2. Í¨¹ıJavascript´´½¨ÌáÊ¾¿ò¡£</P><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;a</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>id</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"dd"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>href</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"javascript:void(0)"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=pln>Click here</SPAN><SPAN class=tag>&lt;/a&gt;</SPAN></LI></OL></PRE><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=pln>$</SPAN><SPAN class=pun>(</SPAN><SPAN class=str>'#dd'</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>tooltip</SPAN><SPAN class=pun>({</SPAN><LI class=L1><SPAN class=pln>    position</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'right'</SPAN><SPAN class=pun>,</SPAN><LI class=L2><SPAN class=pln>    content</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'&lt;span style="color:#fff"&gt;This is the tooltip message.&lt;/span&gt;'</SPAN><SPAN class=pun>,</SPAN><LI class=L3><SPAN class=pln>    onShow</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=kwd>function</SPAN><SPAN class=pun>(){</SPAN><LI class=L4><SPAN class=pln>        $</SPAN><SPAN class=pun>(</SPAN><SPAN class=kwd>this</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>tooltip</SPAN><SPAN class=pun>(</SPAN><SPAN class=str>'tip'</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>css</SPAN><SPAN class=pun>({</SPAN><LI class=L5><SPAN class=pln>            backgroundColor</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'#666'</SPAN><SPAN class=pun>,</SPAN><LI class=L6><SPAN class=pln>            borderColor</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'#666'</SPAN><LI class=L7><SPAN class=pln>        </SPAN><SPAN class=pun>});</SPAN><LI class=L8><SPAN class=pln>    </SPAN><SPAN class=pun>}</SPAN><LI class=L9><SPAN class=pun>});</SPAN></LI></OL></PRE>
-<H4>ÊôĞÔ</H4>
+<H4>ä½¿ç”¨æ¡ˆä¾‹</H4>
+<H5>åˆ›å»ºæç¤ºæ¡†</H5>
+<P>1. é€šè¿‡æ ‡ç­¾åˆ›å»ºæç¤ºæ¡†ï¼Œç»™å…ƒç´ æ·»åŠ ä¸€ä¸ª"easyui-tooltip"çš„ç±»åï¼Œæ— éœ€ä»»ä½•Javascriptä»£ç ã€‚</P><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;a</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>href</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"#"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>title</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"This is the tooltip message."</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>class</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"easyui-tooltip"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=pln>Hover me</SPAN><SPAN class=tag>&lt;/a&gt;</SPAN></LI></OL></PRE>
+<P>2. é€šè¿‡Javascriptåˆ›å»ºæç¤ºæ¡†ã€‚</P><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=tag>&lt;a</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>id</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"dd"</SPAN><SPAN class=pln> </SPAN><SPAN class=atn>href</SPAN><SPAN class=pun>=</SPAN><SPAN class=atv>"javascript:void(0)"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=pln>Click here</SPAN><SPAN class=tag>&lt;/a&gt;</SPAN></LI></OL></PRE><PRE class="prettyprint linenums prettyprinted" name="code"><OL class=linenums><LI class=L0><SPAN class=pln>$</SPAN><SPAN class=pun>(</SPAN><SPAN class=str>'#dd'</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>tooltip</SPAN><SPAN class=pun>({</SPAN><LI class=L1><SPAN class=pln>    position</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'right'</SPAN><SPAN class=pun>,</SPAN><LI class=L2><SPAN class=pln>    content</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'&lt;span style="color:#fff"&gt;This is the tooltip message.&lt;/span&gt;'</SPAN><SPAN class=pun>,</SPAN><LI class=L3><SPAN class=pln>    onShow</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=kwd>function</SPAN><SPAN class=pun>(){</SPAN><LI class=L4><SPAN class=pln>        $</SPAN><SPAN class=pun>(</SPAN><SPAN class=kwd>this</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>tooltip</SPAN><SPAN class=pun>(</SPAN><SPAN class=str>'tip'</SPAN><SPAN class=pun>).</SPAN><SPAN class=pln>css</SPAN><SPAN class=pun>({</SPAN><LI class=L5><SPAN class=pln>            backgroundColor</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'#666'</SPAN><SPAN class=pun>,</SPAN><LI class=L6><SPAN class=pln>            borderColor</SPAN><SPAN class=pun>:</SPAN><SPAN class=pln> </SPAN><SPAN class=str>'#666'</SPAN><LI class=L7><SPAN class=pln>        </SPAN><SPAN class=pun>});</SPAN><LI class=L8><SPAN class=pln>    </SPAN><SPAN class=pun>}</SPAN><LI class=L9><SPAN class=pun>});</SPAN></LI></OL></PRE>
+<H4>å±æ€§</H4>
 <P>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>ÊôĞÔÃû</STRONG></TH>
-    <TH><STRONG>ÊôĞÔÖµÀàĞÍ</STRONG></TH>
-    <TH><STRONG>ÃèÊö</STRONG></TH>
-    <TH><STRONG>Ä¬ÈÏÖµ</STRONG></TH></TR>
+    <TH><STRONG>å±æ€§å</STRONG></TH>
+    <TH><STRONG>å±æ€§å€¼ç±»å‹</STRONG></TH>
+    <TH><STRONG>æè¿°</STRONG></TH>
+    <TH><STRONG>é»˜è®¤å€¼</STRONG></TH></TR>
   <TR>
     <TD>position</TD>
     <TD>string</TD>
-    <TD>ÏûÏ¢¿òÎ»ÖÃ¡£¿ÉÓÃÖµÓĞ£º"left","right","top","bottom"</TD>
+    <TD>æ¶ˆæ¯æ¡†ä½ç½®ã€‚å¯ç”¨å€¼æœ‰ï¼š"left","right","top","bottom"</TD>
     <TD>bottom</TD></TR>
   <TR>
     <TD>content</TD>
     <TD>string</TD>
-    <TD>ÏûÏ¢¿òÄÚÈİ¡£</TD>
+    <TD>æ¶ˆæ¯æ¡†å†…å®¹ã€‚</TD>
     <TD>null</TD></TR>
   <TR>
     <TD>trackMouse</TD>
     <TD>boolean</TD>
-    <TD>ÎªtrueÊ±£¬ÔÊĞíÌáÊ¾¿ò¸ú×ÅÊó±êÒÆ¶¯¡£</TD>
+    <TD>ä¸ºtrueæ—¶ï¼Œå…è®¸æç¤ºæ¡†è·Ÿç€é¼ æ ‡ç§»åŠ¨ã€‚</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>deltaX</TD>
     <TD>number</TD>
-    <TD>Ë®Æ½·½ÏòÌáÊ¾¿òµÄÎ»ÖÃ¡£</TD>
+    <TD>æ°´å¹³æ–¹å‘æç¤ºæ¡†çš„ä½ç½®ã€‚</TD>
     <TD>0</TD></TR>
   <TR>
     <TD>deltaY</TD>
     <TD>number</TD>
-    <TD>´¹Ö±·½ÏòÌáÊ¾¿òµÄÎ»ÖÃ¡£</TD>
+    <TD>å‚ç›´æ–¹å‘æç¤ºæ¡†çš„ä½ç½®ã€‚</TD>
     <TD>0</TD></TR>
   <TR>
     <TD>showEvent</TD>
     <TD>string</TD>
-    <TD>µ±¼¤·¢Ê²Ã´ÊÂ¼şµÄÊ±ºòÏÔÊ¾ÌáÊ¾¿ò¡£</TD>
+    <TD>å½“æ¿€å‘ä»€ä¹ˆäº‹ä»¶çš„æ—¶å€™æ˜¾ç¤ºæç¤ºæ¡†ã€‚</TD>
     <TD>mouseenter</TD></TR>
   <TR>
     <TD>hideEvent</TD>
     <TD>string</TD>
-    <TD>µ±¼¤·¢Ê²Ã´ÊÂ¼şµÄÊ±ºòÒş²ØÌáÊ¾¿ò¡£</TD>
+    <TD>å½“æ¿€å‘ä»€ä¹ˆäº‹ä»¶çš„æ—¶å€™éšè—æç¤ºæ¡†ã€‚</TD>
     <TD>mouseleave</TD></TR>
   <TR>
     <TD>showDelay</TD>
     <TD>number</TD>
-    <TD>ÑÓÊ±¶àÉÙÃëÏÔÊ¾ÌáÊ¾¿ò¡£</TD>
+    <TD>å»¶æ—¶å¤šå°‘ç§’æ˜¾ç¤ºæç¤ºæ¡†ã€‚</TD>
     <TD>200</TD></TR>
   <TR>
     <TD>hideDelay</TD>
     <TD>number</TD>
-    <TD>ÑÓÊ±¶àÉÙÃëÒş²ØÌáÊ¾¿ò¡£</TD>
+    <TD>å»¶æ—¶å¤šå°‘ç§’éšè—æç¤ºæ¡†ã€‚</TD>
     <TD>100</TD></TR></TBODY></TABLE></P>
-<H4>ÊÂ¼ş</H4>
+<H4>äº‹ä»¶</H4>
 <P>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>ÊÂ¼şÃû³Æ</STRONG></TH>
-    <TH><STRONG>ÊÂ¼ş²ÎÊı</STRONG></TH>
-    <TH><STRONG>ÃèÊö</STRONG></TH></TR>
+    <TH><STRONG>äº‹ä»¶åç§°</STRONG></TH>
+    <TH><STRONG>äº‹ä»¶å‚æ•°</STRONG></TH>
+    <TH><STRONG>æè¿°</STRONG></TH></TR>
   <TR>
     <TD>onShow</TD>
     <TD>e</TD>
-    <TD>ÔÚÏÔÊ¾ÌáÊ¾¿òµÄÊ±ºò´¥·¢¡£</TD></TR>
+    <TD>åœ¨æ˜¾ç¤ºæç¤ºæ¡†çš„æ—¶å€™è§¦å‘ã€‚</TD></TR>
   <TR>
     <TD>onHide</TD>
     <TD>e</TD>
-    <TD>ÔÚÒş²ØÌáÊ¾¿òµÄÊ±ºò´¥·¢¡£</TD></TR>
+    <TD>åœ¨éšè—æç¤ºæ¡†çš„æ—¶å€™è§¦å‘ã€‚</TD></TR>
   <TR>
     <TD>onUpdate</TD>
     <TD>content</TD>
-    <TD>ÔÚÌáÊ¾¿òÄÚÈİ¸üĞÂµÄÊ±ºò´¥·¢¡£</TD></TR>
+    <TD>åœ¨æç¤ºæ¡†å†…å®¹æ›´æ–°çš„æ—¶å€™è§¦å‘ã€‚</TD></TR>
   <TR>
     <TD>onPosition</TD>
     <TD>left,top</TD>
-    <TD>ÔÚÌáÊ¾¿òÎ»ÖÃ¸Ä±äµÄÊ±ºò´¥·¢¡£</TD></TR>
+    <TD>åœ¨æç¤ºæ¡†ä½ç½®æ”¹å˜çš„æ—¶å€™è§¦å‘ã€‚</TD></TR>
   <TR>
     <TD>onDestroy</TD>
     <TD>none</TD>
-    <TD>ÔÚÌáÊ¾¿ò±»Ïú»ÙµÄÊ±ºò´¥·¢¡£</TD></TR></TBODY></TABLE></P>
-<H4>·½·¨</H4>
+    <TD>åœ¨æç¤ºæ¡†è¢«é”€æ¯çš„æ—¶å€™è§¦å‘ã€‚</TD></TR></TBODY></TABLE></P>
+<H4>æ–¹æ³•</H4>
 <P>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>·½·¨Ãû</STRONG></TH>
-    <TH><STRONG>·½·¨²ÎÊı</STRONG></TH>
-    <TH><STRONG>ÃèÊö</STRONG></TH></TR>
+    <TH><STRONG>æ–¹æ³•å</STRONG></TH>
+    <TH><STRONG>æ–¹æ³•å‚æ•°</STRONG></TH>
+    <TH><STRONG>æè¿°</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>·µ»Ø¿Ø¼şÊôĞÔ¶ÔÏó¡£</TD></TR>
+    <TD>è¿”å›æ§ä»¶å±æ€§å¯¹è±¡ã€‚</TD></TR>
   <TR>
     <TD>tip</TD>
     <TD>none</TD>
-    <TD>·µ»ØtipÔªËØ¶ÔÏó¡£</TD></TR>
+    <TD>è¿”å›tipå…ƒç´ å¯¹è±¡ã€‚</TD></TR>
   <TR>
     <TD>arrow</TD>
     <TD>none</TD>
-    <TD>·µ»Ø¼ıÍ·ÔªËØ¶ÔÏó¡£</TD></TR>
+    <TD>è¿”å›ç®­å¤´å…ƒç´ å¯¹è±¡ã€‚</TD></TR>
   <TR>
     <TD>show</TD>
     <TD>e</TD>
-    <TD>ÏÔÊ¾ÌáÊ¾¿ò¡£</TD></TR>
+    <TD>æ˜¾ç¤ºæç¤ºæ¡†ã€‚</TD></TR>
   <TR>
     <TD>hide</TD>
     <TD>e</TD>
-    <TD>Òş²ØÌáÊ¾¿ò¡£</TD></TR>
+    <TD>éšè—æç¤ºæ¡†ã€‚</TD></TR>
   <TR>
     <TD>update</TD>
     <TD>content</TD>
-    <TD>¸üĞÂÌáÊ¾¿òÄÚÈİ¡£</TD></TR>
+    <TD>æ›´æ–°æç¤ºæ¡†å†…å®¹ã€‚</TD></TR>
   <TR>
     <TD>reposition</TD>
     <TD>none</TD>
-    <TD>ÖØÖÃÌáÊ¾¿òÎ»ÖÃ¡£</TD></TR>
+    <TD>é‡ç½®æç¤ºæ¡†ä½ç½®ã€‚</TD></TR>
   <TR>
     <TD>destroy</TD>
     <TD>none</TD>
-    <TD>Ïú»ÙÌáÊ¾¿ò¡£</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>
+    <TD>é”€æ¯æç¤ºæ¡†ã€‚</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

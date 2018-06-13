@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>treegrid(���α���)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>treegrid(树形表格)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_91_files/easyui[1]_9.css"><LINK 
@@ -15,21 +16,21 @@ href="536ac27ad9dd84e522d2c8457d32af7a_91_files/SyntaxHighlighter[1].css"><!-- s
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3 align=left>TreeGrid�����α���</H3>
-<P align=left>��չ��$.fn.datagrid.defaults��ʹ��$.fn.treegrid.defaults��дĬ��ֵ����</P>
+<H3 align=left>TreeGrid（树形表格）</H3>
+<P align=left>扩展自$.fn.datagrid.defaults。使用$.fn.treegrid.defaults重写默认值对象。</P>
 <P 
-align=left>���α���������ʾ�ֲ����ݱ������ǻ������ݱ���������ؼ��Ϳɱ༭�������α��������û������ɶ��Ƶġ��첽չ���к���ʾ�ڶ����ϵķֲ����ݡ� 
+align=left>树形表格用于显示分层数据表格。它是基于数据表格、组合树控件和可编辑表格。树形表格允许用户创建可定制的、异步展开行和显示在多列上的分层数据。 
 </P>
 <P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_91_files/treegrid2[2].png"> </P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>������ϵ</H4>
+<H4 align=left>依赖关系</H4>
 <UL>
   <LI>
   <DIV align=left><A 
   href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A></DIV></LI></UL>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>ʹ�ð���</H4>
-<P align=left>ʹ��HTML��ǩ�������α����ڴ��������£����α�����ѭ���ݱ���Ľṹ�� </P>
+<H4 align=left>使用案例</H4>
+<P align=left>使用HTML标签创建树形表格。在大多数情况下，树形表格遵循数据表格的结构。 </P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -118,7 +119,7 @@ align=left>���α���������ʾ�ֲ����ݱ������ǻ������ݱ���������ؼ��Ϳɱ༭���
   <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
   class=tag>&lt;/</SPAN><SPAN class=tag-name>table</SPAN><SPAN 
   class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
-<P align=left>ʹ��Javascript�������α���</P>
+<P align=left>使用Javascript创建树形表格。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -170,39 +171,39 @@ align=left>���α���������ʾ�ֲ����ݱ������ǻ������ݱ���������ؼ��Ϳɱ༭���
   <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;]] &nbsp;&nbsp;</SPAN> 
   <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
 <DIV align=left>&nbsp;</DIV>
-<H4 align=left>����</H4>
-<P align=left>���α�����չ��<A 
-href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(���ݱ���)�����α����������������£�</P>
+<H4 align=left>属性</H4>
+<P align=left>树形表格扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)，树形表格新增的属性如下：</P>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>idField</TD>
     <TD>string</TD>
-    <TD>����ؼ��ֶ�����ʶ���ڵ㡣<STRONG><FONT color=#ff0000>������ģ�</FONT></STRONG></TD>
+    <TD>定义关键字段来标识树节点。<STRONG><FONT color=#ff0000>（必须的）</FONT></STRONG></TD>
     <TD>null</TD></TR>
   <TR>
     <TD>treeField</TD>
     <TD>string</TD>
-    <TD>�������ڵ��ֶΡ�<STRONG><FONT color=#ff0000>������ģ�</FONT></STRONG></TD>
+    <TD>定义树节点字段。<STRONG><FONT color=#ff0000>（必须的）</FONT></STRONG></TD>
     <TD>null</TD></TR>
   <TR>
     <TD>animate</TD>
     <TD>boolean</TD>
-    <TD>�����ڽڵ�չ�����۵���ʱ���Ƿ���ʾ����Ч����</TD>
+    <TD>定义在节点展开或折叠的时候是否显示动画效果。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>checkbox</TD>
     <TD>boolean,function</TD>
     <TD>
-      <P>������ÿһ���ڵ�ǰ��ʾ��ѡ��Ҳ����ָ��һ����������ָ̬���Ƿ���ʾ��ѡ�򣬵���������true��ʱ������ʾ��������ʾ��<STRONG><FONT 
-      color=#ff0000>����������1.4.5�濪ʼ���ã�</FONT></STRONG></P>
-      <P>����ʾ����</P><PRE>$('#tg').treegrid({
+      <P>定义在每一个节点前显示复选框，也可以指定一个函数来动态指定是否显示复选框，但函数返回true的时候则显示，否则不显示。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></P>
+      <P>代码示例：</P><PRE>$('#tg').treegrid({
 	checkbox: function(row){
 		var names = ['Java','eclipse.exe','eclipse.ini'];
 		if ($.inArray(row.name, names)&gt;=0){
@@ -215,160 +216,160 @@ href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(���ݱ���)�����α����
   <TR>
     <TD>cascadeCheck</TD>
     <TD>boolean</TD>
-    <TD>�����Ƿ�����顣<STRONG><FONT 
-    color=#ff0000>����������1.4.5�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>定义是否级联检查。<STRONG><FONT 
+    color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></TD>
     <TD>true</TD></TR>
   <TR>
     <TD>onlyLeafCheck</TD>
     <TD>boolean</TD>
-    <TD>�����Ƿ����Ҷ�ӽڵ�ǰ��ʾ��ѡ��<STRONG><FONT 
-      color=#ff0000>����������1.4.5�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>定义是否仅在叶子节点前显示复选框。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></TD>
     <TD>false</TD></TR>
   <TR>
     <TD>lines</TD>
     <TD>boolean</TD>
-    <TD>�����Ƿ���ʾtreegrid�С�<STRONG><FONT 
-      color=#ff0000>����������1.4.5�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>定义是否显示treegrid行。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.5版开始可用）</FONT></STRONG></TD>
     <TD>false</TD></TR>
   <TR>
     <TD>loader</TD>
     <TD>function(param,success,error)</TD>
-    <TD>�����Ժ��ַ�ʽ��Զ�̷�������ȡ���ݡ�����false���Ժ��Ըö������ú�������һ�²�����<BR>param�����ݵ�Զ�̷������Ĳ�������<BR>success(data)�����������ݳɹ���ʱ����õĻص�������<BR>error()������������ʧ�ܵ�ʱ����õĻص�������</TD>
+    <TD>定义以何种方式从远程服务器读取数据。返回false可以忽略该动作。该函数具有一下参数：<BR>param：传递到远程服务器的参数对象。<BR>success(data)：当检索数据成功的时候调用的回调函数。<BR>error()：当检索数据失败的时候调用的回调函数。</TD>
     <TD>json loader</TD></TR>
   <TR>
     <TD>loadFilter</TD>
     <TD>function(data,parentId)</TD>
-    <TD>���ع��˺�����ݽ���չʾ��</TD>
+    <TD>返回过滤后的数据进行展示。</TD>
     <TD></TD></TR></TBODY></TABLE></P>
 <P align=left><BR></P>
-<H4 align=left>�¼�</H4>
-<P align=left>���α�����¼���չ��<A 
-href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(���ݱ���)�����α���������ʱ�����£�</P>
+<H4 align=left>事件</H4>
+<P align=left>树形表格的事件扩展自<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_88.htm">datagrid</A>(数据表格)，树形表格新增的时间如下：</P>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>�¼���</STRONG></TH>
-    <TH><STRONG>�¼�����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>onClickRow</TD>
     <TD>row</TD>
-    <TD>���û�����ڵ��ʱ�򴥷���</TD></TR>
+    <TD>在用户点击节点的时候触发。</TD></TR>
   <TR>
     <TD>onDblClickRow</TD>
     <TD>row</TD>
-    <TD>���û�˫���ڵ��ʱ�򴥷���</TD></TR>
+    <TD>在用户双击节点的时候触发。</TD></TR>
   <TR>
     <TD>onClickCell</TD>
     <TD>field,row</TD>
-    <TD>���û������Ԫ���ʱ�򴥷���</TD></TR>
+    <TD>在用户点击单元格的时候触发。</TD></TR>
   <TR>
     <TD>onDblClickCell</TD>
     <TD>field,row</TD>
-    <TD>���û�˫����Ԫ���ʱ�򴥷���</TD></TR>
+    <TD>在用户双击单元格的时候触发。</TD></TR>
   <TR>
     <TD>onBeforeLoad</TD>
     <TD>row, param</TD>
-    <TD>���������ݼ���֮ǰ����������false����ȡ�����ض�����</TD></TR>
+    <TD>在请求数据加载之前触发，返回false可以取消加载动作。</TD></TR>
   <TR>
     <TD>onLoadSuccess</TD>
     <TD>row, data</TD>
-    <TD>���ݼ������֮�󴥷���</TD></TR>
+    <TD>数据加载完成之后触发。</TD></TR>
   <TR>
     <TD>onLoadError</TD>
     <TD>arguments</TD>
-    <TD>���ݼ���ʧ�ܵ�ʱ�򴥷���������jQuery��$.ajax()������'error'�ص�����һ����</TD></TR>
+    <TD>数据加载失败的时候触发，参数和jQuery的$.ajax()函数的'error'回调函数一样。</TD></TR>
   <TR>
     <TD>onBeforeSelect</TD>
     <TD>row</TD>
-    <TD>���û�ѡ��һ��֮ǰ����������false��ȡ���ö�����<STRONG><FONT 
-      color=#ff0000>�����¼���1.4�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>在用户选择一行之前触发，返回false则取消该动作。<STRONG><FONT 
+      color=#ff0000>（该事件自1.4版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>onSelect</TD>
     <TD>row</TD>
-    <TD>���û�ѡ���ʱ�򴥷�������false��ȡ���ö�����<FONT 
-      color=#ff0000><STRONG>����</STRONG><STRONG>�¼�</STRONG><STRONG>��1.4�濪ʼ���ã�</STRONG></FONT></TD></TR>
+    <TD>在用户选择的时候触发，返回false则取消该动作。<FONT 
+      color=#ff0000><STRONG>（该</STRONG><STRONG>事件</STRONG><STRONG>自1.4版开始可用）</STRONG></FONT></TD></TR>
   <TR>
     <TD>onBeforeUnselect</TD>
     <TD>row</TD>
-    <TD>���û�ȡ��ѡ��һ��֮ǰ����������false��ȡ���ö�����<FONT 
-      color=#ff0000><STRONG>����</STRONG><STRONG>�¼�</STRONG><STRONG>��1.4�濪ʼ���ã�</STRONG></FONT></TD></TR>
+    <TD>在用户取消选择一行之前触发，返回false则取消该动作。<FONT 
+      color=#ff0000><STRONG>（该</STRONG><STRONG>事件</STRONG><STRONG>自1.4版开始可用）</STRONG></FONT></TD></TR>
   <TR>
     <TD>onUnselect</TD>
     <TD>row</TD>
-    <TD>���û�ȡ��ѡ���ʱ�򴥷�������false��ȡ���ö�����<FONT 
-      color=#ff0000><STRONG>����</STRONG><STRONG>�¼�</STRONG><STRONG>��1.4�濪ʼ���ã�</STRONG></FONT></TD></TR>
+    <TD>在用户取消选择的时候触发，返回false则取消该动作。<FONT 
+      color=#ff0000><STRONG>（该</STRONG><STRONG>事件</STRONG><STRONG>自1.4版开始可用）</STRONG></FONT></TD></TR>
   <TR>
     <TD>onBeforeCheckNode</TD>
     <TD>row,checked</TD>
-    <TD>���û�ѡ��һ�нڵ�֮ǰ����������false��ȡ���ö�����<FONT 
-      color=#ff0000><STRONG>����</STRONG><STRONG>�¼�</STRONG><STRONG>��1.4.5�濪ʼ���ã�</STRONG></FONT></TD></TR>
+    <TD>在用户选中一行节点之前触发，返回false则取消该动作。<FONT 
+      color=#ff0000><STRONG>（该</STRONG><STRONG>事件</STRONG><STRONG>自1.4.5版开始可用）</STRONG></FONT></TD></TR>
   <TR>
     <TD>onCheckNode</TD>
     <TD>row,checked</TD>
-    <TD>���û�ѡ��һ�нڵ��ʱ�򴥷�������false��ȡ���ö�����<FONT 
-      color=#ff0000><STRONG>����</STRONG><STRONG>�¼�</STRONG><STRONG>��1.4.5�濪ʼ���ã�</STRONG></FONT></TD></TR>
+    <TD>在用户选中一行节点的时候触发，返回false则取消该动作。<FONT 
+      color=#ff0000><STRONG>（该</STRONG><STRONG>事件</STRONG><STRONG>自1.4.5版开始可用）</STRONG></FONT></TD></TR>
   <TR>
     <TD>onBeforeExpand</TD>
     <TD>row</TD>
-    <TD>�ڽڵ�չ��֮ǰ����������false����ȡ��չ���ڵ�Ķ�����</TD></TR>
+    <TD>在节点展开之前触发，返回false可以取消展开节点的动作。</TD></TR>
   <TR>
     <TD>onExpand</TD>
     <TD>row</TD>
-    <TD>�ڽڵ㱻չ����ʱ�򴥷���</TD></TR>
+    <TD>在节点被展开的时候触发。</TD></TR>
   <TR>
     <TD>onBeforeCollapse</TD>
     <TD>row</TD>
-    <TD>�ڽڵ��۵�֮ǰ����������false����ȡ���۵��ڵ�Ķ�����</TD></TR>
+    <TD>在节点折叠之前触发，返回false可以取消折叠节点的动作。</TD></TR>
   <TR>
     <TD>onCollapse</TD>
     <TD>row</TD>
-    <TD>�ڽڵ㱻�۵���ʱ�򴥷���</TD></TR>
+    <TD>在节点被折叠的时候触发。</TD></TR>
   <TR>
     <TD>onContextMenu</TD>
     <TD>e, row</TD>
-    <TD>���Ҽ�����ڵ��ʱ�򴥷���</TD></TR>
+    <TD>在右键点击节点的时候触发。</TD></TR>
   <TR>
     <TD>onBeforeEdit</TD>
     <TD>row</TD>
-    <TD>���û���ʼ�༭�ڵ��ʱ�򴥷���</TD></TR>
+    <TD>在用户开始编辑节点的时候触发。</TD></TR>
   <TR>
     <TD>onAfterEdit</TD>
     <TD>row,changes</TD>
-    <TD>���û���ɱ༭��ʱ�򴥷���</TD></TR>
+    <TD>在用户完成编辑的时候触发。</TD></TR>
   <TR>
     <TD>onCancelEdit</TD>
     <TD>row</TD>
-    <TD>���û�ȡ���༭�ڵ��ʱ�򴥷���</TD></TR></TBODY></TABLE></P>
+    <TD>在用户取消编辑节点的时候触发。</TD></TR></TBODY></TABLE></P>
 <P align=left><BR></P>
-<H4 align=left>����</H4>
-<P align=left>�ܶ෽����ʹ��'id'������������'id'�����������ڵ��ֵ�� </P>
+<H4 align=left>方法</H4>
+<P align=left>很多方法都使用'id'命名参数，而'id'参数代表树节点的值。 </P>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>�������α�������ԡ�</TD></TR>
+    <TD>返回树形表格的属性。</TD></TR>
   <TR>
     <TD>resize</TD>
     <TD>options</TD>
-    <TD>�������α����С��options����2�����ԣ�<BR>width�����α�����¿��ȡ�<BR>height�����α�����¸߶ȡ�</TD></TR>
+    <TD>设置树形表格大小，options包含2个属性：<BR>width：树形表格的新宽度。<BR>height：树形表格的新高度。</TD></TR>
   <TR>
     <TD>fixRowHeight</TD>
     <TD>id</TD>
-    <TD>����ָ�����иߡ�</TD></TR>
+    <TD>修正指定的行高。</TD></TR>
   <TR>
     <TD>load</TD>
     <TD>param</TD>
-    <TD>��ȡ����ʾ��ҳ���ݡ�<STRONG><FONT color=#ff0000>���÷�����1.3.4�濪ʼ���ã�</FONT></STRONG> 
+    <TD>读取并显示首页内容。<STRONG><FONT color=#ff0000>（该方法自1.3.4版开始可用）</FONT></STRONG> 
       <BR>
-      <P>����ʾ����</P><PRE>// ��ȡ�������������
+      <P>代码示例：</P><PRE>// 读取并发送请求参数
 $('#tg').treegrid('load', {
 	q: 'abc',
 	name: 'name1'
@@ -376,120 +377,120 @@ $('#tg').treegrid('load', {
   <TR>
     <TD>loadData</TD>
     <TD>data</TD>
-    <TD>��ȡ���α������ݡ�</TD></TR>
+    <TD>读取树形表格数据。</TD></TR>
   <TR>
     <TD>reload</TD>
     <TD>id</TD>
-    <TD>���¼������α������ݡ����'id'������ֵ������������ָ�������У������������������С� 
-      <P>����ʾ����</P><PRE>$('#tt').treegrid('reload', 2);	// ��������ֵΪ2����
-$('#tt').treegrid('reload');	// ��������������</PRE></TD></TR>
+    <TD>重新加载树形表格数据。如果'id'属性有值，将重新载入指定树形行，否则重新载入所有行。 
+      <P>代码示例：</P><PRE>$('#tt').treegrid('reload', 2);	// 重新载入值为2的行
+$('#tt').treegrid('reload');	// 重新载入所有行</PRE></TD></TR>
   <TR>
     <TD>reloadFooter</TD>
     <TD>footer</TD>
-    <TD>��������ҳ�����ݡ�</TD></TR>
+    <TD>重新载入页脚数据。</TD></TR>
   <TR>
     <TD>getData</TD>
     <TD>none</TD>
-    <TD>��ȡ�������ݡ�</TD></TR>
+    <TD>获取载入数据。</TD></TR>
   <TR>
     <TD>getFooterRows</TD>
     <TD>none</TD>
-    <TD>��ȡҳ�����ݡ�</TD></TR>
+    <TD>获取页脚数据。</TD></TR>
   <TR>
     <TD>getRoot</TD>
     <TD>none</TD>
-    <TD>��ȡ���ڵ㣬���ؽڵ����</TD></TR>
+    <TD>获取根节点，返回节点对象。</TD></TR>
   <TR>
     <TD>getRoots</TD>
     <TD>none</TD>
-    <TD>��ȡ���и��ڵ㣬���ؽڵ����顣</TD></TR>
+    <TD>获取所有根节点，返回节点数组。</TD></TR>
   <TR>
     <TD>getParent</TD>
     <TD>id</TD>
-    <TD>��ȡ���ڵ㡣</TD></TR>
+    <TD>获取父节点。</TD></TR>
   <TR>
     <TD>getChildren</TD>
     <TD>id</TD>
-    <TD>��ȡ�ӽڵ㡣</TD></TR>
+    <TD>获取子节点。</TD></TR>
   <TR>
     <TD>getSelected</TD>
     <TD>none</TD>
-    <TD>��ȡѡ��Ľڵ㲢�����������û�нڵ㱻ѡ���򷵻�null��</TD></TR>
+    <TD>获取选择的节点并返回它，如果没有节点被选中则返回null。</TD></TR>
   <TR>
     <TD>getSelections</TD>
     <TD>none</TD>
-    <TD>��ȡ����ѡ��Ľڵ㡣</TD></TR>
+    <TD>获取所有选择的节点。</TD></TR>
   <TR>
     <TD>getCheckedNodes</TD>
     <TD>none</TD>
-    <TD>��ȡ����ѡ�е��С�<STRONG><FONT 
-    color=#ff0000>���÷�����1.4.5�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>获取所有选中的行。<STRONG><FONT 
+    color=#ff0000>（该方法自1.4.5版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>getLevel</TD>
     <TD>id</TD>
-    <TD>��ȡָ���ڵ�ȼ���</TD></TR>
+    <TD>获取指定节点等级。</TD></TR>
   <TR>
     <TD>find</TD>
     <TD>id</TD>
-    <TD>����ָ���ڵ㲢���ؽڵ����ݡ�</TD></TR>
+    <TD>查找指定节点并返回节点数据。</TD></TR>
   <TR>
     <TD>select</TD>
     <TD>id</TD>
-    <TD>ѡ��һ���ڵ㡣</TD></TR>
+    <TD>选择一个节点。</TD></TR>
   <TR>
     <TD>unselect</TD>
     <TD>id</TD>
-    <TD>��ѡһ���ڵ㡣</TD></TR>
+    <TD>反选一个节点。</TD></TR>
   <TR>
     <TD>selectAll</TD>
     <TD>none</TD>
-    <TD>ѡ�����нڵ㡣</TD></TR>
+    <TD>选择所有节点。</TD></TR>
   <TR>
     <TD>unselectAll</TD>
     <TD>none</TD>
-    <TD>��ѡ���нڵ㡣</TD></TR>
+    <TD>反选所有节点。</TD></TR>
   <TR>
     <TD><SPAN 
       style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-style: initial; text-decoration-color: initial'><FONT 
       color=#000000>checkNode</FONT></SPAN></TD>
     <TD>id</TD>
-    <TD>ѡ��ָ���нڵ㡣<STRONG><FONT 
-  color=#ff0000>���÷�����1.4.5�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>选中指定行节点。<STRONG><FONT 
+  color=#ff0000>（该方法自1.4.5版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD><SPAN 
       style='FONT-SIZE: 14px; FONT-FAMILY: "Helvetica Neue", Helvetica, Tahoma, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-style: initial; text-decoration-color: initial'><FONT 
       color=#000000>uncheckNode</FONT></SPAN></TD>
     <TD>id</TD>
-    <TD>��ѡָ���нڵ㡣<STRONG><FONT 
-  color=#ff0000>���÷�����1.4.5�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>反选指定行节点。<STRONG><FONT 
+  color=#ff0000>（该方法自1.4.5版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>collapse</TD>
     <TD>id</TD>
-    <TD>�۵�һ���ڵ㡣</TD></TR>
+    <TD>折叠一个节点。</TD></TR>
   <TR>
     <TD>expand</TD>
     <TD>id</TD>
-    <TD>չ��һ���ڵ㡣</TD></TR>
+    <TD>展开一个节点。</TD></TR>
   <TR>
     <TD>collapseAll</TD>
     <TD>id</TD>
-    <TD>�۵����нڵ㡣</TD></TR>
+    <TD>折叠所有节点。</TD></TR>
   <TR>
     <TD>expandAll</TD>
     <TD>id</TD>
-    <TD>չ�����нڵ㡣</TD></TR>
+    <TD>展开所有节点。</TD></TR>
   <TR>
     <TD>expandTo</TD>
     <TD>id</TD>
-    <TD>�򿪴Ӹ��ڵ㵽ָ���ڵ�֮������нڵ㡣</TD></TR>
+    <TD>打开从根节点到指定节点之间的所有节点。</TD></TR>
   <TR>
     <TD>toggle</TD>
     <TD>id</TD>
-    <TD>�ڵ�չ��/�۵�״̬��������</TD></TR>
+    <TD>节点展开/折叠状态触发器。</TD></TR>
   <TR>
     <TD>append</TD>
     <TD>param</TD>
-    <TD>׷�ӽڵ㵽һ�����ڵ㣬'param'���������������ԣ�<BR>parent�����ڵ�ID�����δָ����׷�ӵ����ڵ㡣<BR>data�����飬�ڵ����ݡ�<BR>����ʾ����&nbsp;<PRE>// ׷�����ɽڵ㵽ѡ�нڵ�ĺ���<BR>var node = $('#tt').treegrid('getSelected');
+    <TD>追加节点到一个父节点，'param'参数包含如下属性：<BR>parent：父节点ID，如果未指定则追加到根节点。<BR>data：数组，节点数据。<BR>代码示例：&nbsp;<PRE>// 追加若干节点到选中节点的后面<BR>var node = $('#tt').treegrid('getSelected');
 $('#tt').treegrid('append',{
 	parent: node.id,  // the node has a 'id' value that defined through 'idField' property
 	data: [{
@@ -501,9 +502,9 @@ $('#tt').treegrid('append',{
   <TR>
     <TD>insert</TD>
     <TD>param</TD>
-    <TD>����һ���½ڵ㵽ָ���ڵ㡣'param'��������һ�²�����<BR>before������ָ���ڵ�IDֵ֮ǰ��<BR>after������ָ���ڵ�IDֵ֮��<BR>data���½ڵ����ݡ� 
+    <TD>插入一个新节点到指定节点。'param'参数包含一下参数：<BR>before：插入指定节点ID值之前。<BR>after：插入指定节点ID值之后。<BR>data：新节点数据。 
 
-      <P>����ʾ����</P><PRE>// ����һ���½ڵ㵽ѡ��Ľڵ�֮ǰ
+      <P>代码示例：</P><PRE>// 插入一个新节点到选择的节点之前
 var node = $('#tt').treegrid('getSelected');
 if (node){
 	$('#tt').treegrid('insert', {
@@ -514,53 +515,53 @@ if (node){
 		}
 	});
 }
-</PRE><STRONG><FONT color=#ff0000>���÷�����1.3.1�濪ʼ���ã�</FONT></STRONG> </TD></TR>
+</PRE><STRONG><FONT color=#ff0000>（该方法自1.3.1版开始可用）</FONT></STRONG> </TD></TR>
   <TR>
     <TD>remove</TD>
     <TD>id</TD>
-    <TD>�Ƴ�һ���ڵ�����������ӽڵ㡣</TD></TR>
+    <TD>移除一个节点和他的所有子节点。</TD></TR>
   <TR>
     <TD>pop</TD>
     <TD>id</TD>
-    <TD>���������ؽڵ������Լ������ӽڵ�֮��ɾ����<STRONG><FONT 
-      color=#ff0000>���÷�����1.3.1�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>弹出并返回节点数据以及它的子节点之后删除。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3.1版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>refresh</TD>
     <TD>id</TD>
-    <TD>ˢ��ָ���ڵ㡣</TD></TR>
+    <TD>刷新指定节点。</TD></TR>
   <TR>
     <TD>update</TD>
     <TD>param</TD>
-    <TD>����ָ���ڵ㡣'param'���������������ԣ�<BR>id��Ҫ���µĽڵ��ID��<BR>row���µ������ݡ� 
-      <P>����ʾ����</P><PRE>$('#tt').treegrid('update',{
+    <TD>更新指定节点。'param'参数包含以下属性：<BR>id：要更新的节点的ID。<BR>row：新的行数据。 
+      <P>代码示例：</P><PRE>$('#tt').treegrid('update',{
 	id: 2,
 	row: {
-		name: '������',
+		name: '新名称',
 		iconCls: 'icon-save'
 	}
 });</PRE><STRONG><FONT 
-color=#ff0000>���÷�����1.3.1�濪ʼ���ã�</FONT></STRONG></TD></TR>
+color=#ff0000>（该方法自1.3.1版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>beginEdit</TD>
     <TD>id</TD>
-    <TD>��ʼ�༭һ���ڵ㡣</TD></TR>
+    <TD>开始编辑一个节点。</TD></TR>
   <TR>
     <TD>endEdit</TD>
     <TD>id</TD>
-    <TD>�����༭һ���ڵ㡣</TD></TR>
+    <TD>结束编辑一个节点。</TD></TR>
   <TR>
     <TD>cancelEdit</TD>
     <TD>id</TD>
-    <TD>ȡ���༭һ���ڵ㡣</TD></TR>
+    <TD>取消编辑一个节点。</TD></TR>
   <TR>
     <TD>getEditors</TD>
     <TD>id</TD>
-    <TD>��ȡָ���б༭����ÿ���༭���������������ԣ�<BR>actions���༭��ִ�еĶ�����<BR>target��Ŀ��༭����jQuery����<BR>field���ֶ����ơ�<BR>type���༭�����͡�</TD></TR>
+    <TD>获取指定行编辑器。每个编辑器都包含以下属性：<BR>actions：编辑器执行的动作。<BR>target：目标编辑器的jQuery对象。<BR>field：字段名称。<BR>type：编辑器类型。</TD></TR>
   <TR>
     <TD>getEditor</TD>
     <TD>param</TD>
-    <TD>��ȡָ���༭����'param'��������2�����ԣ�<BR>id���нڵ�ID��<BR>field���ֶ����ơ�</TD></TR>
+    <TD>获取指定编辑器，'param'参数包含2个属性：<BR>id：行节点ID。<BR>field：字段名称。</TD></TR>
   <TR>
     <TD>showLines</TD>
     <TD>none</TD>
-    <TD>��ʾtreegrid�С�</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>
+    <TD>显示treegrid行。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

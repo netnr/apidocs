@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>resizable(������С)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>resizable(调整大小)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_61_files/easyui[1]_9.css"><LINK 
@@ -15,10 +16,10 @@ href="536ac27ad9dd84e522d2c8457d32af7a_61_files/SyntaxHighlighter[1].css"><!-- s
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3 align=left>Resizable��������С��</H3>
-<P align=left>ʹ��$.fn.resizable.defaults��дĬ��ֵ����</P>
-<H4 align=left>ʹ�ð���</H4>
-<P align=left>ʹ�ñ�ǩ�����ɱ��С�Ĵ��ڡ�</P>
+<H3 align=left>Resizable（调整大小）</H3>
+<P align=left>使用$.fn.resizable.defaults重写默认值对象。</P>
+<H4 align=left>使用案例</H4>
+<P align=left>使用标签创建可变大小的窗口。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -37,7 +38,7 @@ align=left>
   #ccc;"</SPAN><SPAN class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
   class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
 </SPAN></SPAN></LI></OL></DIV></DIV>
-<P align=left>ʹ��Javascript�����ɱ��С�Ĵ��ڡ�</P>
+<P align=left>使用Javascript创建可变大小的窗口。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -63,49 +64,49 @@ align=left>
   <LI class=alt><SPAN>maxHeight:600 </SPAN>
   <LI><SPAN>}); </SPAN></LI></OL></DIV></DIV>
 <DIV align=left>&nbsp;</DIV>
-<H4 align=left>����</H4>
+<H4 align=left>属性</H4>
 <DIV align=left>
 <TABLE class=doc-table width="95%" align=left>
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>disabled</TD>
     <TD>boolean</TD>
-    <TD>���Ϊtrue������ô�С������</TD>
+    <TD>如果为true，则禁用大小调整。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>handles</TD>
     <TD>string</TD>
-    <TD>����������λ,'n'=��,'e'=��,'s'=�ϵȡ�</TD>
+    <TD>声明调整方位,'n'=北,'e'=东,'s'=南等。</TD>
     <TD>n, e, s, w, ne, se, sw, nw, all</TD></TR>
   <TR>
     <TD>minWidth</TD>
     <TD>number</TD>
-    <TD>��������Сʱ�����С���ȡ�</TD>
+    <TD>当调整大小时候的最小宽度。</TD>
     <TD>10</TD></TR>
   <TR>
     <TD>minHeight</TD>
     <TD>number</TD>
-    <TD>��������Сʱ�����С�߶ȡ�</TD>
+    <TD>当调整大小时候的最小高度。</TD>
     <TD>10</TD></TR>
   <TR>
     <TD>maxWidth</TD>
     <TD>number</TD>
-    <TD>��������Сʱ��������ȡ�</TD>
+    <TD>当调整大小时候的最大宽度。</TD>
     <TD>10000</TD></TR>
   <TR>
     <TD>maxHeight</TD>
     <TD>number</TD>
-    <TD>��������Сʱ������߶ȡ�</TD>
+    <TD>当调整大小时候的最大高度。</TD>
     <TD>10000</TD></TR>
   <TR>
     <TD>edge</TD>
     <TD>number</TD>
-    <TD>�߿��Ե��С��</TD>
+    <TD>边框边缘大小。</TD>
     <TD>5</TD></TR></TBODY></TABLE></DIV>
 <H4 align=left>&nbsp;</H4>
 <H4 align=left>&nbsp;</H4>
@@ -116,50 +117,50 @@ align=left>
 <H4 align=left>&nbsp;</H4>
 <H4 align=left>&nbsp;</H4>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>�¼�</H4>
+<H4 align=left>事件</H4>
 <DIV align=left>
 <TABLE class=doc-table width="95%" align=left>
   <TBODY>
   <TR>
-    <TH><STRONG>�¼���</STRONG></TH>
-    <TH><STRONG>�¼�����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>onStartResize</TD>
     <TD>e</TD>
-    <TD>�ڿ�ʼ�ı��С��ʱ�򴥷���</TD></TR>
+    <TD>在开始改变大小的时候触发。</TD></TR>
   <TR>
     <TD>onResize</TD>
     <TD>e</TD>
-    <TD>�ڵ�����С�ڼ䴥����������false��ʱ�򣬲���ʵ�ʸı�DOMԪ�ش�С��</TD></TR>
+    <TD>在调整大小期间触发。当返回false的时候，不会实际改变DOM元素大小。</TD></TR>
   <TR>
     <TD>onStopResize</TD>
     <TD>e</TD>
-    <TD>��ֹͣ�ı��С��ʱ�򴥷���</TD></TR></TBODY></TABLE></DIV>
+    <TD>在停止改变大小的时候触发。</TD></TR></TBODY></TABLE></DIV>
 <H4 align=left>&nbsp;</H4>
 <H4 align=left>&nbsp;</H4>
 <H4 align=left>&nbsp;</H4>
 <H4 align=left>&nbsp;</H4>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>����</H4>
+<H4 align=left>方法</H4>
 <DIV align=left>
 <TABLE class=doc-table width="95%" align=left>
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>���ص�����С���ԡ�</TD></TR>
+    <TD>返回调整大小属性。</TD></TR>
   <TR>
   <TR>
     <TD>enable</TD>
     <TD>none</TD>
-    <TD>���õ�����С���ܡ�</TD></TR>
+    <TD>启用调整大小功能。</TD></TR>
   <TR>
   <TR>
     <TD>disable</TD>
     <TD>none</TD>
-    <TD>���õ�����С���ܡ�</TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>
+    <TD>禁用调整大小功能。</TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>

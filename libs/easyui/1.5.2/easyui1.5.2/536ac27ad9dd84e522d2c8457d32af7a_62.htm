@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>pagination(��ҳ)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>pagination(分页)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_62_files/easyui[1]_9.css"><LINK 
@@ -15,19 +16,19 @@ href="536ac27ad9dd84e522d2c8457d32af7a_62_files/SyntaxHighlighter[1].css"><!-- s
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3 align=left>Pagination����ҳ��</H3>
-<P align=left>ʹ��$.fn.pagination.defaults��дĬ��ֵ����</P>
-<P align=left>�÷�ҳ�ؼ������û�����ҳ������ݡ���֧��ҳ�浼����ҳ�泤��ѡ���ѡ�����á��û������ڷ�ҳ�ؼ��������Զ��尴ť������ǿ�书�ܡ�</P>
+<H3 align=left>Pagination（分页）</H3>
+<P align=left>使用$.fn.pagination.defaults重写默认值对象</P>
+<P align=left>该分页控件允许用户导航页面的数据。它支持页面导航和页面长度选择的选项设置。用户可以在分页控件上添加自定义按钮，以增强其功能。</P>
 <P align=left><IMG  src="536ac27ad9dd84e522d2c8457d32af7a_62_files/pagination[1].png"></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>������ϵ</H4>
+<H4 align=left>依赖关系</H4>
 <UL>
   <LI>
   <DIV align=left><A 
   href="536ac27ad9dd84e522d2c8457d32af7a_70.htm">linkbutton</A></DIV></LI></UL>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>ʹ�ð���</H4>
-<P align=left>ʹ�ñ�ǩ������ҳ�ؼ���</P>
+<H4 align=left>使用案例</H4>
+<P align=left>使用标签创建分页控件。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -46,7 +47,7 @@ align=left>
   class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
   class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
 </SPAN></SPAN></LI></OL></DIV></DIV>
-<P align=left>ʹ��Javascript������ҳ�ؼ���</P>
+<P align=left>使用Javascript创建分页控件。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -71,7 +72,7 @@ align=left>
   <LI><SPAN>total:2000, </SPAN>
   <LI class=alt><SPAN>pageSize:10 </SPAN>
   <LI><SPAN>}); </SPAN></LI></OL></DIV></DIV>
-<P align=left>������ʹ�����ͷ�ҳ���������һ��ajax��ҳ�����û�ѡ��һ����ҳ���ʱ����彫��ʾָ��ҳ������ݡ�</P>
+<P align=left>让我们使用面板和分页插件来创建一个ajax分页。当用户选择一个新页面的时候，面板将显示指定页面的内容。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -106,37 +107,37 @@ align=left>
   class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
 </SPAN></SPAN></LI></OL></DIV></DIV>
 <P 
-align=left>�����Ĭ����ʾ��һҳ�����ݡ����û�����ҳ���ʱ��'onSelectPage'�¼������������������һ���µ�URL������ȡ��Ӧҳ��������ݣ���ͨ��'refresh'����������ˢ�µ���������ϡ�</P>
+align=left>面板上默认显示第一页的内容。当用户导航页面的时候，'onSelectPage'事件将被触发，将会根据一个新的URL参数获取对应页面的新内容，并通过'refresh'方法将内容刷新到内容面板上。</P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>����</H4>
+<H4 align=left>属性</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>total</TD>
     <TD>number</TD>
-    <TD>�ܼ�¼�����ڷ�ҳ�ؼ�����ʱ��ʼ��ֵ��</TD>
+    <TD>总记录数，在分页控件创建时初始的值。</TD>
     <TD>1</TD></TR>
   <TR>
     <TD>pageSize</TD>
     <TD>number</TD>
-    <TD>ҳ���С��</TD>
+    <TD>页面大小。</TD>
     <TD>10</TD></TR>
   <TR>
     <TD>pageNumber</TD>
     <TD>number</TD>
-    <TD>�ڷ�ҳ�ؼ�������ʱ����ʾ��ҳ����</TD>
+    <TD>在分页控件创建的时候显示的页数。</TD>
     <TD>1</TD></TR>
   <TR>
     <TD>pageList</TD>
     <TD>array</TD>
-    <TD>�û����Ըı�ҳ���С��pageList���Զ�����ҳ�浼��չʾ��ҳ�롣 
-      <P>����ʾ����</P><PRE>$('#pp').pagination({
+    <TD>用户可以改变页面大小。pageList属性定义了页面导航展示的页码。 
+      <P>代码示例：</P><PRE>$('#pp').pagination({
 	pageList: [10,20,50,100]
 });
 </PRE></TD>
@@ -144,16 +145,16 @@ align=left>�����Ĭ����ʾ��һҳ�����ݡ����û�����ҳ���ʱ��'onSelectPage'�¼��
   <TR>
     <TD>loading</TD>
     <TD>boolean</TD>
-    <TD>���������Ƿ��������롣</TD>
+    <TD>定义数据是否正在载入。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>buttons</TD>
     <TD>array</TD>
-    <TD>�Զ��尴ť������ֵ�У�<BR>��. 
-      ÿ����ť����2�����ԣ�<BR>iconCls����ʾ����ͼƬ��CSS��ID<BR>handler������ť�����ʱ���õ�һ����������� <BR>��. 
-      ҳ���Ѵ���Ԫ�ص�ѡ�����������磺buttons:'#btnDiv'��<STRONG><FONT 
-      color=#ff0000>��������ֵ��1.3.4�濪ʼ���ã�</FONT></STRONG><BR><BR>
-      <P>�Զ��尴ť����ͨ����ǩ������</P><PRE>&lt;div class="easyui-pagination" style="border:1px solid #ccc" data-options="
+    <TD>自定义按钮，可用值有：<BR>①. 
+      每个按钮都有2个属性：<BR>iconCls：显示背景图片的CSS类ID<BR>handler：当按钮被点击时调用的一个句柄函数。 <BR>②. 
+      页面已存在元素的选择器对象（例如：buttons:'#btnDiv'）<STRONG><FONT 
+      color=#ff0000>（该属性值自1.3.4版开始可用）</FONT></STRONG><BR><BR>
+      <P>自定义按钮可以通过标签创建：</P><PRE>&lt;div class="easyui-pagination" style="border:1px solid #ccc" data-options="
 		total: 114,
 		buttons: [{
 			iconCls:'icon-add',
@@ -164,7 +165,7 @@ align=left>�����Ĭ����ʾ��һҳ�����ݡ����û�����ҳ���ʱ��'onSelectPage'�¼��
 		}]"&gt;
 &lt;/div&gt;
 </PRE>
-      <P>�Զ��尴ťҲ����ͨ��Javascript������</P><PRE>$('#pp').pagination({
+      <P>自定义按钮也可以通过Javascript创建：</P><PRE>$('#pp').pagination({
 	total: 114,
 	buttons: [{
 		iconCls:'icon-add',
@@ -179,67 +180,67 @@ align=left>�����Ĭ����ʾ��һҳ�����ݡ����û�����ҳ���ʱ��'onSelectPage'�¼��
   <TR>
     <TD>layout</TD>
     <TD>array</TD>
-    <TD>��ҳ�ؼ����ֶ��塣<STRONG><FONT 
-      color=#ff0000>��������ֵ��1.3.5�濪ʼ���ã�</FONT></STRONG><BR>����ѡ����԰���һ������ֵ��<BR>1) 
-      list��ҳ����ʾ�����б���<BR>2) sep��ҳ�水ť�ָ��ߡ�<BR>3) first����ҳ��ť��<BR>4) 
-      prev����һҳ��ť��<BR>5) next����һҳ��ť��<BR>6) last��βҳ��ť��<BR>7) refresh��ˢ�°�ť��<BR>8) 
-      manual���ֹ����뵱ǰҳ�������<BR>9) links��ҳ�������ӡ�<BR>
-      <P>ʾ�����룺</P><PRE>$('#pp').pagination({
+    <TD>分页控件布局定义。<STRONG><FONT 
+      color=#ff0000>（该属性值自1.3.5版开始可用）</FONT></STRONG><BR>布局选项可以包含一个或多个值：<BR>1) 
+      list：页面显示条数列表。<BR>2) sep：页面按钮分割线。<BR>3) first：首页按钮。<BR>4) 
+      prev：上一页按钮。<BR>5) next：下一页按钮。<BR>6) last：尾页按钮。<BR>7) refresh：刷新按钮。<BR>8) 
+      manual：手工输入当前页的输入框。<BR>9) links：页面数链接。<BR>
+      <P>示例代码：</P><PRE>$('#pp').pagination({
 	layout:['first','links','last']
 });</PRE></TD>
     <TD></TD></TR>
   <TR>
     <TD>links</TD>
     <TD>number</TD>
-    <TD>�����������ڡ�links��������ڡ�layout���е�ʱ����Ч��<STRONG><FONT 
-      color=#ff0000>��������ֵ��1.3.5�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>该链接数仅在“links”项包含在“layout”中的时候有效。<STRONG><FONT 
+      color=#ff0000>（该属性值自1.3.5版开始可用）</FONT></STRONG></TD>
     <TD>10</TD></TR>
   <TR>
     <TD>showPageList</TD>
     <TD>boolean</TD>
-    <TD>�����Ƿ���ʾҳ�浼���б���</TD>
+    <TD>定义是否显示页面导航列表。</TD>
     <TD>true</TD></TR>
   <TR>
     <TD>showRefresh</TD>
     <TD>boolean</TD>
-    <TD>�����Ƿ���ʾˢ�°�ť��</TD>
+    <TD>定义是否显示刷新按钮。</TD>
     <TD>true</TD></TR>
   <TR>
     <TD>showPageInfo</TD>
     <TD>boolean</TD>
-    <TD>�����Ƿ���ʾҳ����Ϣ��<STRONG><FONT 
-      color=#ff0000>��������ֵ��1.5.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>定义是否显示页面信息。<STRONG><FONT 
+      color=#ff0000>（该属性值自1.5.2版开始可用）</FONT></STRONG></TD>
     <TD>true</TD></TR>
   <TR>
     <TD>beforePageText</TD>
     <TD>string</TD>
-    <TD>���������֮ǰ��ʾһ��label��ǩ��</TD>
+    <TD>在输入组件之前显示一个label标签。</TD>
     <TD>Page</TD></TR>
   <TR>
     <TD>afterPageText</TD>
     <TD>string</TD>
-    <TD>���������֮����ʾһ��label��ǩ��</TD>
+    <TD>在输入组件之后显示一个label标签。</TD>
     <TD>of {pages}</TD></TR>
   <TR>
     <TD>displayMsg</TD>
     <TD>string</TD>
-    <TD>��ʾҳ����Ϣ��</TD>
+    <TD>显示页面信息。</TD>
     <TD>Displaying {from} to {to} of {total} items</TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>�¼�</H4>
+<H4 align=left>事件</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>�¼���</STRONG></TH>
-    <TH><STRONG>�¼�����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>onSelectPage</TD>
     <TD>pageNumber, pageSize</TD>
-    <TD>�û�ѡ��һ����ҳ���ʱ�򴥷����ص���������2��������<BR>pageNumber���µ�ҳ����<BR>pageSize:&nbsp;ҳ���С��ÿҳ��ʾ���������� 
+    <TD>用户选择一个新页面的时候触发。回调函数包含2个参数：<BR>pageNumber：新的页数。<BR>pageSize:&nbsp;页面大小（每页显示的条数）。 
 
-      <P>����ʾ����</P><PRE>$('#pp').pagination({
+      <P>代码示例：</P><PRE>$('#pp').pagination({
 	onSelectPage:function(pageNumber, pageSize){
 		$(this).pagination('loading');
 		alert('pageNumber:'+pageNumber+',pageSize:'+pageSize);
@@ -250,42 +251,42 @@ align=left>�����Ĭ����ʾ��һҳ�����ݡ����û�����ҳ���ʱ��'onSelectPage'�¼��
   <TR>
     <TD>onBeforeRefresh</TD>
     <TD>pageNumber, pageSize</TD>
-    <TD>�ڵ��ˢ�°�ťˢ��֮ǰ����������false����ȡ��ˢ�¶�����</TD></TR>
+    <TD>在点击刷新按钮刷新之前触发，返回false可以取消刷新动作。</TD></TR>
   <TR>
     <TD>onRefresh</TD>
     <TD>pageNumber, pageSize</TD>
-    <TD>ˢ��֮�󴥷���</TD></TR>
+    <TD>刷新之后触发。</TD></TR>
   <TR>
     <TD>onChangePageSize</TD>
     <TD>pageSize</TD>
-    <TD>��ҳ�����ҳ���С��ʱ�򴥷���</TD></TR></TBODY></TABLE></P>
+    <TD>在页面更改页面大小的时候触发。</TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>����</H4>
+<H4 align=left>方法</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>���ز�������</TD></TR>
+    <TD>返回参数对象。</TD></TR>
   <TR>
     <TD>loading</TD>
     <TD>none</TD>
-    <TD>���ѷ�ҳ�ؼ����ڼ����С�</TD></TR>
+    <TD>提醒分页控件正在加载中。</TD></TR>
   <TR>
     <TD>loaded</TD>
     <TD>none</TD>
-    <TD>���ѷ�ҳ�ؼ�������ɡ�</TD></TR>
+    <TD>提醒分页控件加载完成。</TD></TR>
   <TR>
     <TD>refresh</TD>
     <TD>options</TD>
-    <TD>ˢ�²���ʾ��ҳ����Ϣ��<STRONG><FONT color=#ff0000>���÷�����1.3�濪ʼ���ã�</FONT></STRONG> 
-      <P>����ʾ����</P><PRE>$('#pp').pagination('refresh');	// ˢ�·�ҳ����Ϣ
-$('#pp').pagination('refresh',{	// �ı�ѡ�ˢ�·�ҳ����Ϣ
+    <TD>刷新并显示分页栏信息。<STRONG><FONT color=#ff0000>（该方法自1.3版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>$('#pp').pagination('refresh');	// 刷新分页栏信息
+$('#pp').pagination('refresh',{	// 改变选项并刷新分页栏信息
 	total: 114,
 	pageNumber: 6
 });
@@ -293,8 +294,8 @@ $('#pp').pagination('refresh',{	// �ı�ѡ�ˢ�·�ҳ����Ϣ
   <TR>
     <TD>select</TD>
     <TD>page</TD>
-    <TD>ѡ��һ����ҳ�棬ҳ��������1��ʼ��<STRONG><FONT 
-      color=#ff0000>���÷�����1.3�濪ʼ���ã�</FONT></STRONG> 
-      <P>����ʾ����</P><PRE>$('#pp').pagination('select');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ˢ�µ�ǰҳ
-$('#pp').pagination('select', 2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ѡ��ڶ�ҳ
+    <TD>选择一个新页面，页面索引从1开始。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>$('#pp').pagination('select');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 刷新当前页
+$('#pp').pagination('select', 2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 选择第二页
 </PRE></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

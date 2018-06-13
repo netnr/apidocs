@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>menu(�˵�)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>menu(菜单)</TITLE>
 
 <META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
 <BODY>hideOnUnhover <LINK rel=stylesheet type=text/css 
@@ -15,17 +16,17 @@ href="536ac27ad9dd84e522d2c8457d32af7a_69_files/SyntaxHighlighter[1].css"><!-- s
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3 align=left>Menu���˵���</H3>
-<P align=left>ʹ��$.fn.menu.defaults��дĬ��ֵ����</P>
+<H3 align=left>Menu（菜单）</H3>
+<P align=left>使用$.fn.menu.defaults重写默认值对象。</P>
 <P 
-align=left>�˵����ͨ�����ڿ�ݲ˵������ǹ��������˵�����ıر�������������磺menubutton��splitbutton�������������ڵ�����ִ�����</P>
+align=left>菜单组件通常用于快捷菜单。他是构建其他菜单组件的必备基础组件。比如：menubutton和splitbutton。它还可以用于导航和执行命令。</P>
 <P align=left><IMG src="536ac27ad9dd84e522d2c8457d32af7a_69_files/menu[2].png"> 
 </P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>ʹ�ð���</H4>
-<H5 align=left>�����˵�</H5>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建菜单</H5>
 <P 
-align=left>ͨ����ǩ�����˵�����&lt;div/&gt;��ǩ����һ����Ϊ'easyui-menu'����ID��ÿ���˵��ͨ��&lt;div/&gt;��ǩ���������ǿ�������'iconCls'���������˵����һ��ͼ����ʾ���˵������ࡣ����'menu-sep'��ID�˵��������һ���˵��ָ��ߡ�</P>
+align=left>通过标签创建菜单，给&lt;div/&gt;标签添加一个名为'easyui-menu'的类ID。每个菜单项都通过&lt;div/&gt;标签创建。我们可以添加'iconCls'属性来给菜单项定义一个图标显示到菜单项的左侧。添加'menu-sep'类ID菜单项将会生成一个菜单分割线。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -120,7 +121,7 @@ align=left>ͨ����ǩ�����˵�����&lt;div/&gt;��ǩ����һ����Ϊ'easyui-menu'����ID��
   <LI><SPAN></SPAN><STRONG><FONT color=#006699><SPAN class=tag>&lt;/</SPAN><SPAN 
   class=tag-name>div</SPAN><SPAN 
   class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
-<P align=left>ʹ��Javascript�����˵������'onClick'�¼���</P>
+<P align=left>使用Javascript创建菜单项并监听'onClick'事件。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -135,8 +136,8 @@ align=left>ͨ����ǩ�����˵�����&lt;div/&gt;��ǩ����һ����Ϊ'easyui-menu'����ID��
   class=comment>//... </SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN> 
   <LI><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
   <LI class=alt><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV><BR></DIV>
-<H5 align=left>��ʾ�˵�</H5>
-<P align=left>�ڲ˵���������ʱ���������غͲ��ɼ��ġ�����'show'������ʾ�˵���</P>
+<H5 align=left>显示菜单</H5>
+<P align=left>在菜单被创建的时候它是隐藏和不可见的。调用'show'方法显示菜单。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -149,149 +150,149 @@ align=left>ͨ����ǩ�����˵�����&lt;div/&gt;��ǩ����һ����Ϊ'easyui-menu'����ID��
   <LI class=alt><SPAN>&nbsp;&nbsp;top:&nbsp;100 &nbsp;&nbsp;</SPAN> 
   <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
 <P align=left>&nbsp;</P>
-<H4 align=left>�˵���</H4>
-<P align=left>�˵��������ʾ�ڲ˵��ϵ�һ����������Ŀ���������������ԣ� </P>
+<H4 align=left>菜单项</H4>
+<P align=left>菜单项代表显示在菜单上的一个单独的项目。它包含以下属性： </P>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>id</TD>
     <TD>string</TD>
-    <TD>�˵���ID���ԡ�</TD>
+    <TD>菜单项ID属性。</TD>
     <TD></TD></TR>
   <TR>
     <TD>text</TD>
     <TD>string</TD>
-    <TD>�˵����ı���</TD>
+    <TD>菜单项文本。</TD>
     <TD></TD></TR>
   <TR>
     <TD>iconCls</TD>
     <TD>string</TD>
-    <TD>��ʾ�ڲ˵�������16x16����ͼ���CSS��ID��</TD>
+    <TD>显示在菜单项左侧的16x16像素图标的CSS类ID。</TD>
     <TD></TD></TR>
   <TR>
     <TD>href</TD>
     <TD>string</TD>
-    <TD>���õ���˵���ʱ���ҳ��λ�á�</TD>
+    <TD>设置点击菜单项时候的页面位置。</TD>
     <TD></TD></TR>
   <TR>
     <TD>disabled</TD>
     <TD>boolean</TD>
-    <TD>�����Ƿ���ʾ�˵��</TD>
+    <TD>定义是否显示菜单项。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>onclick</TD>
     <TD>function</TD>
-    <TD>�ڵ���˵����ʱ����õĺ�����</TD>
+    <TD>在点击菜单项的时候调用的函数。</TD>
     <TD></TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>�˵�����</H4>
+<H4 align=left>菜单属性</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>zIndex</TD>
     <TD>number</TD>
-    <TD>�˵�z-index��ʽ����������ֵ��</TD>
+    <TD>菜单z-index样式，增加它的值。</TD>
     <TD>110000</TD></TR>
   <TR>
     <TD>left</TD>
     <TD>number</TD>
-    <TD>�˵�����߾�λ�á�</TD>
+    <TD>菜单的左边距位置。</TD>
     <TD>0</TD></TR>
   <TR>
     <TD>top</TD>
     <TD>number</TD>
-    <TD>�˵����ϱ߾�λ�á�</TD>
+    <TD>菜单的上边距位置。</TD>
     <TD>0</TD></TR>
   <TR>
     <TD>align</TD>
     <TD>string</TD>
-    <TD>�˵����뷽ʽ������ֵ�У�'left' �� 'right'��<STRONG><FONT 
-      color=#ff0000>����������1.4.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>菜单对齐方式，可用值有：'left' 和 'right'。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></TD>
     <TD>left</TD></TR>
   <TR>
     <TD>minWidth</TD>
     <TD>number</TD>
-    <TD>�˵�����С���ȡ�<STRONG><FONT 
-color=#ff0000>����������1.3.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>菜单的最小宽度。<STRONG><FONT 
+color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
     <TD>120</TD></TR>
   <TR>
     <TD>itemHeight</TD>
     <TD>number</TD>
-    <TD>�˵���߶ȡ�<STRONG><FONT 
-      color=#ff0000>����������1.4.2�濪ʼ���ã�</FONT></STRONG><FONT 
+    <TD>菜单项高度。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG><FONT 
     color=#ff0000></FONT></TD>
     <TD>22</TD></TR>
   <TR>
     <TD>duration</TD>
     <TD>number</TD>
-    <TD>�����������û��Զ������ز˵������ĳ���ʱ�䣬�Ժ���Ϊ��λ��<BR><STRONG><FONT 
-      color=#ff0000>����������1.4�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>该属性允许用户自定义隐藏菜单动画的持续时间，以毫秒为单位。<BR><STRONG><FONT 
+      color=#ff0000>（该属性自1.4版开始可用）</FONT></STRONG></TD>
     <TD>100</TD></TR>
   <TR>
     <TD>hideOnUnhover</TD>
     <TD>boolean</TD>
-    <TD>������Ϊtrueʱ��������뿪�˵���ʱ���Զ����ز˵���<BR><STRONG><FONT 
-      color=#ff0000>����������1.3.5�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>当设置为true时，在鼠标离开菜单的时候将自动隐藏菜单。<BR><STRONG><FONT 
+      color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG></TD>
     <TD>true</TD></TR>
   <TR>
     <TD>inline</TD>
     <TD>boolean</TD>
-    <TD>������Ϊtrueʱ���˵�������ڸ�����ǩ���ж�λ�����������body���ж�λ��<STRONG><FONT 
-      color=#ff0000>����������1.4.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>当设置为true时，菜单将相对于父级标签进行定位，否则相对于body进行定位。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></TD>
     <TD>false</TD></TR>
   <TR>
     <TD>fit</TD>
     <TD>boolean</TD>
-    <TD>������Ϊtrueʱ���˵��ߴ罫�Զ����丸������<STRONG><FONT 
-      color=#ff0000>����������1.4.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>当设置为true时，菜单尺寸将自动适配父容器。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></TD>
     <TD>false</TD></TR>
   <TR>
     <TD>noline</TD>
     <TD>boolean</TD>
     <TD>
-      <P>������Ϊtrueʱ���˵�������ʾͼ�������֮��ķָ��ߡ�<STRONG><FONT 
-      color=#ff0000>����������1.4.2�濪ʼ���ã�</FONT></STRONG></P>
-      <P>Ϊtrueʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_69_files/11487812.png"></P>
-      <P>Ϊfalseʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_69_files/11435796.png"></P></TD>
+      <P>当设置为true时，菜单将不显示图标和文字之间的分割线。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></P>
+      <P>为true时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_69_files/11487812.png"></P>
+      <P>为false时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_69_files/11435796.png"></P></TD>
     <TD>false</TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>�˵��¼�</H4>
+<H4 align=left>菜单事件</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>�¼���</STRONG></TH>
-    <TH><STRONG>�¼�����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>onShow</TD>
     <TD>none</TD>
-    <TD>�ڲ˵���ʾ֮�󴥷���</TD></TR>
+    <TD>在菜单显示之后触发。</TD></TR>
   <TR>
     <TD>onHide</TD>
     <TD>none</TD>
-    <TD>�ڲ˵�����֮�󴥷���</TD></TR>
+    <TD>在菜单隐藏之后触发。</TD></TR>
   <TR>
     <TD>onClick</TD>
     <TD>item</TD>
-    <TD>�ڲ˵�������ʱ�򴥷��������������ʾ����δ������в˵���ĵ����<PRE>&lt;div class="easyui-menu" data-options="onClick:menuHandler" style="width:120px;"&gt;
-	&lt;div data-options="name:'new'"&gt;�½�&lt;/div&gt;
-	&lt;div data-options="name:'save',iconCls:'icon-save'"&gt;����&lt;/div&gt;
-	&lt;div data-options="name:'print',iconCls:'icon-print'"&gt;��ӡ&lt;/div&gt;
+    <TD>在菜单项被点击的时候触发。下面的例子显示了如何处理所有菜单项的点击：<PRE>&lt;div class="easyui-menu" data-options="onClick:menuHandler" style="width:120px;"&gt;
+	&lt;div data-options="name:'new'"&gt;新建&lt;/div&gt;
+	&lt;div data-options="name:'save',iconCls:'icon-save'"&gt;保存&lt;/div&gt;
+	&lt;div data-options="name:'print',iconCls:'icon-print'"&gt;打印&lt;/div&gt;
 	&lt;div class="menu-sep"&gt;&lt;/div&gt;
-	&lt;div data-options="name:'exit'"&gt;�˳�&lt;/div&gt;
+	&lt;div data-options="name:'exit'"&gt;退出&lt;/div&gt;
 &lt;/div&gt;
 &lt;script type="text/javascript"&gt;
 	function menuHandler(item){
@@ -300,59 +301,59 @@ color=#ff0000>����������1.3.2�濪ʼ���ã�</FONT></STRONG></TD>
 &lt;/script&gt;
 </PRE></TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>�˵�����</H4>
+<H4 align=left>菜单方法</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>�������Զ���</TD></TR>
+    <TD>返回属性对象。</TD></TR>
   <TR>
     <TD>show</TD>
     <TD>pos</TD>
-    <TD>��ʾ�˵���ָ����λ�á�'pos'������2�����ԣ�<BR>left���µ���߾�λ�á�<BR>top���µ��ϱ߾�λ�á�</TD></TR>
+    <TD>显示菜单到指定的位置。'pos'参数有2个属性：<BR>left：新的左边距位置。<BR>top：新的上边距位置。</TD></TR>
   <TR>
     <TD>hide</TD>
     <TD>none</TD>
-    <TD>���ز˵���</TD></TR>
+    <TD>隐藏菜单。</TD></TR>
   <TR>
     <TD>destroy</TD>
     <TD>none</TD>
-    <TD>���ٲ˵���</TD></TR>
+    <TD>销毁菜单。</TD></TR>
   <TR>
     <TD>getItem</TD>
     <TD>itemEl</TD>
-    <TD>��ȡָ���Ĳ˵���õ�����һ���˵����DOMԪ�ء����������չʾ����θ���ID��ȡָ����� <PRE>&lt;div id="mm" class="easyui-menu" style="width:120px"&gt;
+    <TD>获取指定的菜单项。得到的是一个菜单项的DOM元素。下面的例子展示了如何根据ID获取指定的项： <PRE>&lt;div id="mm" class="easyui-menu" style="width:120px"&gt;
 	&lt;div&gt;New&lt;/div&gt;
 	&lt;div id="m-open"&gt;Open&lt;/div&gt;
 	&lt;div&gt;Save&lt;/div&gt;
 &lt;/div&gt;
-</PRE><PRE>var itemEl = $('#m-open')[0];  // ��ȡ�˵���
+</PRE><PRE>var itemEl = $('#m-open')[0];  // 获取菜单项
 var item = $('#mm').menu('getItem', itemEl);
 console.log(item);
 </PRE></TD></TR>
   <TR>
     <TD>setText</TD>
     <TD>param</TD>
-    <TD>����ָ���˵�����ı���'param'��������2�����ԣ�<BR>target��DOM����Ҫ����ֵ�Ĳ˵��<BR>text: 
-      �ַ�����Ҫ���õ����ı�ֵ�� 
-      <P>����ʾ����</P><PRE>var item = $('#mm').menu('findItem', '����');
+    <TD>设置指定菜单项的文本。'param'参数包含2个属性：<BR>target：DOM对象，要设置值的菜单项。<BR>text: 
+      字符串，要设置的新文本值。 
+      <P>代码示例：</P><PRE>var item = $('#mm').menu('findItem', '保存');
 $('#mm').menu('setText', {
 	target: item.target,
-	text: '�޸�'
+	text: '修改'
 });
 </PRE></TD></TR>
   <TR>
     <TD>setIcon</TD>
     <TD>param</TD>
-    <TD>����ָ���˵���ͼ�ꡣ'param'��������2�����ԣ�<BR>target��DOM����Ҫ���õĲ˵��<BR>iconCls���µ�ͼ��CSS��ID�� 
+    <TD>设置指定菜单项图标。'param'参数包含2个属性：<BR>target：DOM对象，要设置的菜单项。<BR>iconCls：新的图标CSS类ID。 
 
-      <P>����ʾ����</P><PRE>$('#mm').menu('setIcon', {
+      <P>代码示例：</P><PRE>$('#mm').menu('setIcon', {
 	target: $('#m-open')[0],
 	iconCls: 'icon-closed'
 });
@@ -360,53 +361,53 @@ $('#mm').menu('setText', {
   <TR>
     <TD>findItem</TD>
     <TD>text</TD>
-    <TD>���ҵ�ָ���˵�����صĶ����getItem������һ���ġ� 
-      <P>����ʾ����</P><PRE>// ���ҡ��򿪡��������
-var item = $('#mm').menu('findItem', '��');
+    <TD>查找的指定菜单项，返回的对象和getItem方法是一样的。 
+      <P>代码示例：</P><PRE>// 查找“打开”项并禁用它
+var item = $('#mm').menu('findItem', '打开');
 $('#mm').menu('disableItem', item.target);
 </PRE></TD></TR>
   <TR>
     <TD>appendItem</TD>
     <TD>options</TD>
-    <TD>׷���µĲ˵��'options'���������²˵������ԡ�Ĭ����������ӵ����ڲ˵���Ķ�����׷��һ���Ӳ˵��'parent'����Ӧ������ָ���ĸ���Ԫ�أ����Ҹø���Ԫ�ر������Ѿ�������ҳ���ϵġ� 
+    <TD>追加新的菜单项，'options'参数代表新菜单项属性。默认情况下添加的项在菜单项的顶部。追加一个子菜单项，'parent'属性应该设置指定的父项元素，并且该父项元素必须是已经定义在页面上的。 
 
-      <P>����ʾ����</P><PRE>// ׷��һ�������˵�
+      <P>代码示例：</P><PRE>// 追加一个顶部菜单
 $('#mm').menu('appendItem', {
-	text: '�²˵���',
+	text: '新菜单项',
 	iconCls: 'icon-ok',
-	onclick: function(){alert('��ʾ���²˵��')}
+	onclick: function(){alert('提示：新菜单项！')}
 });
-</PRE><PRE>// ׷��һ���Ӳ˵���
-var item = $('#mm').menu('findItem', '��');  // ���ҡ��򿪡���
+</PRE><PRE>// 追加一个子菜单项
+var item = $('#mm').menu('findItem', '打开');  // 查找“打开”项
 $('#mm').menu('appendItem', {
-	parent: item.target,  // ���ø��˵�Ԫ��
-	text: '��Excel�ĵ�',
+	parent: item.target,  // 设置父菜单元素
+	text: '打开Excel文档',
 	iconCls: 'icon-excel',
-	onclick: function(){alert('��ʾ����Excel�ĵ���')}
+	onclick: function(){alert('提示：打开Excel文档！')}
 });
 </PRE></TD></TR>
   <TR>
     <TD>removeItem</TD>
     <TD>itemEl</TD>
-    <TD>�Ƴ�ָ���Ĳ˵��</TD></TR>
+    <TD>移除指定的菜单项。</TD></TR>
   <TR>
     <TD>enableItem</TD>
     <TD>itemEl</TD>
-    <TD>���ò˵��</TD></TR>
+    <TD>启用菜单项。</TD></TR>
   <TR>
     <TD>disableItem</TD>
     <TD>itemEl</TD>
-    <TD>���ò˵��</TD></TR>
+    <TD>禁用菜单项。</TD></TR>
   <TR>
     <TD>showItem</TD>
     <TD>itemEl</TD>
-    <TD>��ʾ�˵��<STRONG><FONT color=#ff0000>���÷�����1.4�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>显示菜单项。<STRONG><FONT color=#ff0000>（该方法自1.4版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>hideItem</TD>
     <TD>itemEl</TD>
-    <TD>���ز˵��<STRONG><FONT color=#ff0000>���÷�����1.4�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>隐藏菜单项。<STRONG><FONT color=#ff0000>（该方法自1.4版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>resize</TD>
     <TD>menuEl</TD>
-    <TD>����ָ���Ĳ˵��<STRONG><FONT 
-  color=#ff0000>���÷�����1.4�濪ʼ���ã�</FONT></STRONG></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>
+    <TD>重置指定的菜单项。<STRONG><FONT 
+  color=#ff0000>（该方法自1.4版开始可用）</FONT></STRONG></TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

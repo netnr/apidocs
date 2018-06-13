@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>switchbutton(���ذ�ť)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>switchbutton(开关按钮)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_134_files/easyui[1]_9.css"><LINK 
@@ -15,13 +16,13 @@ href="536ac27ad9dd84e522d2c8457d32af7a_134_files/SyntaxHighlighter[1].css"><!-- 
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3 align=left>SwitchButton�����ذ�ť��</H3>
-<P align=left>����$.fn.switchbutton.defaults��дĬ��ֵ����<STRONG><FONT 
-color=#ff0000>���������1.4.3�濪ʼ���ã�</FONT></STRONG></P>
-<P align=left>����"form"�����еĿ��ذ�ť����ť��2��״̬���������͡��ء����û����Ե�����������л�����ǩ״̬�ǿɶ��Ƶġ�</P>
+<H3 align=left>SwitchButton（开关按钮）</H3>
+<P align=left>用于$.fn.switchbutton.defaults重写默认值对象。<STRONG><FONT 
+color=#ff0000>（该组件自1.4.3版开始可用）</FONT></STRONG></P>
+<P align=left>用在"form"表单中的开关按钮。按钮有2个状态：“开”和“关”，用户可以点击或轻敲来切换，标签状态是可定制的。</P>
 <P align=left><IMG  style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(68,68,68); TEXT-ALIGN: left; FONT: 14px verdana, helvetica, arial, sans-serif; WIDOWS: 1; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"  src="536ac27ad9dd84e522d2c8457d32af7a_134_files/switchbutton[1].png"></P>
-<H4 align=left>�÷�</H4>
-<P align=left>ͨ����ǩ�������ذ�ť��</P>
+<H4 align=left>用法</H4>
+<P align=left>通过标签创建开关按钮。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -50,7 +51,7 @@ color=#ff0000>���������1.4.3�濪ʼ���ã�</FONT></STRONG></P>
   style="FONT-SIZE: 14px; COLOR: rgb(0,136,0)">"onText:'Yes',offText:'No'"</SPAN><SPAN 
   class=tag 
   style="FONT-SIZE: 14px; COLOR: rgb(0,0,136)">&gt;</SPAN></SPAN></SPAN></SPAN></LI></OL></DIV></DIV>
-<P align=left>ʹ��Javascript�������ذ�ť��</P>
+<P align=left>使用Javascript创建开关按钮。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -84,132 +85,132 @@ color=#ff0000>���������1.4.3�濪ʼ���ã�</FONT></STRONG></P>
   class=tag-name>div</SPAN><SPAN 
   class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
 <DIV align=left>&nbsp;</DIV>
-<H4 align=left>����</H4>
+<H4 align=left>属性</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>width</TD>
     <TD>number</TD>
-    <TD>���ذ�ť���ȡ�</TD>
+    <TD>开关按钮宽度。</TD>
     <TD>60</TD></TR>
   <TR>
     <TD>height</TD>
     <TD>number</TD>
-    <TD>���ذ�ť�߶ȡ�</TD>
+    <TD>开关按钮高度。</TD>
     <TD>26</TD></TR>
   <TR>
     <TD>handleWidth</TD>
     <TD>number</TD>
-    <TD>���ذ��ֿ��ȡ�</TD>
+    <TD>开关把手宽度。</TD>
     <TD>auto</TD></TR>
   <TR>
     <TD>checked</TD>
     <TD>boolean</TD>
-    <TD>���尴ť�Ƿ�����</TD>
+    <TD>定义按钮是否开启。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>disabled</TD>
     <TD>boolean</TD>
-    <TD>���尴ť�Ƿ���á�</TD>
+    <TD>定义按钮是否禁用。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>readonly</TD>
     <TD>boolean</TD>
-    <TD>���尴ť�Ƿ�ֻ����</TD>
+    <TD>定义按钮是否只读。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>reversed</TD>
     <TD>boolean</TD>
-    <TD>����Ϊtrueʱ����ת�����ı���</TD>
+    <TD>设置为true时，反转开关文本。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>onText</TD>
     <TD>string</TD>
-    <TD>����ı�ֵ����ת�����ұߣ���</TD>
+    <TD>左边文本值（反转后是右边）。</TD>
     <TD>ON</TD></TR>
   <TR>
     <TD>offText</TD>
     <TD>string</TD>
-    <TD>�ұ��ı�ֵ����ת������ߣ���</TD>
+    <TD>右边文本值（反转后是左边）。</TD>
     <TD>OFF</TD></TR>
   <TR>
     <TD>handleText</TD>
     <TD>string</TD>
-    <TD>���ذ����ı�ֵ��</TD>
+    <TD>开关把手文本值。</TD>
     <TD>''</TD></TR>
   <TR>
     <TD>value</TD>
     <TD>string</TD>
-    <TD>����ť��Ĭ��ֵ��</TD>
+    <TD>给按钮绑定默认值。</TD>
     <TD>on</TD></TR></TBODY></TABLE></P>
-<H4 align=left>�¼�</H4>
+<H4 align=left>事件</H4>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH>�¼���</TH>
-    <TH>�¼�����</TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH>事件名</TH>
+    <TH>事件参数</TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>onChange</TD>
     <TD>checked</TD>
-    <TD>�ڸ��Ŀؼ�ֵ��ʱ�򴥷���</TD></TR></TBODY></TABLE>
-<H4 align=left>����</H4>
+    <TD>在更改控件值的时候触发。</TD></TR></TBODY></TABLE>
+<H4 align=left>方法</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>�������Զ���</TD></TR>
+    <TD>返回属性对象。</TD></TR>
   <TR>
     <TD>resize</TD>
     <TD>param</TD>
-    <TD>�������ذ�ť��С��</TD></TR>
+    <TD>调整开关按钮大小。</TD></TR>
   <TR>
     <TD>disable</TD>
     <TD>none</TD>
     <TD>
-      <P>���ÿ��ذ�ť��</P>
-      <P>����ʾ����&nbsp;</P><PRE>$('#sb').switchbutton('disable');
+      <P>禁用开关按钮。</P>
+      <P>代码示例：&nbsp;</P><PRE>$('#sb').switchbutton('disable');
 </PRE></TD></TR>
   <TR>
     <TD>enable</TD>
     <TD>none</TD>
     <TD>
-      <P>���ÿ��ذ�ť��</P>
-      <P>����ʾ����&nbsp;</P><PRE>$('#sb').switchbutton('enable');
+      <P>启用开关按钮。</P>
+      <P>代码示例：&nbsp;</P><PRE>$('#sb').switchbutton('enable');
 </PRE></TD></TR>
   <TR>
     <TD>readonly</TD>
     <TD>mode</TD>
-    <TD>����/����ֻ��ģʽ��</TD></TR>
+    <TD>启用/禁用只读模式。</TD></TR>
   <TR>
     <TD>check</TD>
     <TD>none</TD>
-    <TD>���ÿ��ذ�ť��</TD></TR>
+    <TD>启用开关按钮。</TD></TR>
   <TR>
     <TD>uncheck</TD>
     <TD>none</TD>
-    <TD>���ÿ��ذ�ť��</TD></TR>
+    <TD>禁用开关按钮。</TD></TR>
   <TR>
     <TD>clear</TD>
     <TD>none</TD>
-    <TD>������ذ�ť��ֵ��</TD></TR>
+    <TD>清除开关按钮的值。</TD></TR>
   <TR>
     <TD>reset</TD>
     <TD>none</TD>
-    <TD>���ÿ��ذ�ť��ֵ��</TD></TR>
+    <TD>重置开关按钮的值。</TD></TR>
   <TR>
     <TD>setValue</TD>
     <TD>value</TD>
-    <TD>���ÿ��ذ�ť��ֵ��</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>
+    <TD>设置开关按钮的值。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

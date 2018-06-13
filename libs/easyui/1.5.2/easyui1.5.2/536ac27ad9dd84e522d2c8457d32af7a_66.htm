@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>tabs(ѡ�)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>tabs(选项卡)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_66_files/easyui[1]_9.css"><LINK 
@@ -15,14 +16,14 @@ href="536ac27ad9dd84e522d2c8457d32af7a_66_files/SyntaxHighlighter[1].css"><!-- s
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" 
 align=left>
-<H3 align=left>Tabs��ѡ���</H3>
-<P align=left>ʹ��$.fn.tabs.defaults��дĬ��ֵ����</P>
+<H3 align=left>Tabs（选项卡）</H3>
+<P align=left>使用$.fn.tabs.defaults重写默认值对象。</P>
 <P 
-align=left>ѡ���ʾһ����塣����ͬһ��ʱ��ֻ����ʾһ����塣ÿ��ѡ���嶼��ͷ�����һЩС�İ�ť���߲˵��������رհ�ť�������Զ��尴ť��</P>
+align=left>选项卡显示一批面板。但在同一个时间只会显示一个面板。每个选项卡面板都有头标题和一些小的按钮工具菜单，包括关闭按钮和其他自定义按钮。</P>
 <P align=left><IMG src="536ac27ad9dd84e522d2c8457d32af7a_66_files/tabs[1].png"> 
 </P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>������ϵ</H4>
+<H4 align=left>依赖关系</H4>
 <UL>
   <LI>
   <DIV align=left><A 
@@ -31,11 +32,11 @@ align=left>ѡ���ʾһ����塣����ͬһ��ʱ��ֻ����ʾһ����塣ÿ��ѡ���嶼�
   <DIV align=left><A 
   href="536ac27ad9dd84e522d2c8457d32af7a_70.htm">linkbutton</A></DIV></LI></UL>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>ʹ�ð���</H4>
-<H5 align=left>�������</H5>
-<P align=left>1. ͨ����ǩ����ѡ�</P>
+<H4 align=left>使用案例</H4>
+<H5 align=left>创建面板</H5>
+<P align=left>1. 通过标签创建选项卡</P>
 <P 
-align=left>ͨ����ǩ���Ը����׵Ĵ���ѡ������ǲ���Ҫд�κ�Javascript���롣ֻ��Ҫ��&lt;div/&gt;��ǩ����һ����ID'easyui-tabs'��ÿ��ѡ���嶼ͨ����&lt;div/&gt;��ǩ���д������÷���panel(���)��ͬ��</P>
+align=left>通过标签可以更容易的创建选项卡，我们不需要写任何Javascript代码。只需要给&lt;div/&gt;标签添加一个类ID'easyui-tabs'。每个选项卡面板都通过子&lt;div/&gt;标签进行创建，用法和panel(面板)相同。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -114,8 +115,8 @@ align=left>ͨ����ǩ���Ը����׵Ĵ���ѡ������ǲ���Ҫд�κ�Javascript���롣ֻ���
   <LI class=alt><SPAN></SPAN><STRONG><FONT color=#006699><SPAN 
   class=tag>&lt;/</SPAN><SPAN class=tag-name>div</SPAN><SPAN 
   class=tag>&gt;</SPAN></FONT></STRONG><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
-<P align=left>&nbsp;2. ͨ��Javascript����ѡ�</P>
-<P align=left>����Ĵ�����ʾ���ʹ��Javascript����ѡ�������ѡ���ѡ��ʱ���ᴥ��'onSelect'�¼���</P>
+<P align=left>&nbsp;2. 通过Javascript创建选项卡</P>
+<P align=left>下面的代码演示如何使用Javascript创建选项卡，当该选项卡被选择时将会触发'onSelect'事件。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -133,8 +134,8 @@ align=left>ͨ����ǩ���Ը����׵Ĵ���ѡ������ǲ���Ҫд�κ�Javascript���롣ֻ���
   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</SPAN> 
   <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
 <DIV align=left>&nbsp;</DIV>
-<H5 align=left>�����µ�ѡ����</H5>
-<P align=left>����һ���µİ���С���߲˵���ѡ���壬С���߲˵�ͼ��(8x8)�������ڹرհ�ť֮ǰ��</P>
+<H5 align=left>添加新的选项卡面板</H5>
+<P align=left>添加一个新的包含小工具菜单的选项卡面板，小工具菜单图标(8x8)被放置在关闭按钮之前。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -165,7 +166,7 @@ align=left>ͨ����ǩ���Ը����׵Ĵ���ѡ������ǲ���Ҫд�κ�Javascript���롣ֻ���
   <LI class=alt><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;}] &nbsp;&nbsp;</SPAN> 
   <LI><SPAN>});&nbsp;&nbsp;</SPAN></LI></OL></DIV></DIV>
 <DIV align=left>&nbsp;</DIV>
-<H5 align=left>��ȡѡ���ѡ�</H5>
+<H5 align=left>获取选择的选项卡</H5>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -183,70 +184,70 @@ align=left>ͨ����ǩ���Ը����׵Ĵ���ѡ������ǲ���Ҫд�κ�Javascript���롣ֻ���
   class=string>'options'</SPAN><SPAN>).tab;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
   class=comment>//&nbsp;the&nbsp;corresponding&nbsp;tab&nbsp;object&nbsp;&nbsp;&nbsp;</SPAN><SPAN>&nbsp;&nbsp;</SPAN></SPAN></LI></OL></DIV></DIV>
 <DIV align=left>&nbsp;</DIV>
-<H4 align=left>����</H4>
+<H4 align=left>属性</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>width</TD>
     <TD>number</TD>
-    <TD>ѡ��������ȡ�</TD>
+    <TD>选项卡容器宽度。</TD>
     <TD>auto</TD></TR>
   <TR>
     <TD>height</TD>
     <TD>number</TD>
-    <TD>ѡ������߶ȡ�</TD>
+    <TD>选项卡容器高度。</TD>
     <TD>auto</TD></TR>
   <TR>
     <TD>plain</TD>
     <TD>boolean</TD>
-    <TD>����Ϊtrueʱ��������ʾ������屳����</TD>
+    <TD>设置为true时，将不显示控制面板背景。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>fit</TD>
     <TD>boolean</TD>
-    <TD>����Ϊtrueʱ��ѡ��Ĵ�С�����������ڵ�������</TD>
+    <TD>设置为true时，选项卡的大小将铺满它所在的容器。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>border</TD>
     <TD>boolean</TD>
-    <TD>����Ϊtrueʱ����ʾѡ������߿�</TD>
+    <TD>设置为true时，显示选项卡容器边框。</TD>
     <TD>true</TD></TR>
   <TR>
     <TD>scrollIncrement</TD>
     <TD>number</TD>
-    <TD>ѡ�������ÿ�ι���������ֵ��</TD>
+    <TD>选项卡滚动条每次滚动的像素值。</TD>
     <TD>100</TD></TR>
   <TR>
     <TD>scrollDuration</TD>
     <TD>number</TD>
-    <TD>ÿ�ι�������������ʱ�䣬��λ�����롣</TD>
+    <TD>每次滚动动画持续的时间，单位：毫秒。</TD>
     <TD>400</TD></TR>
   <TR>
     <TD>tools</TD>
     <TD>array,selector</TD>
-    <TD>������������ѡ����ͷ�������Ҳࡣ���õ�ֵ�У�<BR>1. һ�����߲˵����飬ÿ������ѡ���linkbutton��ͬ��<BR>2. 
-      һ��ָ��&lt;div/&gt;�������߲˵���ѡ������<BR><BR>����ʾ����&nbsp; 
-      <P>ͨ�����鶨�幤�߲˵���</P><PRE>$('#tt').tabs({
+    <TD>工具栏添加在选项卡面板头的左侧或右侧。可用的值有：<BR>1. 一个工具菜单数组，每个工具选项都和linkbutton相同。<BR>2. 
+      一个指向&lt;div/&gt;容器工具菜单的选择器。<BR><BR>代码示例：&nbsp; 
+      <P>通过数组定义工具菜单。</P><PRE>$('#tt').tabs({
 	tools:[{
 		iconCls:'icon-add',
 		handler:function(){
-			alert('����')
+			alert('添加')
 		}
 	},{
 		iconCls:'icon-save',
 		handler:function(){
-			alert('����')
+			alert('保存')
 		}
 	}]
 });
 </PRE>
-      <P>ͨ�����ڵ�DOM�������幤�߲˵���</P><PRE>$('#tt').tabs({
+      <P>通过存在的DOM容器定义工具菜单。</P><PRE>$('#tt').tabs({
 	tools:'#tab-tools'
 });
 &lt;div id="tab-tools"&gt;
@@ -258,339 +259,339 @@ align=left>ͨ����ǩ���Ը����׵Ĵ���ѡ������ǲ���Ҫд�κ�Javascript���롣ֻ���
   <TR>
     <TD>toolPosition</TD>
     <TD>string</TD>
-    <TD>������λ�á�����ֵ��'left','right'��<STRONG><FONT 
-      color=#ff0000>����������1.3.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>工具栏位置。可用值：'left','right'。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
     <TD>right</TD></TR>
   <TR>
     <TD>tabPosition</TD>
     <TD>string</TD>
-    <TD>ѡ�λ�á�����ֵ��'top','bottom','left','right'��<STRONG><FONT 
-      color=#ff0000>����������1.3.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>选项卡位置。可用值：'top','bottom','left','right'。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
     <TD>top</TD></TR>
   <TR>
     <TD>headerWidth</TD>
     <TD>number</TD>
-    <TD>ѡ�������ȣ���tabPosition��������Ϊ'left'��'right'��ʱ�����Ч��<STRONG><FONT 
-      color=#ff0000>����������1.3.2�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>选项卡标题宽度，在tabPosition属性设置为'left'或'right'的时候才有效。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.2版开始可用）</FONT></STRONG></TD>
     <TD>150</TD></TR>
   <TR>
     <TD>tabWidth</TD>
     <TD>number</TD>
-    <TD>��ǩ���Ŀ��ȡ�<STRONG><FONT color=#ff0000>����������1.3.4�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>标签条的宽度。<STRONG><FONT color=#ff0000>（该属性自1.3.4版开始可用）</FONT></STRONG></TD>
     <TD>auto</TD></TR>
   <TR>
     <TD>tabHeight</TD>
     <TD>number</TD>
-    <TD>��ǩ���ĸ߶ȡ�<STRONG><FONT color=#ff0000>����������1.3.4�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>标签条的高度。<STRONG><FONT color=#ff0000>（该属性自1.3.4版开始可用）</FONT></STRONG></TD>
     <TD>27</TD></TR>
   <TR>
     <TD>selected</TD>
     <TD>number</TD>
-    <TD>��ʼ��ѡ��һ����ǩҳ��<STRONG><FONT 
-    color=#ff0000>����������1.3.5�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>初始化选中一个标签页。<STRONG><FONT 
+    color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG></TD>
     <TD>0</TD></TR>
   <TR>
     <TD>showHeader</TD>
     <TD>boolean</TD>
-    <TD>����Ϊtrueʱ����ʾ��ǩҳ���⡣<STRONG><FONT 
-      color=#ff0000>����������1.3.5�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>设置为true时，显示标签页标题。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG></TD>
     <TD>true</TD></TR>
   <TR>
     <TD>justified</TD>
     <TD>boolean</TD>
     <TD>
-      <P>����Ϊtrueʱ�����ɵȿ�����ѡ���</P>
-      <P>Ϊtrueʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2947484.png"></P>
-      <P>Ϊfalseʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2970281.png"></P>
-      <P><STRONG><FONT color=#ff0000>����������1.4.2�濪ʼ���ã�</FONT></STRONG></P></TD>
+      <P>设置为true时，生成等宽标题选项卡。</P>
+      <P>为true时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2947484.png"></P>
+      <P>为false时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2970281.png"></P>
+      <P><STRONG><FONT color=#ff0000>（该属性自1.4.2版开始可用）</FONT></STRONG></P></TD>
     <TD>false</TD></TR>
   <TR>
     <TD>narrow</TD>
     <TD>boolean</TD>
     <TD>
-      <P>����Ϊtrueʱ��ɾ��ѡ�����֮��Ŀռ䡣</P>
-      <P>Ϊtrueʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2893437.png"></P>
-      <P>Ϊfalseʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2835234.png"></P>
+      <P>设置为true时，删除选项卡标题之间的空间。</P>
+      <P>为true时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2893437.png"></P>
+      <P>为false时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2835234.png"></P>
       <P><FONT 
-      color=#ff0000><STRONG>����������1.</STRONG><STRONG>4.2</STRONG><STRONG>�濪ʼ���ã�</STRONG></FONT></P></TD>
+      color=#ff0000><STRONG>（该属性自1.</STRONG><STRONG>4.2</STRONG><STRONG>版开始可用）</STRONG></FONT></P></TD>
     <TD>false</TD></TR>
   <TR>
     <TD>pill</TD>
     <TD>boolean</TD>
     <TD>
-      <P>����Ϊtrueʱ��ѡ�������ʽ��Ϊ����״��</P>
-      <P>Ϊtrueʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2769453.png"></P>
-      <P>Ϊfalseʱ��<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2835234.png"></P>
+      <P>设置为true时，选项卡标题样式改为气泡状。</P>
+      <P>为true时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2769453.png"></P>
+      <P>为false时：<IMG        src="536ac27ad9dd84e522d2c8457d32af7a_66_files/2835234.png"></P>
       <P><FONT 
-      color=#ff0000><STRONG>����������1.</STRONG><STRONG>4.2</STRONG><STRONG>�濪ʼ���ã�</STRONG></FONT></P></TD>
+      color=#ff0000><STRONG>（该属性自1.</STRONG><STRONG>4.2</STRONG><STRONG>版开始可用）</STRONG></FONT></P></TD>
     <TD>false</TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>�¼�</H4>
+<H4 align=left>事件</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>�¼���</STRONG></TH>
-    <TH><STRONG>�¼�����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>onLoad</TD>
     <TD>panel</TD>
-    <TD>��ajaxѡ���������Զ�����ݵ�ʱ�򴥷���</TD></TR>
+    <TD>在ajax选项卡面板加载完远程数据的时候触发。</TD></TR>
   <TR>
     <TD>onSelect</TD>
     <TD>title,index</TD>
-    <TD>�û���ѡ��һ��ѡ�����ʱ�򴥷���</TD></TR>
+    <TD>用户在选择一个选项卡面板的时候触发。</TD></TR>
   <TR>
     <TD>onUnselect</TD>
     <TD>title,index</TD>
-    <TD>�û���ȡ��ѡ��һ��ѡ�����ʱ�򴥷���<STRONG><FONT 
-      color=#ff0000>����������1.3.5�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>用户在取消选择一个选项卡面板的时候触发。<STRONG><FONT 
+      color=#ff0000>（该属性自1.3.5版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>onBeforeClose</TD>
     <TD>title,index</TD>
-    <TD>��ѡ����رյ�ʱ�򴥷�������falseȡ���رղ��������������չʾ���ڹر�ѡ����֮ǰ�Ժ��ַ�ʽ��ʾȷ�϶Ի���<PRE>$('#tt').tabs({
+    <TD>在选项卡面板关闭的时候触发，返回false取消关闭操作。下面的例子展示了在关闭选项卡面板之前以何种方式显示确认对话框。<PRE>$('#tt').tabs({
   onBeforeClose: function(title){
-	return confirm('��ȷ����Ҫ�ر� ' + title);
+	return confirm('您确认想要关闭 ' + title);
   }
 });
-// ʹ���첽ȷ�϶Ի���
+// 使用异步确认对话框
 $('#tt').tabs({
   onBeforeClose: function(title,index){
 	var target = this;
-	$.messager.confirm('ȷ��','��ȷ����Ҫ�ر�'+title,function(r){
+	$.messager.confirm('确认','你确认想要关闭'+title,function(r){
 		if (r){
 			var opts = $(target).tabs('options');
 			var bc = opts.onBeforeClose;
-			opts.onBeforeClose = function(){};  // �������ڹر�
+			opts.onBeforeClose = function(){};  // 允许现在关闭
 			$(target).tabs('close',index);
-			opts.onBeforeClose = bc;  // ��ԭ�¼�����
+			opts.onBeforeClose = bc;  // 还原事件函数
 		}
 	});
-	return false;	// ��ֹ�ر�
+	return false;	// 阻止关闭
   }
 });
 </PRE></TD></TR>
   <TR>
     <TD>onClose</TD>
     <TD>title,index</TD>
-    <TD>���û��ر�һ��ѡ�����ʱ�򴥷���</TD></TR>
+    <TD>在用户关闭一个选项卡面板的时候触发。</TD></TR>
   <TR>
     <TD>onAdd</TD>
     <TD>title,index</TD>
-    <TD>������һ����ѡ�����ʱ�򴥷���</TD></TR>
+    <TD>在添加一个新选项卡面板的时候触发。</TD></TR>
   <TR>
     <TD>onUpdate</TD>
     <TD>title,index</TD>
-    <TD>�ڸ���һ��ѡ�����ʱ�򴥷���</TD></TR>
+    <TD>在更新一个选项卡面板的时候触发。</TD></TR>
   <TR>
     <TD>onContextMenu</TD>
     <TD>e, title,index</TD>
-    <TD>���Ҽ����һ��ѡ�����ʱ�򴥷���</TD></TR></TBODY></TABLE></P>
+    <TD>在右键点击一个选项卡面板的时候触发。</TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>����</H4>
+<H4 align=left>方法</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>����ѡ����ԡ�</TD></TR>
+    <TD>返回选项卡属性。</TD></TR>
   <TR>
     <TD>tabs</TD>
     <TD>none</TD>
-    <TD>��������ѡ���塣</TD></TR>
+    <TD>返回所有选项卡面板。</TD></TR>
   <TR>
     <TD>resize</TD>
     <TD>none</TD>
-    <TD>����ѡ�������С�Ͳ��֡�</TD></TR>
+    <TD>调整选项卡容器大小和布局。</TD></TR>
   <TR>
     <TD>add</TD>
     <TD>options</TD>
-    <TD>����һ����ѡ���壬ѡ�������һ�����ö��󣬲鿴ѡ�������Եĸ���ϸ�ڡ�������һ����ѡ�����ʱ��������ɿ�ѡ�ġ�<BR>����һ����ѡ��״̬��ѡ����ʱ���ǵ�����'selected'����Ϊfalse��<PRE>// ����һ��δѡ��״̬��ѡ����
+    <TD>添加一个新选项卡面板，选项参数是一个配置对象，查看选项卡面板属性的更多细节。在添加一个新选项卡面板的时候它将变成可选的。<BR>添加一个非选中状态的选项卡面板时，记得设置'selected'属性为false。<PRE>// 添加一个未选中状态的选项卡面板
 $('#tt').tabs('add',{
-	title: '��ѡ����',
+	title: '新选项卡面板',
 	selected: false
 	//...
-});</PRE><PRE><STRONG><FONT color=#ff0000>���ù�����1.4.2�濪ʼ���ã�</FONT></STRONG><BR><BR>// ������Ϊ2��λ���ϲ���һ��ѡ����
+});</PRE><PRE><STRONG><FONT color=#ff0000>（该功能自1.4.2版开始可用）</FONT></STRONG><BR><BR>// 在索引为2的位置上插入一个选项卡面板
 $('#tt').tabs('add',{
-	title: '�����ѡ����',
+	title: '插入的选项卡面板',
 	index: 2
 });</PRE></TD></TR>
   <TR>
     <TD>close</TD>
     <TD>which</TD>
-    <TD>�ر�һ��ѡ���壬'which'����������ѡ����ı��������������ָ��Ҫ�رյ���塣</TD></TR>
+    <TD>关闭一个选项卡面板，'which'参数可以是选项卡面板的标题或者索引，以指定要关闭的面板。</TD></TR>
   <TR>
     <TD>getTab</TD>
     <TD>which</TD>
-    <TD>��ȡָ��ѡ���壬'which'����������ѡ����ı������������</TD></TR>
+    <TD>获取指定选项卡面板，'which'参数可以是选项卡面板的标题或者索引。</TD></TR>
   <TR>
     <TD>getTabIndex</TD>
     <TD>tab</TD>
-    <TD>��ȡָ��ѡ�����������</TD></TR>
+    <TD>获取指定选项卡面板的索引。</TD></TR>
   <TR>
     <TD>getSelected</TD>
     <TD>none</TD>
-    <TD>��ȡѡ���ѡ���塣���������չʾ����λ�ȡѡ���ѡ����������<PRE>var tab = $('#tt').tabs('getSelected');
+    <TD>获取选择的选项卡面板。下面的例子展示了如何获取选择的选项卡面板索引。<PRE>var tab = $('#tt').tabs('getSelected');
 var index = $('#tt').tabs('getTabIndex',tab);
 alert(index);
 </PRE></TD></TR>
   <TR>
     <TD>select</TD>
     <TD>which</TD>
-    <TD>ѡ��һ��ѡ���壬'which'����������ѡ����ı������������</TD></TR>
+    <TD>选择一个选项卡面板，'which'参数可以是选项卡面板的标题或者索引。</TD></TR>
   <TR>
     <TD>unselect</TD>
     <TD>which</TD>
-    <TD>ȡ��ѡ��һ��ѡ���壬'which'����������ѡ����ı������������<STRONG><FONT 
-      color=#ff0000>���÷�����1.3.5�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>取消选择一个选项卡面板，'which'参数可以是选项卡面板的标题或者索引。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3.5版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>showHeader</TD>
     <TD>none</TD>
-    <TD>��ʾѡ��ı�ǩͷ��<STRONG><FONT 
-    color=#ff0000>���÷�����1.3.5�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>显示选项卡的标签头。<STRONG><FONT 
+    color=#ff0000>（该方法自1.3.5版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>hideHeader</TD>
     <TD>none</TD>
-    <TD>����ѡ��ı�ǩͷ��<STRONG><FONT 
-    color=#ff0000>���÷�����1.3.5�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>隐藏选项卡的标签头。<STRONG><FONT 
+    color=#ff0000>（该方法自1.3.5版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>showTool</TD>
     <TD>none</TD>
-    <TD>��ʾ��������<STRONG><FONT 
-  color=#ff0000>���÷�����1.4.3�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>显示工具栏。<STRONG><FONT 
+  color=#ff0000>（该方法自1.4.3版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>hideTool</TD>
     <TD>none</TD>
-    <TD>���ع�������<STRONG><FONT 
-  color=#ff0000>���÷�����1.4.3�濪ʼ���ã�</FONT></STRONG></TD></TR>
+    <TD>隐藏工具栏。<STRONG><FONT 
+  color=#ff0000>（该方法自1.4.3版开始可用）</FONT></STRONG></TD></TR>
   <TR>
     <TD>exists</TD>
     <TD>which</TD>
-    <TD>����ָ��������Ƿ���ڣ�'which'����������ѡ����ı����������</TD></TR>
+    <TD>表明指定的面板是否存在，'which'参数可以是选项卡面板的标题或索引。</TD></TR>
   <TR>
     <TD>update</TD>
     <TD>param</TD>
-    <TD>����ָ����ѡ���壬'param'��������2�����ԣ�<BR>tab��Ҫ���µ�ѡ���塣<BR>type���������ͣ�����ֵ�У�'header', 
-      'body', 'all'��<STRONG><FONT 
-      color=#ff0000>���ò�����1.4.1�濪ʼ���ã�</FONT></STRONG><BR>options���������ԡ�<BR><BR>����ʾ����&nbsp;<PRE>// ����ѡ��������±��������
-var tab = $('#tt').tabs('getSelected');  // ��ȡѡ������
+    <TD>更新指定的选项卡面板，'param'参数包含2个属性：<BR>tab：要更新的选项卡面板。<BR>type：更新类型，可用值有：'header', 
+      'body', 'all'。<STRONG><FONT 
+      color=#ff0000>（该参数自1.4.1版开始可用）</FONT></STRONG><BR>options：面板的属性。<BR><BR>代码示例：&nbsp;<PRE>// 更新选择的面板的新标题和内容
+var tab = $('#tt').tabs('getSelected');  // 获取选择的面板
 $('#tt').tabs('update', {
 	tab: tab,
 	options: {
-		title: '�±���',
-		href: 'get_content.php'  // �����ݵ�URL
+		title: '新标题',
+		href: 'get_content.php'  // 新内容的URL
 	}
 });
-</PRE><PRE>// ���� 'refresh' ��������ѡ���������
-var tab = $('#tt').tabs('getSelected');  // ��ȡѡ������<BR>tab.panel('refresh', 'get_content.php');
+</PRE><PRE>// 调用 'refresh' 方法更新选项卡面板的内容
+var tab = $('#tt').tabs('getSelected');  // 获取选择的面板<BR>tab.panel('refresh', 'get_content.php');
 </PRE></TD></TR>
   <TR>
     <TD>enableTab</TD>
     <TD>which</TD>
-    <TD>����ָ����ѡ���壬'which'����������ѡ����ı����������<STRONG><FONT 
-      color=#ff0000>���÷�����1.3�濪ʼ���ã�</FONT></STRONG> 
-      <P>����ʾ����</P><PRE>$('#tt').tabs('enableTab', 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ���õڶ���ѡ����
-$('#tt').tabs('enableTab', 'Tab2');&nbsp;&nbsp;&nbsp;&nbsp; // ���ñ���ΪTab2��ѡ����
+    <TD>启用指定的选项卡面板，'which'参数可以是选项卡面板的标题或索引。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>$('#tt').tabs('enableTab', 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 启用第二个选项卡面板
+$('#tt').tabs('enableTab', 'Tab2');&nbsp;&nbsp;&nbsp;&nbsp; // 启用标题为Tab2的选项卡面板
 </PRE></TD></TR>
   <TR>
     <TD>disableTab</TD>
     <TD>which</TD>
-    <TD>����ָ����ѡ���壬'which'����������ѡ����ı����������<STRONG><FONT 
-      color=#ff0000>���÷�����1.3�濪ʼ���ã�</FONT></STRONG> 
-      <P>����ʾ����</P>
+    <TD>禁用指定的选项卡面板，'which'参数可以是选项卡面板的标题或索引。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P>
       <P><FONT color=#008000>$('#tt').tabs('disableTab', 1); // 
-      ���õڶ���ѡ����<BR></FONT></P></TD></TR>
+      禁用第二个选项卡面板<BR></FONT></P></TD></TR>
   <TR>
     <TD>scrollBy</TD>
     <TD>deltaX</TD>
-    <TD>����ѡ�����ָ����������������ֵ�����ҹ�������ֵ�����������<STRONG><FONT 
-      color=#ff0000>���÷�����1.3�濪ʼ���ã�</FONT></STRONG> 
-      <P>����ʾ����</P><PRE>// ����ѡ����⵽���<BR>$('#tt').tabs('scroll', 10);</PRE></TD></TR></TBODY></TABLE></P>
+    <TD>滚动选项卡标题指定的像素数量，负值则向右滚动，正值则向左滚动。<STRONG><FONT 
+      color=#ff0000>（该方法自1.3版开始可用）</FONT></STRONG> 
+      <P>代码示例：</P><PRE>// 滚动选项卡标题到左边<BR>$('#tt').tabs('scroll', 10);</PRE></TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>ѡ����</H4>
-<P align=left>ѡ����������<A 
-href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A>������ԵĶ������ƣ�������2�������һЩ�������ԡ�</P>
+<H4 align=left>选项卡面板</H4>
+<P align=left>选项卡面板属性与<A 
+href="536ac27ad9dd84e522d2c8457d32af7a_65.htm">panel</A>组件属性的定义类似，下面是2个组件的一些公共属性。</P>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>id</TD>
     <TD>string</TD>
-    <TD>ѡ�����ID���ԡ�</TD>
+    <TD>选项卡面板的ID属性。</TD>
     <TD>null</TD></TR>
   <TR>
     <TD>title</TD>
     <TD>string</TD>
-    <TD>ѡ����ı����ı���</TD>
+    <TD>选项卡面板的标题文本。</TD>
     <TD></TD></TR>
   <TR>
     <TD>content</TD>
     <TD>string</TD>
-    <TD>ѡ��������ݡ�</TD>
+    <TD>选项卡面板的内容。</TD>
     <TD></TD></TR>
   <TR>
     <TD>href</TD>
     <TD>string</TD>
-    <TD>��URL����Զ������������䵽ѡ���塣</TD>
+    <TD>从URL加载远程数据内容填充到选项卡面板。</TD>
     <TD>null</TD></TR>
   <TR>
     <TD>cache</TD>
     <TD>boolean</TD>
-    <TD>���Ϊtrue����'href'������������Чֵ��ʱ�򻺴�ѡ���塣</TD>
+    <TD>如果为true，在'href'属性设置了有效值的时候缓存选项卡面板。</TD>
     <TD>true</TD></TR>
   <TR>
     <TD>iconCls</TD>
     <TD>string</TD>
-    <TD>������һ��ͼ���CSS��ID��ʾ��ѡ������⡣</TD>
+    <TD>定义了一个图标的CSS类ID显示到选项卡面板标题。</TD>
     <TD>null</TD></TR>
   <TR>
     <TD>width</TD>
     <TD>number</TD>
-    <TD>ѡ������ȡ�</TD>
+    <TD>选项卡面板宽度。</TD>
     <TD>auto</TD></TR>
   <TR>
     <TD>height</TD>
     <TD>number</TD>
-    <TD>ѡ����߶ȡ�</TD>
+    <TD>选项卡面板高度。</TD>
     <TD>auto</TD></TR>
   <TR>
     <TD>collapsible</TD>
     <TD>boolean</TD>
-    <TD>���Ϊtrue��������ѡ�ߡ����</TD>
+    <TD>如果为true，则允许选项卡摺叠。</TD>
     <TD>false</TD></TR></TBODY></TABLE></P>
-<P align=left>�������ѡ���������Ҷ��е����ԡ�</P>
+<P align=left>下面的是选项卡面板新增且独有的属性。</P>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>closable</TD>
     <TD>boolean</TD>
-    <TD>������Ϊtrue��ʱ��ѡ���彫��ʾһ���رհ�ť���ڵ����ʱ���ر�ѡ���塣</TD>
+    <TD>在设置为true的时候，选项卡面板将显示一个关闭按钮，在点击的时候会关闭选项卡面板。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>selected</TD>
     <TD>boolean</TD>
-    <TD>������Ϊtrue��ʱ��ѡ����ᱻѡ�С�</TD>
+    <TD>在设置为true的时候，选项卡面板会被选中。</TD>
     <TD>false</TD></TR>
   <TR>
     <TD>disabled</TD>
     <TD>boolean</TD>
-    <TD>������Ϊtrue��ʱ��ѡ����ᱻ���á�<STRONG><FONT 
-      color=#ff0000>����������1.4.4�濪ʼ���ã�</FONT></STRONG></TD>
+    <TD>在设置为true的时候，选项卡面板会被禁用。<STRONG><FONT 
+      color=#ff0000>（该属性自1.4.4版开始可用）</FONT></STRONG></TD>
     <TD>false</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>

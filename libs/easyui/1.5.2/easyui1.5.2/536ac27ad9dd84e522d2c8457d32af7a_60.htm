@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<HTML><HEAD>
 
-<TITLE>droppable(����)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<TITLE>droppable(放置)</TITLE>
 <LINK 
 rel=stylesheet type=text/css 
 href="536ac27ad9dd84e522d2c8457d32af7a_60_files/easyui[1]_9.css"><LINK 
@@ -15,10 +16,10 @@ href="536ac27ad9dd84e522d2c8457d32af7a_60_files/SyntaxHighlighter[1].css"><!-- s
 <DIV 
 style="PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px" 
 align=left>
-<H3 align=left>Droppable�����ã�</H3>
-<P align=left>ʹ��$.fn.droppable.defaults��дĬ��ֵ����</P>
-<H4 align=left>ʹ�ð���</H4>
-<P align=left>ͨ����ǩ����һ����������</P>
+<H3 align=left>Droppable（放置）</H3>
+<P align=left>使用$.fn.droppable.defaults重写默认值对象。</P>
+<H4 align=left>使用案例</H4>
+<P align=left>通过标签创建一个放置区。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -37,7 +38,7 @@ align=left>
   class=tag>&gt;</SPAN><SPAN class=tag>&lt;/</SPAN><SPAN 
   class=tag-name>div</SPAN><SPAN class=tag>&gt;</SPAN><SPAN> 
 </SPAN></SPAN></LI></OL></DIV></DIV>
-<P align=left>ʹ��Javascript����һ����������</P>
+<P align=left>使用Javascript创建一个放置区。</P>
 <DIV align=left>
 <DIV class=dp-highlighter>
 <DIV class=bar>
@@ -63,68 +64,68 @@ align=left>
   <LI class=alt><SPAN>}); </SPAN></LI></OL></DIV></DIV>
 <DIV align=left>&nbsp;</DIV>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>����</H4>
+<H4 align=left>属性</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>����ֵ����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH>
-    <TH><STRONG>Ĭ��ֵ</STRONG></TH></TR>
+    <TH><STRONG>属性名</STRONG></TH>
+    <TH><STRONG>属性值类型</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH>
+    <TH><STRONG>默认值</STRONG></TH></TR>
   <TR>
     <TD>accept</TD>
     <TD>selector</TD>
-    <TD>ȷ����Щ����קԪ�ؽ������ܡ�</TD>
+    <TD>确定哪些可拖拽元素将被接受。</TD>
     <TD>null</TD></TR>
   <TR>
     <TD>disabled</TD>
     <TD>boolean</TD>
-    <TD>���Ϊtrue�����ֹ���á�</TD>
+    <TD>如果为true，则禁止放置。</TD>
     <TD>false</TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>�¼�</H4>
+<H4 align=left>事件</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>�¼���</STRONG></TH>
-    <TH><STRONG>�¼�����</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>事件名</STRONG></TH>
+    <TH><STRONG>事件参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>onDragEnter</TD>
     <TD>e,source</TD>
-    <TD>�ڱ���קԪ�ص��������ڵ�ʱ�򴥷���source������ʾ����ק��DOMԪ�ء�</TD></TR>
+    <TD>在被拖拽元素到放置区内的时候触发，source参数表示被拖拽的DOM元素。</TD></TR>
   <TR>
     <TD>onDragOver</TD>
     <TD>e,source</TD>
-    <TD>�ڱ���קԪ�ؾ�����������ʱ�򴥷���source������ʾ����ק��DOMԪ�ء�</TD></TR>
+    <TD>在被拖拽元素经过放置区的时候触发，source参数表示被拖拽的DOM元素。</TD></TR>
   <TR>
     <TD>onDragLeave</TD>
     <TD>e,source</TD>
-    <TD>�ڱ���קԪ���뿪��������ʱ�򴥷���source������ʾ����ק��DOMԪ�ء�</TD></TR>
+    <TD>在被拖拽元素离开放置区的时候触发，source参数表示被拖拽的DOM元素。</TD></TR>
   <TR>
     <TD>onDrop</TD>
     <TD>e,source</TD>
-    <TD>�ڱ���קԪ�ط��뵽��������ʱ�򴥷���source������ʾ����ק��DOMԪ�ء�</TD></TR></TBODY></TABLE></P>
+    <TD>在被拖拽元素放入到放置区的时候触发，source参数表示被拖拽的DOM元素。</TD></TR></TBODY></TABLE></P>
 <H4 align=left>&nbsp;</H4>
-<H4 align=left>����</H4>
+<H4 align=left>方法</H4>
 <P align=left>
 <TABLE class=doc-table width="95%">
   <TBODY>
   <TR>
-    <TH><STRONG>������</STRONG></TH>
-    <TH><STRONG>��������</STRONG></TH>
-    <TH><STRONG>����</STRONG></TH></TR>
+    <TH><STRONG>方法名</STRONG></TH>
+    <TH><STRONG>方法参数</STRONG></TH>
+    <TH><STRONG>描述</STRONG></TH></TR>
   <TR>
     <TD>options</TD>
     <TD>none</TD>
-    <TD>�������Զ���</TD></TR>
+    <TD>返回属性对象。</TD></TR>
   <TR>
     <TD>enable</TD>
     <TD>none</TD>
-    <TD>���÷��ù��ܡ�</TD></TR>
+    <TD>启用放置功能。</TD></TR>
   <TR>
     <TD>disable</TD>
     <TD>none</TD>
-    <TD>���÷��ù��ܡ�</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>
+    <TD>禁用放置功能。</TD></TR></TBODY></TABLE></P></DIV></BODY></HTML>
