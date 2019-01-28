@@ -62,33 +62,33 @@ function dTree(objName) {
 
     this.icon = {
 
-        root: '/assets/dtree/img/base.gif',
+        root: '/dtree/img/base.gif',
 
-        folder: '/assets/dtree/img/folder.gif',
+        folder: '/dtree/img/folder.gif',
 
-        folderOpen: '/assets/dtree/img/folderopen.gif',
+        folderOpen: '/dtree/img/folderopen.gif',
 
-        node: '/assets/dtree/img/page.gif',
+        node: '/dtree/img/page.gif',
 
-        empty: '/assets/dtree/img/empty.gif',
+        empty: '/dtree/img/empty.gif',
 
-        line: '/assets/dtree/img/line.gif',
+        line: '/dtree/img/line.gif',
 
-        join: '/assets/dtree/img/join.gif',
+        join: '/dtree/img/join.gif',
 
-        joinBottom: '/assets/dtree/img/joinbottom.gif',
+        joinBottom: '/dtree/img/joinbottom.gif',
 
-        plus: '/assets/dtree/img/plus.gif',
+        plus: '/dtree/img/plus.gif',
 
-        plusBottom: '/assets/dtree/img/plusbottom.gif',
+        plusBottom: '/dtree/img/plusbottom.gif',
 
-        minus: '/assets/dtree/img/minus.gif',
+        minus: '/dtree/img/minus.gif',
 
-        minusBottom: '/assets/dtree/img/minusbottom.gif',
+        minusBottom: '/dtree/img/minusbottom.gif',
 
-        nlPlus: '/assets/dtree/img/nolines_plus.gif',
+        nlPlus: '/dtree/img/nolines_plus.gif',
 
-        nlMinus: '/assets/dtree/img/nolines_minus.gif'
+        nlMinus: '/dtree/img/nolines_minus.gif'
 
     };
 
