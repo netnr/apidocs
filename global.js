@@ -1,9 +1,5 @@
 /*                                *\
- *  APIDocs NET≈£»À
  *  Author£∫netnr
- *  Date£∫2018-03-30
- *  Site£∫https://ad.netnr.com
- *  PoweredBy£∫https://netnr.com 
 \*                                */
 
 (function (window, undefined) {
@@ -283,13 +279,11 @@ function switchcard(t) {
         case 2:
             j('#dbox').hide();
             j('#vbox').show();
-            j('#footer').hide();
             break;
         //index
         default:
             j('#dbox').show();
             j('#vbox').hide();
-            j('#footer').show();
             document.title = window.origintitle;
             j('#bt')[0].innerHTML = "";
             break;
